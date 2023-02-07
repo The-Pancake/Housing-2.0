@@ -1,0 +1,8 @@
+{
+    "name": "Jonh Smith",
+    "sex": "m",
+    "major": "mech-e",
+    "dormPref": ["Warren", "Nason"],
+    "dorm": "",
+    "year": "freshman"
+}
