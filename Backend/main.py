@@ -1,3 +1,7 @@
+# goals for the moment:
+# get a baseline working with limited students and housing
+# up the scale slowly and compare data structues with whatever else people write
+
 import json
 import sort
 
