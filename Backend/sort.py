@@ -11,8 +11,6 @@ potentialRooms = []
 
 def idealSearch(student):
 
-
-
     return
 
 # looks to see if two students have commonality
