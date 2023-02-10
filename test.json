@@ -5,9 +5,7 @@
         "size": 2,
         "shared_bathroom": false,
         "year": "freshman",
-        "occupants": [
-            "Jonh Smith"
-        ]
+        "occupants": []
     },
     "Warren1-2": {
         "sex": "m",
@@ -31,6 +29,14 @@
         "size": 2,
         "shared_bathroom": false,
         "year": "freshman",
+        "occupants": []
+    },
+    "RAHPSA1": {
+        "sex": "e",
+        "id": "1",
+        "size": 4,
+        "shared_bathroom": true,
+        "year": "sophomore",
         "occupants": []
     }
 }
