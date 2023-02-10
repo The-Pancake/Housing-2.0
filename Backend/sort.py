@@ -5,7 +5,8 @@
 # is not found*)
 
 # i want to have it working with just induvial students before I implement
-# groups 
+# groups - though that shouldn't be hard since groups will pretty much always
+# fit under the perfect fit category of things
 
 potentialRooms = []
 
