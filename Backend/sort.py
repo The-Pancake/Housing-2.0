@@ -10,6 +10,7 @@
 
 potentialRooms = []
 
+# weights rooms on a bunch of variables
 def weightRoom(student, room):
 
     i = 0
@@ -27,6 +28,7 @@ def weightRoom(student, room):
 
     return i
 
+# after first search, uses potentialRooms to look
 def idealSearch(student):
 
     bestMatch = potentialRooms[0]
