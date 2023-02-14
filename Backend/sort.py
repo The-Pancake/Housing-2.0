@@ -22,9 +22,12 @@ def weightRoom(student, room):
         if (j["geo"] == student["geo"]):
             i += 2
 
+    k = 0    
+    
     for j in student["dormPref"]:
         if (j == room["name"]):
-            i += 5 - j
+            i += 5 - k
+            k += 1
 
     return i
 
