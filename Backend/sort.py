@@ -17,14 +17,14 @@ def weightRoom(student, room):
 
     for j in room["occupants"]:
         if (j["major"] == student["major"]):
-            i += 3
+            i += 4
 
         if (j["geo"] == student["geo"]):
-            i += 1
+            i += 2
 
     for j in student["dormPref"]:
         if (j == room["name"]):
-            i += 4
+            i += 5 - j
 
     return i
 
