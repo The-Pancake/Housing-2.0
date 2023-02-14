@@ -1,0 +1,17 @@
+
+img {
+  width: 300px; /* You can set the dimensions to whatever you want */
+  height: 20;
+  object-fit: cover;
+ }
+ 
+footer {
+    text-align: center;
+    padding: 3px;
+    background-color: transparent;
+    color: black;
+    margin: none;
+}
+.github_logo{
+    margin-top: none;
+}
