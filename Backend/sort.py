@@ -10,7 +10,37 @@
 
 potentialRooms = []
 
+def weightRoom(student, room):
+
+    i = 0
+
+    for j in room["occupants"]:
+        if (j["major"] == student["major"]):
+            i += 3
+
+        if (j["geo"] == student["geo"]):
+            i += 1
+
+    for j in student["dormPref"]:
+        if (j == room["name"]):
+            i += 4
+
+    return i
+
 def idealSearch(student):
+
+    bestMatch = potentialRooms[0]
+    highestWeight = 0
+
+    for i in potentialRooms:
+        w = weightRoom(student, i)
+        
+        if (w > highestWeight):
+            bestMatch = i
+            highestWeight= i
+            
+
+    bestMatch["occupants"].append(student)
 
     return
 
@@ -19,14 +49,14 @@ def isPerfectMatch(room, student):
 
     i = 0
 
-    for i in room["occupants"]:
-        if (i["major"] == student["major"]):
+    for j in room["occupants"]:
+        if (j["major"] == student["major"]):
             i += 3
 
-        if (i["geo"] == student["geo"]):
+        if (j["geo"] == student["geo"]):
             i += 1
 
-    if (i > 3):
+    if (i > 2):
         return True
 
     return False
@@ -39,17 +69,16 @@ def firstSearch(data, student):
 
     if (len(student["dormPref"]) != 0): # if there is a preferred dorm, look through those
         
-        while (student["dorm"] == ""): 
+        for i in student["dormPref"]:
             
             # move through dorm prefs  - later on we can just move the iterablle to specific points in the array
-            i = 0        
             dorm = data.keys()  # list of dorms to use as keys
 
             for j in dorm:
-                if (student["dormPref"][i] in j):   # find preferred dorm
+                if (i in j):   # find preferred dorm
                     
                     # see if possible to move into room
-                    if (student["sex"] == data[j]["sex"] or data[j]["sex"] == "e" and student["year"] == data[j]["year"]):
+                    if (student["sex"] == data[j]["sex"] and student["year"] == data[j]["year"]):
                         if (len(data[j]["occupants"]) > 0):
                             if (isPerfectMatch(data[j], student)):
                                 data[j]["occupants"].append(student)
@@ -61,13 +90,11 @@ def firstSearch(data, student):
                         if (len(data[j]["occupants"]) == 0):
                             potentialRooms.append(data[j])
 
-            i += 1
-
     if (len(potentialRooms) == 0):
         dorm = data.keys()
 
         for j in dorm:
-            if (student["sex"] == data[j]["sex"] or data[j]["sex"] == "e" and student["year"] == data[j]["year"]):
+            if (student["sex"] == data[j]["sex"] and student["year"] == data[j]["year"]):
                 if (len(data[j]["occupants"]) > 0):
                     if (isPerfectMatch(data[j], student)):
                         data[j]["occupants"].append(student)
@@ -79,4 +106,7 @@ def firstSearch(data, student):
                 if (len(data[j]["occupants"]) == 0):
                     potentialRooms.append(data[j])
                
-    idealSearch(student)
+    if (len(potentialRooms) != 0):
+        idealSearch(student)
+    else:
+        return False

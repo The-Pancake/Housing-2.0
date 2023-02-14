@@ -33,19 +33,7 @@
         "size": 2,
         "shared_bathroom": false,
         "year": "freshman",
-        "occupants": [
-            {
-                "name": "Jonh Smith",
-                "sex": "m",
-                "major": "mech-e",
-                "dormPref": [
-                    "Nason"
-                ],
-                "dorm": "",
-                "year": "freshman",
-                "geo": "NY"
-            }
-        ]
+        "occupants": []
     },
     "RAHPSA1": {
         "name": "RAHPS A",
