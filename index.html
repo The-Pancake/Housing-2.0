@@ -7,16 +7,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="./Frontend/resources/style.css">
+
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    
+    <!-- shortcut icon -->
+    <link rel="shortcut icon" href="./Frontend/Resources/image/RPI_logo_gray.png" type="image/x-icon">
+    <style>
+        /* set background image with no repeat*/
+        body {
+            background-image: url("./Frontend/Resources/image/index_background.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-family: 'Playfair Display', serif;
+        }
+        #logo{
+            width: 20%;
+            height: 20%;
+            margin-left: 40%;
+            margin-top: 2%;
+
+        }
+        .login{
+            margin-top: 2%;
+        }
+        button{
+            border-radius: 10px;  
+        }
+        .login_info{
+            font-size: 20px;
+            margin: 0;
+            color: darkred;
+            text-shadow: 1px black;
+        }
+
+    </style>
     <title>Housing 2.0</title>
 </head>
 
 <body>
+    <div class="rpi_gray_logo">
+        <img src="./Frontend/Resources/image/RPI_logo_gray.png" alt="RPI Logo" id="logo">
+    </div>
+    
+    <div class="login text-center">
+        <!-- A button that send user to the main page -->
+        <!--  We have not decided which login system we will use, so this button will send the user to main page directly  -->
+        <button type="button" class="btn btn-primary btn-lg btn-danger" id="login">Click Here to Find Your Home</button>
+        <p class="login_info">Welcome to RPI Housing 2.0</p>
+        <p class="login_info">This website is secured by RPI CAS system, please use your RCS account to login</p>
+    </div>
+
+    <footer class="footer fixed-bottom">
+        <p>Housing 2.0<p>
+        <div class="github_logo">
+            <a href="https://github.com/The-Pancake/Housing-2.0">
+                <img src="./Frontend/Resources/image/github-mark.png" alt="GitHub Logo" width="2%" height="2%">
+            </a>
+        </div>
+    </footer>
+      
+      
+      
 
 
 
-
-
+    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
         crossorigin="anonymous"></script>
