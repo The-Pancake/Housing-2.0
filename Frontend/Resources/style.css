@@ -15,3 +15,20 @@ footer {
 .github_logo{
     margin-top: none;
 }
+
+
+body {
+    height: 100vh;
+    background-image: url('rpi.png');  
+
+    background-size: cover;
+    background-position: center;
+
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.7),
+        rgba(0, 0, 0, 0.7)
+      ),
+      url("../Resources/image/rpi.png");
+    
+    
+}
