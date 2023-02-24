@@ -1,30 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
-import Navbar from './Navbar';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import Tabs from './Tab';
-
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Landing from "./landing";
+import Main from "./main";
 
 function App() {
   return (
-    <div className="App">
-      <Navbar></Navbar>
-      <Tabs></Tabs>
-      {/* <div className="container con">
-        <div className="row">
-          <div className="col-md-12 d-flex align-items-center justify-content-center">
-            <div className="card align-self-center" id="card">
-              <div className="card-body text-dark">
-                <h1>Hello World!</h1>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> */}
-
-
-
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Landing />} />
+        <Route path="/main" element={<Main />} />
+      </Routes>
+    </Router>
   );
 }
 
