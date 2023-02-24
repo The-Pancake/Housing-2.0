@@ -14,8 +14,18 @@ if __name__ == "__main__":
         t1 = json.load(json_file)
     with open("2.json") as json_file:
         t2 = json.load(json_file)
+    with open("3.json") as json_file:
+        t3 = json.load(json_file)
+    with open("4.json") as json_file:
+        t4 = json.load(json_file)
+    with open("5.json") as json_file:
+        t5 = json.load(json_file)
 
-    sort.firstSearch(data, t1)
+    print(sort.firstSearch(data, t1))
+    print(sort.firstSearch(data, t2))
+    print(sort.firstSearch(data, t3))
+    print(sort.firstSearch(data, t4))
+    print(sort.firstSearch(data, t5))
 
     with open("test.json", "w") as out:
         json.dump(data, out, indent=4)
