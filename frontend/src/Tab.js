@@ -1,5 +1,7 @@
 import { useState } from "react";
 import "./Tab.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 function Tabs() {
   const [toggleState, setToggleState] = useState(1);
@@ -29,24 +31,30 @@ function Tabs() {
         <div
           className={toggleState === 1 ? "content  active-content" : "content"}
         >
-          <h2>Content 1</h2>
-          <hr />
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
-            praesentium incidunt quia aspernatur quasi quidem facilis quo nihil
-            vel voluptatum?
-          </p>
+
+
+          <div className="card">
+            <div class="card-body">
+              <h5 class="card-title text-left">Applications: </h5>
+              <p class="card-text">Summer Arch 2023: <span className="text-success"> 70%</span></p>
+              <a href="#" class="btn btn-success">Continue Application</a>
+            </div>
+          </div>
         </div>
 
         <div
           className={toggleState === 2 ? "content  active-content" : "content"}
         >
-          <h2>Content 2</h2>
-          <hr />
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
-            voluptatum qui adipisci.
-          </p>
+          <div className="card">
+            <div class="card-body">
+              <h5 class="card-title text-left">Roommates: </h5>
+              <p class="card-text d-block">Josh</p>
+              <p class="card-text d-block">Yosh</p>
+              <p class="card-text d-block">Yash</p>
+
+              <a href="#" class="btn btn-success">Add roommates</a>
+            </div>
+          </div>
         </div>
 
       </div>
