@@ -1,0 +1,24 @@
+#logo{
+    width: 20%;
+    height: 20%;
+    margin-top: 2%;
+
+}
+.login{
+    margin-top: 2%;
+}
+button{
+    border-radius: 10px;  
+}
+.login_info{
+    font-size: 40px;
+    margin: 2rem;
+    color: red;
+    text-shadow: 1px black;
+}
+*{
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Playfair Display', serif;
+    font-weight: 10px;
+}
