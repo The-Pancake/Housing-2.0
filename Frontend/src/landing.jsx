@@ -4,7 +4,7 @@ import './landing.css';
 import RPI_logo_gray from './image/RPI_logo_gray.png';
 import index_background from './image/index_background.jpg';
 
-export default function Landing() {
+export default function Landing({onButtonClick} ) {
     // set background image
     document.body.style.backgroundImage = `url(${index_background})`;
   return (
@@ -14,7 +14,7 @@ export default function Landing() {
       </div>
 
       <div className="login text-center">
-          <button type="button" className="btn btn-primary btn-lg btn-danger" id="login">
+          <button type="button" className="btn btn-primary btn-lg btn-danger" id="login" onClick={onButtonClick}>
             Click Here to Find Your Home
           </button>
 
