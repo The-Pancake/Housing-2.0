@@ -4,6 +4,7 @@
 
 import json
 import sort
+import random
 
 if __name__ == "__main__":
     
@@ -26,6 +27,33 @@ if __name__ == "__main__":
     print(sort.firstSearch(data, t3))
     print(sort.firstSearch(data, t4))
     print(sort.firstSearch(data, t5))
+
+    with open("names.json") as json_file:
+        names = json.load(json_file)
+    with open("states.json") as json_file:
+        states = json.load(json_file)
+    with open("majors.json") as json_file:
+        majors = json.load(json_file)
+    
+    s = ["m", "f"]
+    
+    for i in range(100):
+        
+        name = names[random.randrange(0, len(names))]
+        sex = s[random.randrange(0, 2)]
+        major = majors[random.randrange(0, len(majors))]
+        state = states[random.randrange(0, len(states))]
+
+        randStudent = {
+            "name": name,
+            "sex": sex,
+            "major": major,
+            "dormPref": "",
+            "year": "freshman",
+            "geo": state
+        }
+
+        print(sort.firstSearch(data, randStudent))
 
     with open("test.json", "w") as out:
         json.dump(data, out, indent=4)
