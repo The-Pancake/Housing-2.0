@@ -50,6 +50,7 @@ def idealSearch(student):
         bestMatch["sex"] = student["sex"]
 
     bestMatch["occupants"].append(student)
+    student["dorm"] = bestMatch["name"]
 
     return
 
@@ -87,7 +88,7 @@ def firstSearch(data, student):
                 if (i in j): # find preferred dorm
                     
                     # see if possible to move into room
-                    if ((student["sex"] == data[j]["sex"] or data[j]["sex"] == "e") and student["year"] == data[j]["year"] and 
+                    if ((student["sex"] == data[j]["sex"] or data[j]["sex"] == "e" or data[j]["sex"] == "i") and student["year"] == data[j]["year"] and 
                     len(data[j]["occupants"]) < data[j]["size"]):
                         if (len(data[j]["occupants"]) > 0):
                             if (isPerfectMatch(data[j], student)):
@@ -105,7 +106,7 @@ def firstSearch(data, student):
 
         for j in dorm:
 
-            if ((student["sex"] == data[j]["sex"] or data[j]["sex"] == "e") and student["year"] == data[j]["year"] and 
+            if ((student["sex"] == data[j]["sex"] or data[j]["sex"] == "e" or data[j]["sex"] == "i") and student["year"] == data[j]["year"] and 
                 len(data[j]["occupants"]) < data[j]["size"]):
                 if (len(data[j]["occupants"]) > 0):
                     if (isPerfectMatch(data[j], student)):
