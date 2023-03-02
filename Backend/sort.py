@@ -10,7 +10,8 @@
 
 potentialRooms = []
 
-# weights rooms on a bunch of variables
+# weights rooms on a bunch of variables - to change, currently acts as just an example 
+# of what it will be
 def weightRoom(student, room):
 
     i = 0
@@ -45,7 +46,11 @@ def idealSearch(student):
             highestWeight= i
             
 
+    if (bestMatch["sex"] == "e"):
+        bestMatch["sex"] = student["sex"]
+
     bestMatch["occupants"].append(student)
+    student["dorm"] = bestMatch["name"]
 
     return
 
@@ -80,10 +85,11 @@ def firstSearch(data, student):
             dorm = data.keys()  # list of dorms to use as keys
 
             for j in dorm:
-                if (i in j):   # find preferred dorm
+                if (i in j): # find preferred dorm
                     
                     # see if possible to move into room
-                    if (student["sex"] == data[j]["sex"] and student["year"] == data[j]["year"]):
+                    if ((student["sex"] == data[j]["sex"] or data[j]["sex"] == "e" or data[j]["sex"] == "i") and student["year"] == data[j]["year"] and 
+                    len(data[j]["occupants"]) < data[j]["size"]):
                         if (len(data[j]["occupants"]) > 0):
                             if (isPerfectMatch(data[j], student)):
                                 data[j]["occupants"].append(student)
@@ -99,7 +105,9 @@ def firstSearch(data, student):
         dorm = data.keys()
 
         for j in dorm:
-            if (student["sex"] == data[j]["sex"] and student["year"] == data[j]["year"]):
+
+            if ((student["sex"] == data[j]["sex"] or data[j]["sex"] == "e" or data[j]["sex"] == "i") and student["year"] == data[j]["year"] and 
+                len(data[j]["occupants"]) < data[j]["size"]):
                 if (len(data[j]["occupants"]) > 0):
                     if (isPerfectMatch(data[j], student)):
                         data[j]["occupants"].append(student)
