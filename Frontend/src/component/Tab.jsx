@@ -33,8 +33,8 @@ function Tabs() {
         >
 
 
-          <div className="card">
-            <div className="card-body">
+          <div className="card bg-transparent">
+            <div className="card-body text-light">
               <h5 className="card-title text-left">Applications: </h5>
               <p className="card-text">Summer Arch 2023: <span className="text-success"> 70%</span></p>
               <a href="#" className="btn btn-success">Continue Application</a>
@@ -45,8 +45,8 @@ function Tabs() {
         <div
           className={toggleState === 2 ? "content  active-content" : "content"}
         >
-          <div className="card">
-            <div className="card-body">
+          <div className="card bg-transparent">
+            <div className="card-body text-light">
               <h5 className="card-title text-left">Roommates: </h5>
               <p className="card-text d-block">Josh</p>
               <p className="card-text d-block">Yosh</p>
