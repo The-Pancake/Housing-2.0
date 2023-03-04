@@ -33,11 +33,19 @@ function Tabs() {
         >
 
 
-          <div className="card bg-transparent">
+          <div className="card bg-transparent app-card">
             <div className="card-body text-light">
-              <h5 className="card-title text-left">Applications: </h5>
-              <p className="card-text">Summer Arch 2023: <span className="text-success"> 70%</span></p>
-              <a href="#" className="btn btn-success">Continue Application</a>
+              <h5 className="card-title text-left mb-5">Applications: </h5>
+              <div className="my-3">
+
+                <p className="card-text text-left">Summer Arch 2023:</p>
+                <div className="progress">
+                  <div className="progress-bar" role="progressbar" style={{ width: "25%" }} aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+                </div>
+
+              </div>
+
+              <a href="#" className="btn btn-success mt-5">Continue Application</a>
             </div>
           </div>
         </div>
