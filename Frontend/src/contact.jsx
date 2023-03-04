@@ -5,6 +5,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import $ from 'jquery';
 import './Frontend/resources/script.js';
 
+//contact
 function Contact() {
   return (
     <div className="container">
