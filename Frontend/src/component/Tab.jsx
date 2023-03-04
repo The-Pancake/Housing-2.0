@@ -35,6 +35,7 @@ function Tabs() {
 
           <div className="card bg-transparent app-card">
             <div className="card-body text-light">
+              
               <h5 className="card-title text-left mb-5">Applications: </h5>
               <div className="my-3">
 
@@ -55,12 +56,26 @@ function Tabs() {
         >
           <div className="card bg-transparent">
             <div className="card-body text-light">
-              <h5 className="card-title text-left">Roommates: </h5>
-              <p className="card-text d-block">Josh</p>
-              <p className="card-text d-block">Yosh</p>
-              <p className="card-text d-block">Yash</p>
 
-              <a href="#" className="btn btn-success">Add roommates</a>
+            <div className="mb-5">
+
+              <h5 className="card-title text-left mb-3 ">Group SPAM W: </h5>
+              <p className="card-text d-block mb-1">Tommie Trishna</p>
+              <p className="card-text d-block mb-1">Valentinus Ramakant</p>
+              <p className="card-text d-block mb-1">Marijus Ciarán</p>
+
+
+
+            </div>
+              
+              <div className="d-flex justify-content-around">
+
+                <a href="#" className="btn btn-danger">Leave group</a>
+                <a href="#" className="btn btn-success">Add roommates</a>
+
+
+
+              </div>
             </div>
           </div>
         </div>
