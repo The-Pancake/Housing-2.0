@@ -16,16 +16,7 @@ function App() {
     setShowDorm(true);
   };
 
-  return (
-    <div className="App">
-      {showHomepage ? (
-        <Homepage />
-      ) : (
-        <Landing onButtonClick={handleButtonClick} />
-      )}
-      {showDorm ? <Dorm /> : null}
-    </div>
-  );
+
 }
 
 export default Dorms;
