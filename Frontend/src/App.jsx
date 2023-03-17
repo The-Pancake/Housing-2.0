@@ -15,7 +15,7 @@ function App() {
   return (
     <div className="App">
       {showHomepage ? (
-        <Profile />
+        <Homepage />
       ) : (
         <Landing onButtonClick={handleButtonClick} />
         

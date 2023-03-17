@@ -1,7 +1,16 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
+import React , {useCallback, useState} from 'react';
 
 
-const Navbar = () => {
+const Navbar = ({ fixed, viewSelector }) => {
+  const [navbarOpen, setNavbarOpen] = React.useState(false);
+
+   const selectContactView = useCallback(() => {
+     viewSelector('contact');
+   });
+   const selectTabsView = useCallback(() => {
+     viewSelector('tabs');
+   });
     return (
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
           <div className="container-fluid">
@@ -10,17 +19,17 @@ const Navbar = () => {
             </button>
             <div className="collapse navbar-collapse" id="navbarNav">
               <ul className="navbar-nav me-auto mx-auto">
-                <li className="nav-item">
-                  <a className="nav-link me-3" href="#">Application</a>
+                <li className="nav-item" onClick={selectTabsView}>
+                  <a className="nav-link me-3" >Application</a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link me-3" href="#">Dorms</a>
+                  <a className="nav-link me-3" >Dorms</a>
+                </li>
+                <li className="nav-item" onClick={selectContactView}>
+                  <a className="nav-link me-3" >Contact Us</a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link me-3" href="#">Contact Us</a>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link me-3" href="#">My Profile</a>
+                  <a className="nav-link me-3" >My Profile</a>
                 </li>
               </ul>
               <ul className="navbar-nav ms-auto mx-auto">
