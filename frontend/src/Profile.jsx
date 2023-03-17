@@ -23,7 +23,9 @@ const Profile = () => {
                 <div className="row bg-primary full-height">
                     <div className="col-sm-4 bg-warning">
 
-  
+                    <div className="square-img">
+                        <img src={profile_img} alt="profile" id="profile" />
+                    </div>
                     <p className="text-center">Your description here</p>
 
                     </div>
