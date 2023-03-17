@@ -20,7 +20,7 @@ const Navbar = () => {
                   <a className="nav-link me-3" href="#">Contact Us</a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link me-3" href="#">My Account</a>
+                  <a className="nav-link me-3" href="#">My Profile</a>
                 </li>
               </ul>
               <ul className="navbar-nav ms-auto mx-auto">

@@ -3,6 +3,7 @@ import reactLogo from './assets/react.svg'
 import './App.css'
 import Landing from './landing.jsx';
 import Homepage from './homepage';
+import Profile from './Profile';
 
 function App() {
   const [showHomepage, setShowHomepage] = useState(false)
@@ -14,7 +15,7 @@ function App() {
   return (
     <div className="App">
       {showHomepage ? (
-        <Homepage />
+        <Profile />
       ) : (
         <Landing onButtonClick={handleButtonClick} />
         
