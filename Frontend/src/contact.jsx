@@ -1,14 +1,9 @@
 import React from 'react';
-import './resources/style.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min.js';
-import $ from 'jquery';
-import './Frontend/resources/script.js';
 
 //contact
-function Contact() {
+function Contact({hidden}) {
   return (
-    <div className="container">
+    <div className="container" hidden={hidden}>
       <h1>Contact Us</h1>
       <p>Email: <a href="mailto:contact@example.com">Whatever the email is</a></p>
       <p>Phone: Whatever the number is</p>
