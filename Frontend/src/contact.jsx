@@ -1,11 +1,9 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min.js';
-import Navbar from './component/Navbar';
 
-const ContactUs = () => {
+const ContactUs = ({hidden}) => {
   return (
-    <div>
+    <div hidden={hidden}>
       <h1>Contact Us</h1>
       <form>
         <label htmlFor="name">Name:</label><br />
