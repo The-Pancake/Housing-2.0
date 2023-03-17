@@ -3,7 +3,7 @@ import "./Tab.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
-function Tabs({hidden}) {
+function Tabs() {
   const [toggleState, setToggleState] = useState(1);
 
   const toggleTab = (index) => {
@@ -11,7 +11,7 @@ function Tabs({hidden}) {
   };
 
   return (
-    <div className="container" hidden={hidden}>
+    <div className="container">
       <div className="bloc-tabs">
         <button
           className={toggleState === 1 ? "tabs active-tabs" : "tabs"}

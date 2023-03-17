@@ -6,18 +6,14 @@ import './App.css';
 
 
 
-export default function Homepage({hidden}) {
-  const [view, setView] = useState('home');
-  const height = window.visualViewport.height - 80;
-
+function Homepage() {
   return (
-    <div className="Homepage" hidden={hidden}>
-      <Navbar viewSelector={setView} />
-      <Tabs hidden={view !== 'tabs'}></Tabs>
-      <Contact hidden={view !== 'contact'} />
+    <div className="Homepage">
+      <Navbar></Navbar>
+      <Tabs></Tabs>
 
     </div>
   );
 }
 
-
+export default Homepage;
