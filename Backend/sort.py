@@ -81,7 +81,7 @@ def firstSearch(data, student):
         
         for i in student["dormPref"]:
             
-            # move through dorm prefs  - later on we can just move the iterablle to specific points in the array
+            # move through dorm prefs - later on we can just move the iterablle to specific points in the array
             dorm = data.keys()  # list of dorms to use as keys
 
             for j in dorm:
@@ -90,7 +90,12 @@ def firstSearch(data, student):
                     # see if possible to move into room
                     if ((student["sex"] == data[j]["sex"] or data[j]["sex"] == "e" or data[j]["sex"] == "i") and student["year"] == data[j]["year"] and 
                     len(data[j]["occupants"]) < data[j]["size"]):
+                        for k in data[j]["occupants"]:
+                            if k["name"] == student["name"]:
+                                return False
+                    
                         if (len(data[j]["occupants"]) > 0):
+
                             if (isPerfectMatch(data[j], student)):
                                 data[j]["occupants"].append(student)
 
@@ -108,6 +113,11 @@ def firstSearch(data, student):
 
             if ((student["sex"] == data[j]["sex"] or data[j]["sex"] == "e" or data[j]["sex"] == "i") and student["year"] == data[j]["year"] and 
                 len(data[j]["occupants"]) < data[j]["size"]):
+                
+                for k in data[j]["occupants"]:
+                    if k["name"] == student["name"]:
+                        return False
+                
                 if (len(data[j]["occupants"]) > 0):
                     if (isPerfectMatch(data[j], student)):
                         data[j]["occupants"].append(student)

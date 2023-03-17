@@ -5,7 +5,30 @@
         "size": 2,
         "shared_bathroom": false,
         "year": "freshman",
-        "occupants": []
+        "occupants": [
+            {
+                "name": "John Smith",
+                "sex": "m",
+                "major": "mech-e",
+                "dormPref": [
+                    "Nason"
+                ],
+                "dorm": "Warren",
+                "year": "freshman",
+                "geo": "NY"
+            },
+            {
+                "name": "Jon Smithy",
+                "sex": "m",
+                "major": "mech-e",
+                "dormPref": [
+                    "Nason"
+                ],
+                "dorm": "",
+                "year": "freshman",
+                "geo": "NY"
+            }
+        ]
     },
     "Warren1-2": {
         "name": "Warren",
@@ -13,7 +36,30 @@
         "size": 2,
         "shared_bathroom": false,
         "year": "freshman",
-        "occupants": []
+        "occupants": [
+            {
+                "name": "John Smith",
+                "sex": "m",
+                "major": "mech-e",
+                "dormPref": [
+                    "Nason"
+                ],
+                "dorm": "Warren",
+                "year": "freshman",
+                "geo": "NY"
+            },
+            {
+                "name": "Jon Smithy",
+                "sex": "m",
+                "major": "mech-e",
+                "dormPref": [
+                    "Nason"
+                ],
+                "dorm": "",
+                "year": "freshman",
+                "geo": "NY"
+            }
+        ]
     },
     "Warren1-3": {
         "name": "Warren",
@@ -405,7 +451,30 @@
         "size": 2,
         "shared_bathroom": false,
         "year": "freshman",
-        "occupants": []
+        "occupants": [
+            {
+                "name": "John Smith",
+                "sex": "m",
+                "major": "mech-e",
+                "dormPref": [
+                    "Nason"
+                ],
+                "dorm": "Nason",
+                "year": "freshman",
+                "geo": "NY"
+            },
+            {
+                "name": "Jon Smithy",
+                "sex": "m",
+                "major": "mech-e",
+                "dormPref": [
+                    "Nason"
+                ],
+                "dorm": "",
+                "year": "freshman",
+                "geo": "NY"
+            }
+        ]
     },
     "RAHPSA1": {
         "name": "RAHPS A",
@@ -413,6 +482,43 @@
         "size": 4,
         "shared_bathroom": true,
         "year": "sophomore",
-        "occupants": []
+        "occupants": [
+            {
+                "name": "Daniel He",
+                "sex": "m",
+                "major": "comp-sci",
+                "dormPref": [],
+                "dorm": "RAHPS A",
+                "year": "sophomore",
+                "geo": "NY"
+            },
+            {
+                "name": "Jack Sherick",
+                "sex": "m",
+                "major": "comp-sci",
+                "dormPref": [],
+                "dorm": "",
+                "year": "sophomore",
+                "geo": "CA"
+            },
+            {
+                "name": "Daniel He",
+                "sex": "m",
+                "major": "comp-sci",
+                "dormPref": [],
+                "dorm": "",
+                "year": "sophomore",
+                "geo": "NY"
+            },
+            {
+                "name": "Jack Sherick",
+                "sex": "m",
+                "major": "comp-sci",
+                "dormPref": [],
+                "dorm": "",
+                "year": "sophomore",
+                "geo": "CA"
+            }
+        ]
     }
 }

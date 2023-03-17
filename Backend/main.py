@@ -37,7 +37,7 @@ if __name__ == "__main__":
     
     s = ["m", "f"]
     
-    for i in range(100):
+    for i in range(200):
         
         name = names[random.randrange(0, len(names))]
         sex = s[random.randrange(0, 2)]
@@ -53,7 +53,7 @@ if __name__ == "__main__":
             "geo": state
         }
 
-        print(sort.firstSearch(data, randStudent))
+        #print(sort.firstSearch(data, randStudent))
 
     with open("test.json", "w") as out:
         json.dump(data, out, indent=4)
