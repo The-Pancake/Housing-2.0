@@ -1,22 +1,16 @@
-import { useState } from "react";
-import "./App.css";
-import Landing from "./landing.jsx";
-import Homepage from "./homepage";
-import Dorm from "./dorm.jsx";
+import React from 'react';
 
-function App() {
-  const [showHomepage, setShowHomepage] = useState(false);
-  const [showDorm, setShowDorm] = useState(false);
+const DormGrid = ({ dorms }) => {
+  return (
+    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gridTemplateRows: 'repeat(10, auto)', gridGap: '10px' }}>
+      {dorms.map(dorm => (
+        <div key={dorm.id} style={{ border: '1px solid #ccc', padding: '10px' }}>
+          <h2>{dorm.name}</h2>
+          <p>{dorm.description}</p>
+        </div>
+      ))}
+    </div>
+  );
+};
 
-  const handleButtonClick = () => {
-    setShowHomepage(true);
-  };
-
-  const handleDormClick = () => {
-    setShowDorm(true);
-  };
-
-
-}
-
-export default Dorms;
+export default Dorm;
