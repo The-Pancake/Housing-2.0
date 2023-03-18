@@ -24,9 +24,9 @@ def ideal_split_search(group_list,group_preferences,campus):
       if campus[dorm][room]["size"] != len(group1) or len(campus[dorm][room]["Occupants"]) > 0: 
         continue
       else:
-        if campus[dorm][room]["shared_bathroom"] != False:
+        if campus[dorm][room]["shared_bathroom"] == True:
           connected_room = campus[dorm][room]["shared_bathroom"]
-          if campus[dorm][connected_room]["size"] == len(group2) or len(campus[dorm][room]["Occupants"]) > 0:
+          if campus[dorm][connected_room]["size"] == len(group2) or len(campus[dorm][room]["Occupants"]) == 0:
             campus[dorm][room]["Occupants"] = copy.deepcopy(group1)
             campus[dorm][room]["Occupants"] = copy.deepcopy(group2)
             a = open('C:/Users/dongm2/Documents/RPI/Personal_projects/Rcos/objects_changed.json', 'w')
