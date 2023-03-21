@@ -11,6 +11,9 @@ const Navbar = ({ fixed, viewSelector }) => {
    const selectTabsView = useCallback(() => {
      viewSelector('tabs');
    });
+   const selectDormView = useCallback(() => {
+    viewSelector('dorm');
+  });
     return (
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
           <div className="container-fluid">
@@ -22,7 +25,7 @@ const Navbar = ({ fixed, viewSelector }) => {
                 <li className="nav-item" onClick={selectTabsView}>
                   <a className="nav-link me-3" >Application</a>
                 </li>
-                <li className="nav-item">
+                <li className="nav-item" onClick={selectDormView}>
                   <a className="nav-link me-3" >Dorms</a>
                 </li>
                 <li className="nav-item" onClick={selectContactView}>
