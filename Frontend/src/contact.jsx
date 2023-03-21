@@ -1,10 +1,11 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './contact.css';
+import './Contact.css';
 
 const ContactUs = ({hidden}) => {
   return (
     <div hidden={hidden}>
+      <h1></h1>
       <h1>Contact Us</h1>
       <form>
         <label htmlFor="name">Name:</label><br />
