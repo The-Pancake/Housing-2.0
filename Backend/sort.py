@@ -12,7 +12,7 @@ potentialRooms = []
 
 # weights rooms on a bunch of variables - to change, currently acts as just an example 
 # of what it will be
-def weightRoom(student, room):
+def weightRoom(room, student):
 
     i = 0
 
@@ -38,11 +38,11 @@ def idealSearch(student):
     bestMatch = potentialRooms[0]
     highestWeight = 0
 
-    for i in potentialRooms:
-        w = weightRoom(student, i)
+    for i in range(len(potentialRooms)):
+        w = weightRoom(potentialRooms[i], student)
         
         if (w > highestWeight):
-            bestMatch = i
+            bestMatch = potentialRooms[i]
             highestWeight= i
             
 
@@ -66,7 +66,7 @@ def isPerfectMatch(room, student):
         if (j["geo"] == student["geo"]):
             i += 1
 
-    if (i > 2):
+    if (i > 2): 
         return True
 
     return False
@@ -92,7 +92,7 @@ def firstSearch(data, student):
                     len(data[j]["occupants"]) < data[j]["size"]):
                         for k in data[j]["occupants"]:
                             if k["name"] == student["name"]:
-                                return False
+                                    return False
                     
                         if (len(data[j]["occupants"]) > 0):
 

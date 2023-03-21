@@ -22,11 +22,11 @@ if __name__ == "__main__":
     with open("5.json") as json_file:
         t5 = json.load(json_file)
 
-    print(sort.firstSearch(data, t1))
-    print(sort.firstSearch(data, t2))
-    print(sort.firstSearch(data, t3))
-    print(sort.firstSearch(data, t4))
-    print(sort.firstSearch(data, t5))
+    sort.firstSearch(data, t1)
+    sort.firstSearch(data, t2)
+    sort.firstSearch(data, t3)
+    sort.firstSearch(data, t4)
+    sort.firstSearch(data, t5)
 
     with open("names.json") as json_file:
         names = json.load(json_file)
@@ -53,8 +53,10 @@ if __name__ == "__main__":
             "geo": state
         }
 
-        #print(sort.firstSearch(data, randStudent))
+        sort.firstSearch(data, randStudent)
+        
+        with open("test.json", "w") as out:
+            json.dump(data, out, indent=4)
 
-    with open("test.json", "w") as out:
-        json.dump(data, out, indent=4)
+    
     
