@@ -23,6 +23,9 @@ def weightRoom(room, student):
         if (j["geo"] == student["geo"]):
             i += 2
 
+    if (i == 0):
+        i += 1
+
     k = 0    
     
     for j in student["dormPref"]:
@@ -61,6 +64,7 @@ def isPerfectMatch(room, student):
 
     for j in room["occupants"]:
         if (j["major"] == student["major"]):
+            print("same major")
             i += 3
 
         if (j["geo"] == student["geo"]):
@@ -90,12 +94,13 @@ def firstSearch(data, student):
                     # see if possible to move into room
                     if ((student["sex"] == data[j]["sex"] or data[j]["sex"] == "e" or data[j]["sex"] == "i") and student["year"] == data[j]["year"] and 
                     len(data[j]["occupants"]) < data[j]["size"]):
-                        for k in data[j]["occupants"]:
-                            if k["name"] == student["name"]:
-                                    return False
+                        
+                        # for k in data[j]["occupants"]:
+                        #     if k["name"] == student["name"]:
+                        #             return False
                     
                         if (len(data[j]["occupants"]) > 0):
-
+                            print(data[j], student)
                             if (isPerfectMatch(data[j], student)):
                                 data[j]["occupants"].append(student)
 
@@ -114,12 +119,13 @@ def firstSearch(data, student):
             if ((student["sex"] == data[j]["sex"] or data[j]["sex"] == "e" or data[j]["sex"] == "i") and student["year"] == data[j]["year"] and 
                 len(data[j]["occupants"]) < data[j]["size"]):
                 
-                for k in data[j]["occupants"]:
-                    if k["name"] == student["name"]:
-                        return False
+                # for k in data[j]["occupants"]:
+                #     if k["name"] == student["name"]:
+                #         return False
                 
                 if (len(data[j]["occupants"]) > 0):
                     if (isPerfectMatch(data[j], student)):
+                        print(data[j], student)
                         data[j]["occupants"].append(student)
 
                         return True

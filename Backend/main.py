@@ -32,7 +32,7 @@ if __name__ == "__main__":
         names = json.load(json_file)
     with open("states.json") as json_file:
         states = json.load(json_file)
-    with open("majors.json") as json_file:
+    with open("majorsSmaller.json") as json_file:
         majors = json.load(json_file)
     
     s = ["m", "f"]
