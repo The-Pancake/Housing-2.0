@@ -1,16 +1,89 @@
 import React from 'react';
+import { useState } from "react";
 
-const DormGrid = ({ dorms }) => {
+const DormGrid = ({ hidden }) => {
   return (
-    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gridTemplateRows: 'repeat(10, auto)', gridGap: '10px' }}>
-      {dorms.map(dorm => (
-        <div key={dorm.id} style={{ border: '1px solid #ccc', padding: '10px' }}>
-          <h2>{dorm.name}</h2>
-          <p>{dorm.description}</p>
+    <div hidden={hidden}>
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">BARH</h5>
+              <p class="card-text">Some information about BARH here</p>
+            </div>
+          </div>
         </div>
-      ))}
+        <div class="col">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">BARH</h5>
+              <p class="card-text">Some information about BARH here</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">BARH</h5>
+              <p class="card-text">Some information about BARH here</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">BARH</h5>
+              <p class="card-text">Some information about BARH here</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">BARH</h5>
+              <p class="card-text">Some information about BARH here</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">BARH</h5>
+              <p class="card-text">Some information about BARH here</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">BARH</h5>
+              <p class="card-text">Some information about BARH here</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">BARH</h5>
+              <p class="card-text">Some information about BARH here</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">BARH</h5>
+              <p class="card-text">Some information about BARH here</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
 
-export default Dorm;
+export default DormGrid;
