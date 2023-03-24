@@ -55,6 +55,12 @@ const Navbar = ({ fixed, viewSelector }) => {
               </ul>
             </div>
           </div>
+            <style jsx>{`
+        nav a:hover {
+          color: #f00;
+            cursor: pointer;
+        }
+      `}</style>
         </nav>
       );    
 }
