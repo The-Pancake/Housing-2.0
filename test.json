@@ -5,26 +5,7 @@
         "size": 2,
         "shared_bathroom": false,
         "year": "freshman",
-        "occupants": [
-            {
-                "name": "H",
-                "sex": "m",
-                "major": "Architecture",
-                "dormPref": "",
-                "year": "freshman",
-                "geo": "MD",
-                "dorm": "Warren"
-            },
-            {
-                "name": "K",
-                "sex": "m",
-                "major": "Aerospace, Aeronautical and Astronautical Engineering",
-                "dormPref": "",
-                "year": "freshman",
-                "geo": "LA",
-                "dorm": "Warren"
-            }
-        ]
+        "occupants": []
     },
     "Warren1-2": {
         "name": "Warren",
@@ -34,21 +15,12 @@
         "year": "freshman",
         "occupants": [
             {
-                "name": "G",
+                "name": "C",
                 "sex": "m",
-                "major": "Pre-Medicine/Pre-Medical Studies",
+                "major": "Philosophy",
                 "dormPref": "",
                 "year": "freshman",
-                "geo": "ID",
-                "dorm": "Warren"
-            },
-            {
-                "name": "H",
-                "sex": "m",
-                "major": "Business Administration and Management, General",
-                "dormPref": "",
-                "year": "freshman",
-                "geo": "MA",
+                "geo": "HI",
                 "dorm": "Warren"
             }
         ]
@@ -61,22 +33,26 @@
         "year": "freshman",
         "occupants": [
             {
-                "name": "H",
+                "name": "John Smith",
                 "sex": "m",
-                "major": "Multi-/Interdisciplinary Studies, General",
-                "dormPref": "",
+                "major": "mech-e",
+                "dormPref": [
+                    "Nason"
+                ],
+                "dorm": "Warren",
                 "year": "freshman",
-                "geo": "RI",
-                "dorm": "Warren"
+                "geo": "NY"
             },
             {
-                "name": "E",
+                "name": "Jon Smithy",
                 "sex": "m",
-                "major": "Economics, General",
-                "dormPref": "",
+                "major": "mech-e",
+                "dormPref": [
+                    "Nason"
+                ],
+                "dorm": "",
                 "year": "freshman",
-                "geo": "NE",
-                "dorm": "Warren"
+                "geo": "NY"
             }
         ]
     },
@@ -86,26 +62,7 @@
         "size": 2,
         "shared_bathroom": false,
         "year": "freshman",
-        "occupants": [
-            {
-                "name": "A",
-                "sex": "m",
-                "major": "Aerospace, Aeronautical and Astronautical Engineering",
-                "dormPref": "",
-                "year": "freshman",
-                "geo": "CO",
-                "dorm": "Warren"
-            },
-            {
-                "name": "C",
-                "sex": "m",
-                "major": "Economics, General",
-                "dormPref": "",
-                "year": "freshman",
-                "geo": "KS",
-                "dorm": "Warren"
-            }
-        ]
+        "occupants": []
     },
     "Warren1-5": {
         "name": "Warren",
@@ -113,26 +70,7 @@
         "size": 2,
         "shared_bathroom": false,
         "year": "freshman",
-        "occupants": [
-            {
-                "name": "H",
-                "sex": "m",
-                "major": "Digital Communication and Media/Multimedia",
-                "dormPref": "",
-                "year": "freshman",
-                "geo": "WY",
-                "dorm": "Warren"
-            },
-            {
-                "name": "B",
-                "sex": "m",
-                "major": "Multi-/Interdisciplinary Studies, General",
-                "dormPref": "",
-                "year": "freshman",
-                "geo": "AR",
-                "dorm": "Warren"
-            }
-        ]
+        "occupants": []
     },
     "Warren1-6": {
         "name": "Warren",
@@ -140,26 +78,7 @@
         "size": 2,
         "shared_bathroom": false,
         "year": "freshman",
-        "occupants": [
-            {
-                "name": "A",
-                "sex": "m",
-                "major": "Economics, General",
-                "dormPref": "",
-                "year": "freshman",
-                "geo": "GA",
-                "dorm": "Warren"
-            },
-            {
-                "name": "D",
-                "sex": "m",
-                "major": "Computer Technology/Computer Systems Technology",
-                "dormPref": "",
-                "year": "freshman",
-                "geo": "KS",
-                "dorm": "Warren"
-            }
-        ]
+        "occupants": []
     },
     "Warren1-7": {
         "name": "Warren",
@@ -167,26 +86,7 @@
         "size": 2,
         "shared_bathroom": false,
         "year": "freshman",
-        "occupants": [
-            {
-                "name": "B",
-                "sex": "m",
-                "major": "Digital Communication and Media/Multimedia",
-                "dormPref": "",
-                "year": "freshman",
-                "geo": "SD",
-                "dorm": "Warren"
-            },
-            {
-                "name": "B",
-                "sex": "m",
-                "major": "Pre-Medicine/Pre-Medical Studies",
-                "dormPref": "",
-                "year": "freshman",
-                "geo": "AZ",
-                "dorm": "Warren"
-            }
-        ]
+        "occupants": []
     },
     "Warren1-8": {
         "name": "Warren",
@@ -194,26 +94,7 @@
         "size": 2,
         "shared_bathroom": false,
         "year": "freshman",
-        "occupants": [
-            {
-                "name": "E",
-                "sex": "m",
-                "major": "Philosophy",
-                "dormPref": "",
-                "year": "freshman",
-                "geo": "MD",
-                "dorm": "Warren"
-            },
-            {
-                "name": "J",
-                "sex": "m",
-                "major": "Game and Interactive Media Design",
-                "dormPref": "",
-                "year": "freshman",
-                "geo": "TN",
-                "dorm": "Warren"
-            }
-        ]
+        "occupants": []
     },
     "Warren1-9": {
         "name": "Warren",
@@ -221,26 +102,7 @@
         "size": 2,
         "shared_bathroom": false,
         "year": "freshman",
-        "occupants": [
-            {
-                "name": "I",
-                "sex": "m",
-                "major": "Economics, General",
-                "dormPref": "",
-                "year": "freshman",
-                "geo": "SD",
-                "dorm": "Warren"
-            },
-            {
-                "name": "D",
-                "sex": "m",
-                "major": "Philosophy",
-                "dormPref": "",
-                "year": "freshman",
-                "geo": "CA",
-                "dorm": "Warren"
-            }
-        ]
+        "occupants": []
     },
     "Warren1-10": {
         "name": "Warren",
@@ -248,26 +110,7 @@
         "size": 2,
         "shared_bathroom": false,
         "year": "freshman",
-        "occupants": [
-            {
-                "name": "H",
-                "sex": "m",
-                "major": "Digital Communication and Media/Multimedia",
-                "dormPref": "",
-                "year": "freshman",
-                "geo": "VA",
-                "dorm": "Warren"
-            },
-            {
-                "name": "H",
-                "sex": "m",
-                "major": "Music Theory and Composition",
-                "dormPref": "",
-                "year": "freshman",
-                "geo": "NH",
-                "dorm": "Warren"
-            }
-        ]
+        "occupants": []
     },
     "Warren1-11": {
         "name": "Warren",
@@ -275,26 +118,7 @@
         "size": 2,
         "shared_bathroom": false,
         "year": "freshman",
-        "occupants": [
-            {
-                "name": "I",
-                "sex": "m",
-                "major": "Multi-/Interdisciplinary Studies, Other",
-                "dormPref": "",
-                "year": "freshman",
-                "geo": "HI",
-                "dorm": "Warren"
-            },
-            {
-                "name": "A",
-                "sex": "m",
-                "major": "Pre-Medicine/Pre-Medical Studies",
-                "dormPref": "",
-                "year": "freshman",
-                "geo": "WI",
-                "dorm": "Warren"
-            }
-        ]
+        "occupants": []
     },
     "Warren1-12": {
         "name": "Warren",
@@ -302,26 +126,7 @@
         "size": 2,
         "shared_bathroom": false,
         "year": "freshman",
-        "occupants": [
-            {
-                "name": "C",
-                "sex": "m",
-                "major": "Cognitive Science",
-                "dormPref": "",
-                "year": "freshman",
-                "geo": "MD",
-                "dorm": "Warren"
-            },
-            {
-                "name": "I",
-                "sex": "m",
-                "major": "Multi-/Interdisciplinary Studies, General",
-                "dormPref": "",
-                "year": "freshman",
-                "geo": "FL",
-                "dorm": "Warren"
-            }
-        ]
+        "occupants": []
     },
     "Warren1-13": {
         "name": "Warren",
@@ -329,26 +134,7 @@
         "size": 2,
         "shared_bathroom": false,
         "year": "freshman",
-        "occupants": [
-            {
-                "name": "E",
-                "sex": "m",
-                "major": "Multi-/Interdisciplinary Studies, Other",
-                "dormPref": "",
-                "year": "freshman",
-                "geo": "LA",
-                "dorm": "Warren"
-            },
-            {
-                "name": "G",
-                "sex": "m",
-                "major": "Economics, General",
-                "dormPref": "",
-                "year": "freshman",
-                "geo": "NE",
-                "dorm": "Warren"
-            }
-        ]
+        "occupants": []
     },
     "Warren1-14": {
         "name": "Warren",
@@ -356,26 +142,7 @@
         "size": 2,
         "shared_bathroom": false,
         "year": "freshman",
-        "occupants": [
-            {
-                "name": "H",
-                "sex": "m",
-                "major": "Multi-/Interdisciplinary Studies, General",
-                "dormPref": "",
-                "year": "freshman",
-                "geo": "MS",
-                "dorm": "Warren"
-            },
-            {
-                "name": "K",
-                "sex": "m",
-                "major": "Architecture",
-                "dormPref": "",
-                "year": "freshman",
-                "geo": "MD",
-                "dorm": "Warren"
-            }
-        ]
+        "occupants": []
     },
     "Warren1-15": {
         "name": "Warren",
@@ -383,26 +150,7 @@
         "size": 2,
         "shared_bathroom": false,
         "year": "freshman",
-        "occupants": [
-            {
-                "name": "E",
-                "sex": "m",
-                "major": "Communication, General",
-                "dormPref": "",
-                "year": "freshman",
-                "geo": "AL",
-                "dorm": "Warren"
-            },
-            {
-                "name": "D",
-                "sex": "m",
-                "major": "Communication Studies/Speech Communication and Rhetoric",
-                "dormPref": "",
-                "year": "freshman",
-                "geo": "OH",
-                "dorm": "Warren"
-            }
-        ]
+        "occupants": []
     },
     "Warren1-16": {
         "name": "Warren",
@@ -410,17 +158,7 @@
         "size": 1,
         "shared_bathroom": false,
         "year": "freshman",
-        "occupants": [
-            {
-                "name": "I",
-                "sex": "m",
-                "major": "Visual and Performing Arts, General",
-                "dormPref": "",
-                "year": "freshman",
-                "geo": "DE",
-                "dorm": "Warren"
-            }
-        ]
+        "occupants": []
     },
     "Warren2-1": {
         "name": "Warren",
@@ -428,26 +166,7 @@
         "size": 2,
         "shared_bathroom": false,
         "year": "freshman",
-        "occupants": [
-            {
-                "name": "C",
-                "sex": "f",
-                "major": "Business Administration and Management, General",
-                "dormPref": "",
-                "year": "freshman",
-                "geo": "AZ",
-                "dorm": "Warren"
-            },
-            {
-                "name": "G",
-                "sex": "f",
-                "major": "Philosophy",
-                "dormPref": "",
-                "year": "freshman",
-                "geo": "KS",
-                "dorm": "Warren"
-            }
-        ]
+        "occupants": []
     },
     "Warren2-2": {
         "name": "Warren",
@@ -457,21 +176,13 @@
         "year": "freshman",
         "occupants": [
             {
-                "name": "G",
+                "name": "D",
                 "sex": "f",
-                "major": "Pre-Medicine/Pre-Medical Studies",
+                "major": "Cognitive Science",
                 "dormPref": "",
                 "year": "freshman",
-                "geo": "OR",
+                "geo": "OH",
                 "dorm": "Warren"
-            },
-            {
-                "name": "H",
-                "sex": "f",
-                "major": "Pre-Medicine/Pre-Medical Studies",
-                "dormPref": "",
-                "year": "freshman",
-                "geo": "NY"
             }
         ]
     },
@@ -481,26 +192,7 @@
         "size": 2,
         "shared_bathroom": false,
         "year": "freshman",
-        "occupants": [
-            {
-                "name": "G",
-                "sex": "f",
-                "major": "Multi-/Interdisciplinary Studies, General",
-                "dormPref": "",
-                "year": "freshman",
-                "geo": "WA",
-                "dorm": "Warren"
-            },
-            {
-                "name": "E",
-                "sex": "f",
-                "major": "Visual and Performing Arts, General",
-                "dormPref": "",
-                "year": "freshman",
-                "geo": "RI",
-                "dorm": "Warren"
-            }
-        ]
+        "occupants": []
     },
     "Warren2-4": {
         "name": "Warren",
@@ -508,26 +200,7 @@
         "size": 2,
         "shared_bathroom": false,
         "year": "freshman",
-        "occupants": [
-            {
-                "name": "A",
-                "sex": "f",
-                "major": "Economics, General",
-                "dormPref": "",
-                "year": "freshman",
-                "geo": "NJ",
-                "dorm": "Warren"
-            },
-            {
-                "name": "B",
-                "sex": "f",
-                "major": "Aerospace, Aeronautical and Astronautical Engineering",
-                "dormPref": "",
-                "year": "freshman",
-                "geo": "MA",
-                "dorm": "Warren"
-            }
-        ]
+        "occupants": []
     },
     "Warren2-5": {
         "name": "Warren",
@@ -535,26 +208,7 @@
         "size": 2,
         "shared_bathroom": false,
         "year": "freshman",
-        "occupants": [
-            {
-                "name": "E",
-                "sex": "f",
-                "major": "Multi-/Interdisciplinary Studies, General",
-                "dormPref": "",
-                "year": "freshman",
-                "geo": "MN",
-                "dorm": "Warren"
-            },
-            {
-                "name": "E",
-                "sex": "f",
-                "major": "Multi-/Interdisciplinary Studies, Other",
-                "dormPref": "",
-                "year": "freshman",
-                "geo": "NH",
-                "dorm": "Warren"
-            }
-        ]
+        "occupants": []
     },
     "Warren2-6": {
         "name": "Warren",
@@ -562,26 +216,7 @@
         "size": 2,
         "shared_bathroom": false,
         "year": "freshman",
-        "occupants": [
-            {
-                "name": "H",
-                "sex": "f",
-                "major": "Digital Communication and Media/Multimedia",
-                "dormPref": "",
-                "year": "freshman",
-                "geo": "SD",
-                "dorm": "Warren"
-            },
-            {
-                "name": "H",
-                "sex": "f",
-                "major": "Communication Studies/Speech Communication and Rhetoric",
-                "dormPref": "",
-                "year": "freshman",
-                "geo": "AR",
-                "dorm": "Warren"
-            }
-        ]
+        "occupants": []
     },
     "Warren2-7": {
         "name": "Warren",
@@ -589,26 +224,7 @@
         "size": 2,
         "shared_bathroom": false,
         "year": "freshman",
-        "occupants": [
-            {
-                "name": "C",
-                "sex": "f",
-                "major": "Visual and Performing Arts, General",
-                "dormPref": "",
-                "year": "freshman",
-                "geo": "SC",
-                "dorm": "Warren"
-            },
-            {
-                "name": "K",
-                "sex": "f",
-                "major": "Aerospace, Aeronautical and Astronautical Engineering",
-                "dormPref": "",
-                "year": "freshman",
-                "geo": "LA",
-                "dorm": "Warren"
-            }
-        ]
+        "occupants": []
     },
     "Warren2-8": {
         "name": "Warren",
@@ -616,26 +232,7 @@
         "size": 2,
         "shared_bathroom": false,
         "year": "freshman",
-        "occupants": [
-            {
-                "name": "J",
-                "sex": "f",
-                "major": "Game and Interactive Media Design",
-                "dormPref": "",
-                "year": "freshman",
-                "geo": "AZ",
-                "dorm": "Warren"
-            },
-            {
-                "name": "D",
-                "sex": "f",
-                "major": "Economics, General",
-                "dormPref": "",
-                "year": "freshman",
-                "geo": "SD",
-                "dorm": "Warren"
-            }
-        ]
+        "occupants": []
     },
     "Warren2-9": {
         "name": "Warren",
@@ -643,26 +240,7 @@
         "size": 2,
         "shared_bathroom": false,
         "year": "freshman",
-        "occupants": [
-            {
-                "name": "E",
-                "sex": "f",
-                "major": "Philosophy",
-                "dormPref": "",
-                "year": "freshman",
-                "geo": "OH",
-                "dorm": "Warren"
-            },
-            {
-                "name": "J",
-                "sex": "f",
-                "major": "Visual and Performing Arts, General",
-                "dormPref": "",
-                "year": "freshman",
-                "geo": "VT",
-                "dorm": "Warren"
-            }
-        ]
+        "occupants": []
     },
     "Warren2-10": {
         "name": "Warren",
@@ -670,26 +248,7 @@
         "size": 2,
         "shared_bathroom": false,
         "year": "freshman",
-        "occupants": [
-            {
-                "name": "K",
-                "sex": "f",
-                "major": "Computer Technology/Computer Systems Technology",
-                "dormPref": "",
-                "year": "freshman",
-                "geo": "GA",
-                "dorm": "Warren"
-            },
-            {
-                "name": "D",
-                "sex": "f",
-                "major": "Aerospace, Aeronautical and Astronautical Engineering",
-                "dormPref": "",
-                "year": "freshman",
-                "geo": "FL",
-                "dorm": "Warren"
-            }
-        ]
+        "occupants": []
     },
     "Warren2-11": {
         "name": "Warren",
@@ -697,26 +256,7 @@
         "size": 2,
         "shared_bathroom": false,
         "year": "freshman",
-        "occupants": [
-            {
-                "name": "F",
-                "sex": "f",
-                "major": "Pre-Medicine/Pre-Medical Studies",
-                "dormPref": "",
-                "year": "freshman",
-                "geo": "FL",
-                "dorm": "Warren"
-            },
-            {
-                "name": "D",
-                "sex": "f",
-                "major": "Multi-/Interdisciplinary Studies, Other",
-                "dormPref": "",
-                "year": "freshman",
-                "geo": "RI",
-                "dorm": "Warren"
-            }
-        ]
+        "occupants": []
     },
     "Warren2-12": {
         "name": "Warren",
@@ -724,25 +264,7 @@
         "size": 2,
         "shared_bathroom": false,
         "year": "freshman",
-        "occupants": [
-            {
-                "name": "H",
-                "sex": "f",
-                "major": "Economics, General",
-                "dormPref": "",
-                "year": "freshman",
-                "geo": "TX",
-                "dorm": "Warren"
-            },
-            {
-                "name": "A",
-                "sex": "f",
-                "major": "Economics, General",
-                "dormPref": "",
-                "year": "freshman",
-                "geo": "GA"
-            }
-        ]
+        "occupants": []
     },
     "Warren2-13": {
         "name": "Warren",
@@ -750,26 +272,7 @@
         "size": 2,
         "shared_bathroom": false,
         "year": "freshman",
-        "occupants": [
-            {
-                "name": "A",
-                "sex": "f",
-                "major": "Cognitive Science",
-                "dormPref": "",
-                "year": "freshman",
-                "geo": "MI",
-                "dorm": "Warren"
-            },
-            {
-                "name": "D",
-                "sex": "f",
-                "major": "Business Administration and Management, General",
-                "dormPref": "",
-                "year": "freshman",
-                "geo": "MS",
-                "dorm": "Warren"
-            }
-        ]
+        "occupants": []
     },
     "Warren2-14": {
         "name": "Warren",
@@ -777,26 +280,7 @@
         "size": 2,
         "shared_bathroom": false,
         "year": "freshman",
-        "occupants": [
-            {
-                "name": "I",
-                "sex": "f",
-                "major": "Communication Studies/Speech Communication and Rhetoric",
-                "dormPref": "",
-                "year": "freshman",
-                "geo": "OR",
-                "dorm": "Warren"
-            },
-            {
-                "name": "B",
-                "sex": "f",
-                "major": "Game and Interactive Media Design",
-                "dormPref": "",
-                "year": "freshman",
-                "geo": "SC",
-                "dorm": "Warren"
-            }
-        ]
+        "occupants": []
     },
     "Warren2-15": {
         "name": "Warren",
@@ -804,26 +288,7 @@
         "size": 2,
         "shared_bathroom": false,
         "year": "freshman",
-        "occupants": [
-            {
-                "name": "G",
-                "sex": "f",
-                "major": "Economics, General",
-                "dormPref": "",
-                "year": "freshman",
-                "geo": "OH",
-                "dorm": "Warren"
-            },
-            {
-                "name": "B",
-                "sex": "f",
-                "major": "Business Administration and Management, General",
-                "dormPref": "",
-                "year": "freshman",
-                "geo": "WV",
-                "dorm": "Warren"
-            }
-        ]
+        "occupants": []
     },
     "Warren2-16": {
         "name": "Warren",
@@ -831,25 +296,7 @@
         "size": 2,
         "shared_bathroom": false,
         "year": "freshman",
-        "occupants": [
-            {
-                "name": "C",
-                "sex": "f",
-                "major": "Architecture",
-                "dormPref": "",
-                "year": "freshman",
-                "geo": "NE",
-                "dorm": "Warren"
-            },
-            {
-                "name": "I",
-                "sex": "f",
-                "major": "Architecture",
-                "dormPref": "",
-                "year": "freshman",
-                "geo": "DE"
-            }
-        ]
+        "occupants": []
     },
     "Warren2-17": {
         "name": "Warren",
@@ -865,26 +312,7 @@
         "size": 2,
         "shared_bathroom": false,
         "year": "freshman",
-        "occupants": [
-            {
-                "name": "I",
-                "sex": "f",
-                "major": "Architecture",
-                "dormPref": "",
-                "year": "freshman",
-                "geo": "GA",
-                "dorm": "Warren"
-            },
-            {
-                "name": "E",
-                "sex": "f",
-                "major": "Aerospace, Aeronautical and Astronautical Engineering",
-                "dormPref": "",
-                "year": "freshman",
-                "geo": "DE",
-                "dorm": "Warren"
-            }
-        ]
+        "occupants": []
     },
     "Warren3-2": {
         "name": "Warren",
@@ -892,26 +320,7 @@
         "size": 2,
         "shared_bathroom": false,
         "year": "freshman",
-        "occupants": [
-            {
-                "name": "B",
-                "sex": "f",
-                "major": "Aerospace, Aeronautical and Astronautical Engineering",
-                "dormPref": "",
-                "year": "freshman",
-                "geo": "WY",
-                "dorm": "Warren"
-            },
-            {
-                "name": "A",
-                "sex": "f",
-                "major": "Philosophy",
-                "dormPref": "",
-                "year": "freshman",
-                "geo": "WV",
-                "dorm": "Warren"
-            }
-        ]
+        "occupants": []
     },
     "Warren3-3": {
         "name": "Warren",
@@ -919,26 +328,7 @@
         "size": 2,
         "shared_bathroom": false,
         "year": "freshman",
-        "occupants": [
-            {
-                "name": "A",
-                "sex": "f",
-                "major": "Philosophy",
-                "dormPref": "",
-                "year": "freshman",
-                "geo": "IA",
-                "dorm": "Warren"
-            },
-            {
-                "name": "E",
-                "sex": "f",
-                "major": "Digital Communication and Media/Multimedia",
-                "dormPref": "",
-                "year": "freshman",
-                "geo": "NE",
-                "dorm": "Warren"
-            }
-        ]
+        "occupants": []
     },
     "Warren3-4": {
         "name": "Warren",
@@ -946,25 +336,7 @@
         "size": 2,
         "shared_bathroom": false,
         "year": "freshman",
-        "occupants": [
-            {
-                "name": "A",
-                "sex": "f",
-                "major": "Communication, General",
-                "dormPref": "",
-                "year": "freshman",
-                "geo": "OK",
-                "dorm": "Warren"
-            },
-            {
-                "name": "I",
-                "sex": "f",
-                "major": "Communication, General",
-                "dormPref": "",
-                "year": "freshman",
-                "geo": "TN"
-            }
-        ]
+        "occupants": []
     },
     "Warren3-5": {
         "name": "Warren",
@@ -972,26 +344,7 @@
         "size": 2,
         "shared_bathroom": false,
         "year": "freshman",
-        "occupants": [
-            {
-                "name": "I",
-                "sex": "f",
-                "major": "Digital Communication and Media/Multimedia",
-                "dormPref": "",
-                "year": "freshman",
-                "geo": "KS",
-                "dorm": "Warren"
-            },
-            {
-                "name": "G",
-                "sex": "f",
-                "major": "Visual and Performing Arts, General",
-                "dormPref": "",
-                "year": "freshman",
-                "geo": "CA",
-                "dorm": "Warren"
-            }
-        ]
+        "occupants": []
     },
     "Warren3-6": {
         "name": "Warren",
@@ -999,26 +352,7 @@
         "size": 2,
         "shared_bathroom": false,
         "year": "freshman",
-        "occupants": [
-            {
-                "name": "I",
-                "sex": "f",
-                "major": "Digital Communication and Media/Multimedia",
-                "dormPref": "",
-                "year": "freshman",
-                "geo": "WV",
-                "dorm": "Warren"
-            },
-            {
-                "name": "I",
-                "sex": "f",
-                "major": "Aerospace, Aeronautical and Astronautical Engineering",
-                "dormPref": "",
-                "year": "freshman",
-                "geo": "NY",
-                "dorm": "Warren"
-            }
-        ]
+        "occupants": []
     },
     "Warren3-7": {
         "name": "Warren",
@@ -1026,26 +360,7 @@
         "size": 2,
         "shared_bathroom": false,
         "year": "freshman",
-        "occupants": [
-            {
-                "name": "B",
-                "sex": "f",
-                "major": "Music Theory and Composition",
-                "dormPref": "",
-                "year": "freshman",
-                "geo": "WI",
-                "dorm": "Warren"
-            },
-            {
-                "name": "H",
-                "sex": "f",
-                "major": "Aerospace, Aeronautical and Astronautical Engineering",
-                "dormPref": "",
-                "year": "freshman",
-                "geo": "AK",
-                "dorm": "Warren"
-            }
-        ]
+        "occupants": []
     },
     "Warren3-8": {
         "name": "Warren",
@@ -1053,26 +368,7 @@
         "size": 2,
         "shared_bathroom": false,
         "year": "freshman",
-        "occupants": [
-            {
-                "name": "B",
-                "sex": "f",
-                "major": "Computer Technology/Computer Systems Technology",
-                "dormPref": "",
-                "year": "freshman",
-                "geo": "SC",
-                "dorm": "Warren"
-            },
-            {
-                "name": "J",
-                "sex": "f",
-                "major": "Architecture",
-                "dormPref": "",
-                "year": "freshman",
-                "geo": "WA",
-                "dorm": "Warren"
-            }
-        ]
+        "occupants": []
     },
     "Warren3-9": {
         "name": "Warren",
@@ -1080,26 +376,7 @@
         "size": 2,
         "shared_bathroom": false,
         "year": "freshman",
-        "occupants": [
-            {
-                "name": "A",
-                "sex": "f",
-                "major": "Economics, General",
-                "dormPref": "",
-                "year": "freshman",
-                "geo": "MI",
-                "dorm": "Warren"
-            },
-            {
-                "name": "I",
-                "sex": "f",
-                "major": "Music Theory and Composition",
-                "dormPref": "",
-                "year": "freshman",
-                "geo": "TX",
-                "dorm": "Warren"
-            }
-        ]
+        "occupants": []
     },
     "Warren3-10": {
         "name": "Warren",
@@ -1107,26 +384,7 @@
         "size": 2,
         "shared_bathroom": false,
         "year": "freshman",
-        "occupants": [
-            {
-                "name": "H",
-                "sex": "f",
-                "major": "Multi-/Interdisciplinary Studies, Other",
-                "dormPref": "",
-                "year": "freshman",
-                "geo": "NM",
-                "dorm": "Warren"
-            },
-            {
-                "name": "J",
-                "sex": "f",
-                "major": "Communication, General",
-                "dormPref": "",
-                "year": "freshman",
-                "geo": "DE",
-                "dorm": "Warren"
-            }
-        ]
+        "occupants": []
     },
     "Warren3-11": {
         "name": "Warren",
@@ -1134,26 +392,7 @@
         "size": 2,
         "shared_bathroom": false,
         "year": "freshman",
-        "occupants": [
-            {
-                "name": "B",
-                "sex": "f",
-                "major": "Digital Communication and Media/Multimedia",
-                "dormPref": "",
-                "year": "freshman",
-                "geo": "NH",
-                "dorm": "Warren"
-            },
-            {
-                "name": "G",
-                "sex": "f",
-                "major": "Music Theory and Composition",
-                "dormPref": "",
-                "year": "freshman",
-                "geo": "IL",
-                "dorm": "Warren"
-            }
-        ]
+        "occupants": []
     },
     "Warren3-12": {
         "name": "Warren",
@@ -1161,26 +400,7 @@
         "size": 2,
         "shared_bathroom": false,
         "year": "freshman",
-        "occupants": [
-            {
-                "name": "D",
-                "sex": "f",
-                "major": "Computer Technology/Computer Systems Technology",
-                "dormPref": "",
-                "year": "freshman",
-                "geo": "HI",
-                "dorm": "Warren"
-            },
-            {
-                "name": "E",
-                "sex": "f",
-                "major": "Multi-/Interdisciplinary Studies, General",
-                "dormPref": "",
-                "year": "freshman",
-                "geo": "NC",
-                "dorm": "Warren"
-            }
-        ]
+        "occupants": []
     },
     "Warren3-13": {
         "name": "Warren",
@@ -1188,26 +408,7 @@
         "size": 2,
         "shared_bathroom": false,
         "year": "freshman",
-        "occupants": [
-            {
-                "name": "J",
-                "sex": "f",
-                "major": "Communication, General",
-                "dormPref": "",
-                "year": "freshman",
-                "geo": "DE",
-                "dorm": "Warren"
-            },
-            {
-                "name": "C",
-                "sex": "f",
-                "major": "Game and Interactive Media Design",
-                "dormPref": "",
-                "year": "freshman",
-                "geo": "MO",
-                "dorm": "Warren"
-            }
-        ]
+        "occupants": []
     },
     "Warren3-14": {
         "name": "Warren",
@@ -1215,26 +416,7 @@
         "size": 2,
         "shared_bathroom": false,
         "year": "freshman",
-        "occupants": [
-            {
-                "name": "I",
-                "sex": "f",
-                "major": "Music Theory and Composition",
-                "dormPref": "",
-                "year": "freshman",
-                "geo": "MN",
-                "dorm": "Warren"
-            },
-            {
-                "name": "I",
-                "sex": "f",
-                "major": "Philosophy",
-                "dormPref": "",
-                "year": "freshman",
-                "geo": "OK",
-                "dorm": "Warren"
-            }
-        ]
+        "occupants": []
     },
     "Warren3-15": {
         "name": "Warren",
@@ -1242,26 +424,7 @@
         "size": 2,
         "shared_bathroom": false,
         "year": "freshman",
-        "occupants": [
-            {
-                "name": "E",
-                "sex": "f",
-                "major": "Digital Communication and Media/Multimedia",
-                "dormPref": "",
-                "year": "freshman",
-                "geo": "NC",
-                "dorm": "Warren"
-            },
-            {
-                "name": "G",
-                "sex": "f",
-                "major": "Computer Technology/Computer Systems Technology",
-                "dormPref": "",
-                "year": "freshman",
-                "geo": "ND",
-                "dorm": "Warren"
-            }
-        ]
+        "occupants": []
     },
     "Warren3-16": {
         "name": "Warren",
@@ -1269,26 +432,7 @@
         "size": 2,
         "shared_bathroom": false,
         "year": "freshman",
-        "occupants": [
-            {
-                "name": "I",
-                "sex": "f",
-                "major": "Philosophy",
-                "dormPref": "",
-                "year": "freshman",
-                "geo": "PA",
-                "dorm": "Warren"
-            },
-            {
-                "name": "H",
-                "sex": "f",
-                "major": "Multi-/Interdisciplinary Studies, General",
-                "dormPref": "",
-                "year": "freshman",
-                "geo": "CO",
-                "dorm": "Warren"
-            }
-        ]
+        "occupants": []
     },
     "Warren3-17": {
         "name": "Warren",
@@ -1337,21 +481,12 @@
         "year": "sophomore",
         "occupants": [
             {
-                "name": "Daniel He",
+                "name": "Jack Sherick",
                 "sex": "m",
                 "major": "comp-sci",
                 "dormPref": [],
                 "dorm": "RAHPS A",
                 "year": "sophomore",
-                "geo": "NY"
-            },
-            {
-                "name": "Jack Sherick",
-                "sex": "m",
-                "major": "comp-sci",
-                "dormPref": [],
-                "dorm": "",
-                "year": "sophomore",
                 "geo": "CA"
             },
             {
@@ -1371,6 +506,15 @@
                 "dorm": "",
                 "year": "sophomore",
                 "geo": "CA"
+            },
+            {
+                "name": "Daniel He",
+                "sex": "m",
+                "major": "comp-sci",
+                "dormPref": [],
+                "dorm": "",
+                "year": "sophomore",
+                "geo": "NY"
             }
         ]
     }

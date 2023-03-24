@@ -23,7 +23,7 @@ def weightRoom(room, student):
         if (j["geo"] == student["geo"]):
             i += 2
 
-    if (i == 0):
+    if (i == 0 and len(room["occupants"]) == 0):
         i += 1
 
     k = 0    
@@ -54,8 +54,6 @@ def idealSearch(student):
 
     bestMatch["occupants"].append(student)
     student["dorm"] = bestMatch["name"]
-
-    return
 
 # looks to see if two students have commonality
 def isPerfectMatch(room, student):
@@ -100,7 +98,7 @@ def firstSearch(data, student):
                         #             return False
                     
                         if (len(data[j]["occupants"]) > 0):
-                            print(data[j], student)
+                            
                             if (isPerfectMatch(data[j], student)):
                                 data[j]["occupants"].append(student)
 
@@ -111,6 +109,7 @@ def firstSearch(data, student):
                         if (len(data[j]["occupants"]) == 0):
                             potentialRooms.append(data[j])
 
+    # the case in no dorm pref, or if it couldn't find it regardless
     if (len(potentialRooms) == 0):
         dorm = data.keys()
 
@@ -124,8 +123,9 @@ def firstSearch(data, student):
                 #         return False
                 
                 if (len(data[j]["occupants"]) > 0):
+
                     if (isPerfectMatch(data[j], student)):
-                        print(data[j], student)
+                        print("test")
                         data[j]["occupants"].append(student)
 
                         return True
