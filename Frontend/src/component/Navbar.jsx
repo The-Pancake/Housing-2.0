@@ -13,7 +13,14 @@ const Navbar = ({ fixed, viewSelector }) => {
    });
    const selectDormView = useCallback(() => {
     viewSelector('dorm');
-  });
+  }
+  )
+
+  const selectProfileView = useCallback(() => {
+    viewSelector('Profile');
+  })
+  
+  ;
     return (
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
           <div className="container-fluid">
@@ -32,7 +39,7 @@ const Navbar = ({ fixed, viewSelector }) => {
                   <a className="nav-link me-3" >Contact Us</a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link me-3" >My Profile</a>
+                  <a className="nav-link me-3" onClick={selectProfileView}>My Profile</a>
                 </li>
               </ul>
               <ul className="navbar-nav ms-auto mx-auto">

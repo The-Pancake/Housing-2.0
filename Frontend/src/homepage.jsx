@@ -6,6 +6,8 @@ import './App.css';
 import { useState } from 'react';
 import Contact from './contact';
 import DormGrid from './dorm';
+import ProfileGrid from './Profile';
+
 
 export default function Homepage({ hidden }) {
   const [view, setView] = useState('home');
@@ -16,6 +18,7 @@ export default function Homepage({ hidden }) {
       <Tabs hidden={view !== 'tabs'}></Tabs>
       <Contact hidden={view !== 'contact'} />
       <DormGrid hidden={view !== 'dorm'} />
+      <ProfileGrid hidden={view !== 'Profile'} />
     </div>
   );
 }
