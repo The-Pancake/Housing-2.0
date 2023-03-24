@@ -16,8 +16,34 @@ const ContactUs = ({hidden}) => {
         <textarea id="message" name="message"></textarea><br /><br />
         <input type="submit" value="Submit" />
       </form>
+
+      <div className="container">
+        <div className="row">
+          <div className="col-md-4 col-sm-6">
+            <h3>Office Hours</h3>
+            <p>Monday-Friday: 8:30am - 4:30pm</p>
+          </div>
+          <div className="col-md-4 col-sm-6">
+            <h3>Contact Us</h3>
+            <p>Phone: (518) 276-6505</p>
+            <p>Email: union-admin@rpi.edu</p>
+          </div>
+          <div className="col-md-4 col-sm-12">
+            <h3>Visit Us</h3>
+            <p>15th Street, Rensselaer Union Room 3701</p>
+            <p>Troy, NY 12180</p>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-md-12">
+            <p>&copy; {new Date().getFullYear()} Rensselaer Union</p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
+
+
 
 export default ContactUs;

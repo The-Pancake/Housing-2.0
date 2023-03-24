@@ -4,9 +4,9 @@ import "./Profile.css";
 import profile_img from './image/profile.jpg';
 
 
-const Profile = () => {
+const Profile = ({hidden}) => {
     return ( 
-        <div className="">
+        <div className="" hidden={hidden}>
            <div className="container-fluid">
                 <div className="row bg-primary full-height">
                     <div className="col-sm-4 bg-warning p-0">
