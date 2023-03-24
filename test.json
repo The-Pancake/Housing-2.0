@@ -1353,6 +1353,24 @@
                 "dorm": "",
                 "year": "sophomore",
                 "geo": "CA"
+            },
+            {
+                "name": "Daniel He",
+                "sex": "m",
+                "major": "comp-sci",
+                "dormPref": [],
+                "dorm": "",
+                "year": "sophomore",
+                "geo": "NY"
+            },
+            {
+                "name": "Jack Sherick",
+                "sex": "m",
+                "major": "comp-sci",
+                "dormPref": [],
+                "dorm": "",
+                "year": "sophomore",
+                "geo": "CA"
             }
         ]
     }
