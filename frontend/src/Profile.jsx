@@ -56,7 +56,35 @@ const Profile = ({hidden}) => {
 
 
                     </div>
-                    <div className="col-sm-4 bg-danger">Column 3</div>
+                    <div className="col-sm-4 bg-danger">
+
+          <form className="bg-transparent">
+            <h1>Update Preferences</h1>
+            <div className="form-group">
+              <a href="/application" className="btn btn-primary btn-lg btn-block mb-3">
+                Go to Application Page
+              </a>
+            </div>
+            <div className="form-group">
+
+            </div>
+            <div className="form-group">
+              <label htmlFor="bio">Update Bio</label>
+              <textarea
+                className="form-control"
+                id="bio"
+                rows="3"
+              />
+            </div>
+            <button type="submit" className="btn btn-primary btn-lg btn-block">Update Preferences</button>
+          </form>
+
+
+                        
+
+
+
+                    </div>
                 </div>
             </div>
         </div>
