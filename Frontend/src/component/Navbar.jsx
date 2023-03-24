@@ -4,6 +4,9 @@ import React , {useCallback, useState} from 'react';
 
 const Navbar = ({ fixed, viewSelector }) => {
   const [navbarOpen, setNavbarOpen] = React.useState(false);
+  const selectRoommateView = useCallback(() => {
+      viewSelector('roommate');
+  })
 
    const selectContactView = useCallback(() => {
      viewSelector('contact');
@@ -40,6 +43,9 @@ const Navbar = ({ fixed, viewSelector }) => {
                 </li>
                 <li className="nav-item" onClick={selectProfileView}>
                   <a className="nav-link me-3">My Profile</a>
+                </li>
+                  <li className="nav-item" onClick={selectRoommateView}>
+                  <a className="nav-link me-3">Roommate</a>
                 </li>
               </ul>
               <ul className="navbar-nav ms-auto mx-auto">

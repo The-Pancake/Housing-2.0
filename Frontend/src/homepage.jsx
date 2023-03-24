@@ -7,6 +7,7 @@ import { useState } from 'react';
 import Contact from './contact';
 import DormGrid from './dorm';
 import ProfileGrid from './Profile';
+import Roommates from './roommate';
 
 
 export default function Homepage({ hidden }) {
@@ -19,6 +20,7 @@ export default function Homepage({ hidden }) {
       <Contact hidden={view !== 'contact'} />
       <DormGrid hidden={view !== 'dorm'} />
       <ProfileGrid hidden={view !== 'Profile'} />
+        <Roommates hidden={view !== 'roommate'} />
     </div>
   );
 }
