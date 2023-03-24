@@ -64,7 +64,7 @@ def isPerfectMatch(room, student):
 
     for j in room["occupants"]:
         if (j["major"] == student["major"]):
-            print("same major")
+            # print("same major")
             i += 3
 
         if (j["geo"] == student["geo"]):
@@ -114,7 +114,7 @@ def firstSearch(data, student):
     # the case in no dorm pref, or if it couldn't find it regardless
     if (len(potentialRooms) == 0):
         dorm = data.keys()
-        print(student)
+        # print(student)
         for j in dorm:
 
             if ((student["sex"] == data[j]["sex"] or data[j]["sex"] == "e" or data[j]["sex"] == "i") and student["year"] == data[j]["year"] and 
