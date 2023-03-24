@@ -11,22 +11,22 @@ if __name__ == "__main__":
     with open("test.json") as json_file:
         data = json.load(json_file)
 
-    with open("Smith.json") as json_file:
-        t1 = json.load(json_file)
-    with open("Doe.json") as json_file:
-        t2 = json.load(json_file)
-    with open("Sherick.json") as json_file:
-        t3 = json.load(json_file)
-    with open("He.json") as json_file:
-        t4 = json.load(json_file)
-    with open("Smithy.json") as json_file:
-        t5 = json.load(json_file)
+    # with open("Smith.json") as json_file:
+    #     t1 = json.load(json_file)
+    # with open("Doe.json") as json_file:
+    #     t2 = json.load(json_file)
+    # with open("Sherick.json") as json_file:
+    #     t3 = json.load(json_file)
+    # with open("He.json") as json_file:
+    #     t4 = json.load(json_file)
+    # with open("Smithy.json") as json_file:
+    #     t5 = json.load(json_file)
 
-    sort.firstSearch(data, t1)
-    sort.firstSearch(data, t2)
-    sort.firstSearch(data, t3)
-    sort.firstSearch(data, t4)
-    sort.firstSearch(data, t5)
+    # sort.firstSearch(data, t1)
+    # sort.firstSearch(data, t2)
+    # sort.firstSearch(data, t3)
+    # sort.firstSearch(data, t4)
+    # sort.firstSearch(data, t5)
 
     with open("names.json") as json_file:
         names = json.load(json_file)
@@ -55,13 +55,13 @@ if __name__ == "__main__":
 
         sort.firstSearch(data, randStudent)
 
-        s = str(i) + ".json"
+        with open("test.json", "w") as outf:
+            json.dump(data, outf, indent=4)
 
-        with open(s, "w") as out:
-            json.dump(randStudent, out, indent=4)
-        
-        with open("test.json", "w") as out:
-            json.dump(data, out, indent=4)
+        st = str(i) + ".json"
+
+        #with open(st, "w") as out:
+        #    json.dump(randStudent, out, indent=4)
 
     
     
