@@ -15,7 +15,6 @@ const Navbar = ({ fixed, viewSelector }) => {
     viewSelector('dorm');
   }
   )
-
   const selectProfileView = useCallback(() => {
     viewSelector('Profile');
   })
@@ -38,8 +37,8 @@ const Navbar = ({ fixed, viewSelector }) => {
                 <li className="nav-item" onClick={selectContactView}>
                   <a className="nav-link me-3" >Contact Us</a>
                 </li>
-                <li className="nav-item">
-                  <a className="nav-link me-3" onClick={selectProfileView}>My Profile</a>
+                <li className="nav-item" onClick={selectProfileView}>
+                  <a className="nav-link me-3">My Profile</a>
                 </li>
               </ul>
               <ul className="navbar-nav ms-auto mx-auto">
