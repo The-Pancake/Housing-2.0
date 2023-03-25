@@ -1,0 +1,29 @@
+.container {
+    max-width: 800px;
+    margin: auto;
+  }
+  
+  .accordion {
+    margin-bottom: 20px;
+  }
+  
+  .accordion-button {
+    background-color: #f8f9fa;
+    color: #212529;
+    font-weight: bold;
+  }
+  
+  .accordion-button:hover {
+    background-color: #e9ecef;
+  }
+  
+  .accordion-button:focus {
+    outline: none;
+    box-shadow: none;
+  }
+  
+  .accordion-body {
+    background-color: #f8f9fa;
+    padding: 10px 20px;
+  }
+  
