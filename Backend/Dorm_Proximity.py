@@ -1,22 +1,15 @@
 """
 Reasoning/Realization:
-
 So as a ranking from 0-10, each value in each dictionary below is representative of the relative distance that associate dorm is from the any given titular dictionary
-
 The nature of these measurements were made using what Michael and I both deemed to be the two farthest dorms as the ceiling measurement: Bryckwyck to CityStation South/West (~8,976 ft)
-
 Consequently each ranking (sans 0 ofc) is a distributed increment of the ceiling, i.e. 1 <= 897.6 ft; 2 <= 2(897.6 ft); 3 <= 3(897.6 ft) etc.
-
 *NOTE*: 897.6 ft = ~3.4 mins of walking for the average person
-
 What this allows us to do is objectively gauge the distance a student may have to walk from one dorm to the next, allowing for things such as grouping based on proximity from a given "central" dorm
 out to others in a set specified vicinity (which a short algorithm below also handles)
-
 "Don't even get me started on the amounts of Google Maps scraping that went into getting this, we're just not going to talk about that rn" --- JG
-
 """
 
-
+dorms = ['Barton',	'Bray',	'BarH',	'Cary',	'Crockett',	'Davison',	'E_Complex',	'Hall',	'Nason',	'North',	'Quad',	'Sharp',	'Warren',	'Rahps_B',	'Blitman',	'Bryckwyck',	'Colonie',	'Rahps_A',	'Stacwyck',	'City_Station_West',	'City_Station_South',	'Polytechnic']
 
 Barton_Weights = {	          'Barton' : 0,	'Bray' : 1,	'BarH' : 3,	'Cary' : 1,	'Crockett' : 1,	'Davison' : 1,	'E-Complex' : 2,	'Hall' : 1,	'Nason' : 1,	'North' : 2,	'Quad' : 2,	'Sharp' : 2,	'Warren' : 1,	'Beman and Brinsmade (Rahps B)' : 5,	'Blitman' : 5,	'Bryckwyck' : 6,	'Colonie' : 5,	'Colvin and Albright (Rahps A)' : 3,	'Stacwyck' : 5,	'City Station West' : 6,	'City Station South' : 6,	'Polytechnic' : 5}
 Bray_Weights = {	          'Barton' : 1,	'Bray' : 0,	'BarH' : 2,	'Cary' : 1,	'Crockett' : 1,	'Davison' : 1,	'E-Complex' : 3,	'Hall' : 1,	'Nason' : 1,	'North' : 3,	'Quad' : 2,	'Sharp' : 1,	'Warren' : 1,	'Beman and Brinsmade (Rahps B)' : 5,	'Blitman' : 5,	'Bryckwyck' : 6,	'Colonie' : 5,	'Colvin and Albright (Rahps A)' : 3,	'Stacwyck' : 5,	'City Station West' : 6,	'City Station South' : 6,	'Polytechnic' : 5}
