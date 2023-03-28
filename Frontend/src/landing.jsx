@@ -9,7 +9,7 @@ export default function Landing({onButtonClick} ) {
     document.body.style.backgroundImage = `url(${index_background})`;
   return (
     <div>
-      <div className="rpi_gray_logo">
+      <div className="rpi_gray_logo ">
         <img src={RPI_logo_gray} alt="RPI Logo" id="logo" />
       </div>
 
