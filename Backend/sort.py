@@ -118,7 +118,7 @@ def firstSearch(data, student):
                     
                     # see if possible to move into room
                     if ((student["sex"] == data[j]["sex"] or data[j]["sex"] == "e" or data[j]["sex"] == "i") and student["year"] == data[j]["year"] and 
-                    len(data[j]["occupants"]) < data[j]["size"]):
+                    len(data[j]["occupants"]) < data[j]["size"]) and data[j]["ra room"] == False:
                         
                         # for k in data[j]["occupants"]:
                         #     if k["name"] == student["name"]:
@@ -143,7 +143,7 @@ def firstSearch(data, student):
         for j in dorm:
 
             if ((student["sex"] == data[j]["sex"] or data[j]["sex"] == "e" or data[j]["sex"] == "i") and student["year"] == data[j]["year"] and 
-                len(data[j]["occupants"]) < data[j]["size"]):
+                len(data[j]["occupants"]) < data[j]["size"] and data[j]["ra room"] == False):
                 #print(student)
                 
                 # for k in data[j]["occupants"]:

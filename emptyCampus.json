@@ -5,7 +5,8 @@
         "size": 2,
         "shared_bathroom": false,
         "year": "freshman",
-        "occupants": []
+        "occupants": [],
+        "ra room": false
     },
     "Warren1-2": {
         "name": "Warren",
@@ -13,7 +14,8 @@
         "size": 2,
         "shared_bathroom": false,
         "year": "freshman",
-        "occupants": []
+        "occupants": [],
+        "ra room": false
     },
     "Warren1-3": {
         "name": "Warren",
@@ -21,7 +23,8 @@
         "size": 2,
         "shared_bathroom": false,
         "year": "freshman",
-        "occupants": []
+        "occupants": [],
+        "ra room": false
     },
     "Warren1-4": {
         "name": "Warren",
@@ -29,7 +32,8 @@
         "size": 2,
         "shared_bathroom": false,
         "year": "freshman",
-        "occupants": []
+        "occupants": [],
+        "ra room": false
     },
     "Warren1-5": {
         "name": "Warren",
@@ -37,7 +41,8 @@
         "size": 2,
         "shared_bathroom": false,
         "year": "freshman",
-        "occupants": []
+        "occupants": [],
+        "ra room": false
     },
     "Warren1-6": {
         "name": "Warren",
@@ -45,7 +50,8 @@
         "size": 2,
         "shared_bathroom": false,
         "year": "freshman",
-        "occupants": []
+        "occupants": [],
+        "ra room": false
     },
     "Warren1-7": {
         "name": "Warren",
@@ -53,7 +59,8 @@
         "size": 2,
         "shared_bathroom": false,
         "year": "freshman",
-        "occupants": []
+        "occupants": [],
+        "ra room": false
     },
     "Warren1-8": {
         "name": "Warren",
@@ -61,7 +68,8 @@
         "size": 2,
         "shared_bathroom": false,
         "year": "freshman",
-        "occupants": []
+        "occupants": [],
+        "ra room": false
     },
     "Warren1-9": {
         "name": "Warren",
@@ -69,7 +77,8 @@
         "size": 2,
         "shared_bathroom": false,
         "year": "freshman",
-        "occupants": []
+        "occupants": [],
+        "ra room": false
     },
     "Warren1-10": {
         "name": "Warren",
@@ -77,7 +86,8 @@
         "size": 2,
         "shared_bathroom": false,
         "year": "freshman",
-        "occupants": []
+        "occupants": [],
+        "ra room": false
     },
     "Warren1-11": {
         "name": "Warren",
@@ -85,7 +95,8 @@
         "size": 2,
         "shared_bathroom": false,
         "year": "freshman",
-        "occupants": []
+        "occupants": [],
+        "ra room": false
     },
     "Warren1-12": {
         "name": "Warren",
@@ -93,7 +104,8 @@
         "size": 2,
         "shared_bathroom": false,
         "year": "freshman",
-        "occupants": []
+        "occupants": [],
+        "ra room": false
     },
     "Warren1-13": {
         "name": "Warren",
@@ -101,7 +113,8 @@
         "size": 2,
         "shared_bathroom": false,
         "year": "freshman",
-        "occupants": []
+        "occupants": [],
+        "ra room": false
     },
     "Warren1-14": {
         "name": "Warren",
@@ -109,7 +122,8 @@
         "size": 2,
         "shared_bathroom": false,
         "year": "freshman",
-        "occupants": []
+        "occupants": [],
+        "ra room": false
     },
     "Warren1-15": {
         "name": "Warren",
@@ -117,7 +131,8 @@
         "size": 2,
         "shared_bathroom": false,
         "year": "freshman",
-        "occupants": []
+        "occupants": [],
+        "ra room": false
     },
     "Warren1-16": {
         "name": "Warren",
@@ -125,7 +140,8 @@
         "size": 1,
         "shared_bathroom": false,
         "year": "freshman",
-        "occupants": []
+        "occupants": [],
+        "ra room": true
     },
     "Warren2-1": {
         "name": "Warren",
@@ -133,7 +149,8 @@
         "size": 2,
         "shared_bathroom": false,
         "year": "freshman",
-        "occupants": []
+        "occupants": [],
+        "ra room": false
     },
     "Warren2-2": {
         "name": "Warren",
@@ -141,7 +158,8 @@
         "size": 2,
         "shared_bathroom": false,
         "year": "freshman",
-        "occupants": []
+        "occupants": [],
+        "ra room": false
     },
     "Warren2-3": {
         "name": "Warren",
@@ -149,7 +167,8 @@
         "size": 2,
         "shared_bathroom": false,
         "year": "freshman",
-        "occupants": []
+        "occupants": [],
+        "ra room": false
     },
     "Warren2-4": {
         "name": "Warren",
@@ -157,7 +176,8 @@
         "size": 2,
         "shared_bathroom": false,
         "year": "freshman",
-        "occupants": []
+        "occupants": [],
+        "ra room": false
     },
     "Warren2-5": {
         "name": "Warren",
@@ -165,7 +185,8 @@
         "size": 2,
         "shared_bathroom": false,
         "year": "freshman",
-        "occupants": []
+        "occupants": [],
+        "ra room": false
     },
     "Warren2-6": {
         "name": "Warren",
@@ -173,7 +194,8 @@
         "size": 2,
         "shared_bathroom": false,
         "year": "freshman",
-        "occupants": []
+        "occupants": [],
+        "ra room": false
     },
     "Warren2-7": {
         "name": "Warren",
@@ -181,7 +203,8 @@
         "size": 2,
         "shared_bathroom": false,
         "year": "freshman",
-        "occupants": []
+        "occupants": [],
+        "ra room": false
     },
     "Warren2-8": {
         "name": "Warren",
@@ -189,7 +212,8 @@
         "size": 2,
         "shared_bathroom": false,
         "year": "freshman",
-        "occupants": []
+        "occupants": [],
+        "ra room": false
     },
     "Warren2-9": {
         "name": "Warren",
@@ -197,7 +221,8 @@
         "size": 2,
         "shared_bathroom": false,
         "year": "freshman",
-        "occupants": []
+        "occupants": [],
+        "ra room": false
     },
     "Warren2-10": {
         "name": "Warren",
@@ -205,7 +230,8 @@
         "size": 2,
         "shared_bathroom": false,
         "year": "freshman",
-        "occupants": []
+        "occupants": [],
+        "ra room": false
     },
     "Warren2-11": {
         "name": "Warren",
@@ -213,7 +239,8 @@
         "size": 2,
         "shared_bathroom": false,
         "year": "freshman",
-        "occupants": []
+        "occupants": [],
+        "ra room": false
     },
     "Warren2-12": {
         "name": "Warren",
@@ -221,7 +248,8 @@
         "size": 2,
         "shared_bathroom": false,
         "year": "freshman",
-        "occupants": []
+        "occupants": [],
+        "ra room": false
     },
     "Warren2-13": {
         "name": "Warren",
@@ -229,7 +257,8 @@
         "size": 2,
         "shared_bathroom": false,
         "year": "freshman",
-        "occupants": []
+        "occupants": [],
+        "ra room": false
     },
     "Warren2-14": {
         "name": "Warren",
@@ -237,7 +266,8 @@
         "size": 2,
         "shared_bathroom": false,
         "year": "freshman",
-        "occupants": []
+        "occupants": [],
+        "ra room": false
     },
     "Warren2-15": {
         "name": "Warren",
@@ -245,15 +275,17 @@
         "size": 2,
         "shared_bathroom": false,
         "year": "freshman",
-        "occupants": []
+        "occupants": [],
+        "ra room": false
     },
     "Warren2-16": {
         "name": "Warren",
         "sex": "f",
-        "size": 2,
+        "size": 1,
         "shared_bathroom": false,
         "year": "freshman",
-        "occupants": []
+        "occupants": [],
+        "ra room": true
     },
     "Warren2-17": {
         "name": "Warren",
@@ -261,7 +293,8 @@
         "size": 2,
         "shared_bathroom": false,
         "year": "RA",
-        "occupants": []
+        "occupants": [],
+        "ra room": false
     },
     "Warren3-1": {
         "name": "Warren",
@@ -269,7 +302,8 @@
         "size": 2,
         "shared_bathroom": false,
         "year": "freshman",
-        "occupants": []
+        "occupants": [],
+        "ra room": false
     },
     "Warren3-2": {
         "name": "Warren",
@@ -277,7 +311,8 @@
         "size": 2,
         "shared_bathroom": false,
         "year": "freshman",
-        "occupants": []
+        "occupants": [],
+        "ra room": false    
     },
     "Warren3-3": {
         "name": "Warren",
@@ -285,7 +320,8 @@
         "size": 2,
         "shared_bathroom": false,
         "year": "freshman",
-        "occupants": []
+        "occupants": [],
+        "ra room": false
     },
     "Warren3-4": {
         "name": "Warren",
@@ -293,7 +329,8 @@
         "size": 2,
         "shared_bathroom": false,
         "year": "freshman",
-        "occupants": []
+        "occupants": [],
+        "ra room": false
     },
     "Warren3-5": {
         "name": "Warren",
@@ -301,7 +338,8 @@
         "size": 2,
         "shared_bathroom": false,
         "year": "freshman",
-        "occupants": []
+        "occupants": [],
+        "ra room": false
     },
     "Warren3-6": {
         "name": "Warren",
@@ -309,7 +347,8 @@
         "size": 2,
         "shared_bathroom": false,
         "year": "freshman",
-        "occupants": []
+        "occupants": [],
+        "ra room": false
     },
     "Warren3-7": {
         "name": "Warren",
@@ -317,7 +356,8 @@
         "size": 2,
         "shared_bathroom": false,
         "year": "freshman",
-        "occupants": []
+        "occupants": [],
+        "ra room": false
     },
     "Warren3-8": {
         "name": "Warren",
@@ -325,7 +365,8 @@
         "size": 2,
         "shared_bathroom": false,
         "year": "freshman",
-        "occupants": []
+        "occupants": [],
+        "ra room": false
     },
     "Warren3-9": {
         "name": "Warren",
@@ -333,7 +374,8 @@
         "size": 2,
         "shared_bathroom": false,
         "year": "freshman",
-        "occupants": []
+        "occupants": [],
+        "ra room": false
     },
     "Warren3-10": {
         "name": "Warren",
@@ -341,7 +383,8 @@
         "size": 2,
         "shared_bathroom": false,
         "year": "freshman",
-        "occupants": []
+        "occupants": [],
+        "ra room": false
     },
     "Warren3-11": {
         "name": "Warren",
@@ -349,7 +392,8 @@
         "size": 2,
         "shared_bathroom": false,
         "year": "freshman",
-        "occupants": []
+        "occupants": [],
+        "ra room": false
     },
     "Warren3-12": {
         "name": "Warren",
@@ -357,7 +401,8 @@
         "size": 2,
         "shared_bathroom": false,
         "year": "freshman",
-        "occupants": []
+        "occupants": [],
+        "ra room": false
     },
     "Warren3-13": {
         "name": "Warren",
@@ -365,7 +410,8 @@
         "size": 2,
         "shared_bathroom": false,
         "year": "freshman",
-        "occupants": []
+        "occupants": [],
+        "ra room": false
     },
     "Warren3-14": {
         "name": "Warren",
@@ -373,7 +419,8 @@
         "size": 2,
         "shared_bathroom": false,
         "year": "freshman",
-        "occupants": []
+        "occupants": [],
+        "ra room": false
     },
     "Warren3-15": {
         "name": "Warren",
@@ -381,15 +428,17 @@
         "size": 2,
         "shared_bathroom": false,
         "year": "freshman",
-        "occupants": []
+        "occupants": [],
+        "ra room": false
     },
     "Warren3-16": {
         "name": "Warren",
         "sex": "f",
-        "size": 2,
+        "size": 1,
         "shared_bathroom": false,
         "year": "freshman",
-        "occupants": []
+        "occupants": [],
+        "ra room": true
     },
     "Warren3-17": {
         "name": "Warren",
@@ -397,7 +446,8 @@
         "size": 2,
         "shared_bathroom": false,
         "year": "RA",
-        "occupants": []
+        "occupants": [],
+        "ra room": false
     },
     "Nason1-1": {
         "name": "Nason",
@@ -405,7 +455,8 @@
         "size": 2,
         "shared_bathroom": false,
         "year": "freshman",
-        "occupants": []
+        "occupants": [],
+        "ra room": false
     },
     "RAHPSA1": {
         "name": "RAHPS A",
@@ -413,6 +464,7 @@
         "size": 4,
         "shared_bathroom": true,
         "year": "sophomore",
-        "occupants": []
+        "occupants": [],
+        "ra room": false
     }
 }
