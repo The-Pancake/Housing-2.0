@@ -23,7 +23,7 @@ def weightRoom(room, student):
         if (j["geo"] == student["geo"]):
             i += 2
 
-    if (i == 0):
+    if (i == 0 and len(room["occupants"]) == 0):
         i += 1
 
     k = 0    
@@ -32,6 +32,7 @@ def weightRoom(room, student):
         if (j == room["name"]):
             i += 5 - k
             k += 1
+            print("test")
 
     return i
 

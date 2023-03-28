@@ -60,8 +60,8 @@ if __name__ == "__main__":
 
         st = str(i) + ".json"
 
-        with open(st, "w") as out:
-            json.dump(randStudent, out, indent=4)
+        #with open(st, "w") as out:
+        #    json.dump(randStudent, out, indent=4)
 
     
     
