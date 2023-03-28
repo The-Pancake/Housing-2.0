@@ -21,6 +21,9 @@ const Navbar = ({ fixed, viewSelector }) => {
   const selectProfileView = useCallback(() => {
     viewSelector('Profile');
   })
+    const selectRoommatePairingView = useCallback(() => {
+    viewSelector('roommatePairing');
+    })
   
   ;
     return (
@@ -45,6 +48,9 @@ const Navbar = ({ fixed, viewSelector }) => {
                 </li>
                   <li className="nav-item" onClick={selectRoommateView}>
                   <a className="nav-link me-3">Roommate</a>
+                </li>
+                    <li className="nav-item" onClick={selectRoommatePairingView}>
+                    <a className="nav-link me-3">Pairing System</a>
                 </li>
               </ul>
               <ul className="navbar-nav ms-auto mx-auto">

@@ -7,7 +7,7 @@ const ContactUs = ({hidden}) => {
     <div hidden={hidden}>
       <h1></h1>
       <h1>Contact Us</h1>
-      <form>
+      <form className={"contact-form"}>
         <label htmlFor="name">Name:</label><br />
         <input type="text" id="name" name="name" /><br />
         <label htmlFor="email">Email:</label><br />

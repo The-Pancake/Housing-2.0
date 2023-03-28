@@ -8,7 +8,7 @@ import Contact from './contact';
 import DormGrid from './dorm';
 import ProfileGrid from './Profile';
 import Roommates from './roommate';
-
+import RoommatePairing from './roommatePairing';
 
 export default function Homepage({ hidden }) {
   const [view, setView] = useState('home');
@@ -21,6 +21,7 @@ export default function Homepage({ hidden }) {
       <DormGrid hidden={view !== 'dorm'} />
       <ProfileGrid hidden={view !== 'Profile'} />
         <Roommates hidden={view !== 'roommate'} />
+        <RoommatePairing hidden={view !== 'roommatePairing'} />
     </div>
   );
 }

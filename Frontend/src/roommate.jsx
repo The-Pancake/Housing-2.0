@@ -31,7 +31,12 @@ const Roommates = ({hidden}) => {
   ];
 
   return (
-    <div className="container" style={{ maxWidth: '90%' }} hidden={hidden}>
+    <div className="container" style={{
+      backgroundColor: '#f8f9fa',
+      borderRadius: '10px',
+      marginBottom: '5%',
+      marginTop: '5%',
+    }} hidden={hidden}>
       <h1 className="my-4">Personal Information</h1>
       <div className="card mb-4" style={{ width: '100%' }}>
         <div className="card-body">
