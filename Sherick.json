@@ -1,9 +1,10 @@
 {
     "name": "Jack Sherick",
     "sex": "m",
-    "major": "comp-sci",
+    "major": "Computer Science",
     "dormPref": [],
-    "dorm": "",
     "year": "sophomore",
-    "geo": "CA"
+    "geo": "CA",
+    "sleepHours": [12, 8],
+    "musicPreference": "Rock"
 }

@@ -34,6 +34,8 @@ if __name__ == "__main__":
         states = json.load(json_file)
     with open("majorsSmaller.json") as json_file:
         majors = json.load(json_file)
+    with open("music.json") as json_file:
+        music = json.load(json_file)
     
     s = ["m", "f"]
     
@@ -44,13 +46,28 @@ if __name__ == "__main__":
         major = majors[random.randrange(0, len(majors))]
         state = states[random.randrange(0, len(states))]
 
+        
+        hours1 = [8, 9, 10, 11, 12, 1, 2]
+        hours2 = [5, 6, 7, 8, 9, 10]
+
+        sleepHours = [hours1[random.randrange(0, len(hours1))], hours2[random.randrange(0, len(hours2))]]
+
+        musicPrefernce = []
+
+        for j in range(random.randrange(0, 3)):
+            k = random.randrange(0, len(music))
+            if (music[k] not in musicPrefernce):
+                musicPrefernce.append(music[k])        
+
         randStudent = {
             "name": name,
             "sex": sex,
             "major": major,
             "dormPref": "",
             "year": "freshman",
-            "geo": state
+            "geo": state,
+            "sleepHours": sleepHours,
+            "musicPreference": musicPrefernce
         }
 
         sort.firstSearch(data, randStudent)

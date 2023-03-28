@@ -18,10 +18,18 @@ def weightRoom(room, student):
 
     for j in room["occupants"]:
         if (j["major"] == student["major"]):
-            i += 4
+            i += 5
 
         if (j["geo"] == student["geo"]):
-            i += 2
+            i += 3
+        
+        for k in range(2):
+            if (j["sleepHours"][k] == student["sleepHours"][k] or j["sleepHours"][k] + 1 == student["sleepHours"] or j["sleepHours"][k] - 1 == student["sleepHours"]):
+                i += 1
+        
+        for k in j["musicPreference"]:
+            if (k in student["musicPreference"]):
+                i += 1
 
     if (i == 0 and len(room["occupants"]) == 0):
         i += 1
@@ -32,7 +40,6 @@ def weightRoom(room, student):
         if (j == room["name"]):
             i += 5 - k
             k += 1
-            print("test")
 
     return i
 
@@ -143,3 +150,8 @@ def firstSearch(data, student):
         idealSearch(student)
     else:
         return False
+    
+
+def groupSort(students):
+
+    return
