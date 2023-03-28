@@ -8,14 +8,13 @@ const DormGrid = ({ hidden }) => {
       .then(response => response.json())
       .then(data => setDorms(data))
       .catch(error => console.error(error));
-      console.log(dorms);
   }, []);
 
   return (
     <div hidden={hidden}>
       {dorms.length === 0 && <p>Loading dorm data...</p>}
       {dorms.length > 0 && (
-        <>
+        <div className="row row-cols-1 row-cols-md-3 g-4">
           {dorms.map(dorm => (
             <div className="col" key={dorm.name}>
               <div className="card h-100">
@@ -26,7 +25,7 @@ const DormGrid = ({ hidden }) => {
               </div>
             </div>
           ))}
-        </>
+        </div>
       )}
     </div>
   );
