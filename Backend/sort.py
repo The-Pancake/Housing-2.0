@@ -30,6 +30,10 @@ def weightRoom(room, student):
         for k in j["musicPreference"]:
             if (k in student["musicPreference"]):
                 i += 1
+        
+        for k in j["hobbies"]:
+            if (k in student["musicPreference"]):
+                i += 1
 
     if (i == 0 and len(room["occupants"]) == 0):
         i += 1
@@ -73,12 +77,25 @@ def isPerfectMatch(room, student):
     for j in room["occupants"]:
         if (j["major"] == student["major"]):
             # print("same major")
-            i += 3
+            i += 5
 
         if (j["geo"] == student["geo"]):
             i += 1
 
-    if (i > 2): 
+        for k in range(2):
+            if (j["sleepHours"][k] == student["sleepHours"][k] or j["sleepHours"][k] + 1 == student["sleepHours"] or j["sleepHours"][k] - 1 == student["sleepHours"]):
+                i += 1
+        
+        for k in j["musicPreference"]:
+            if (k in student["musicPreference"]):
+                i += 1
+        
+        for k in j["hobbies"]:
+            if (k in student["musicPreference"]):
+                i += 1
+        
+
+    if (i > 4): 
         return True
 
     return False
