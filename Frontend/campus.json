@@ -76,7 +76,7 @@
         "Study Room(s)":" Yes ",
         "Wireless":" Yes "
       },
-      "nearby":"BarH Dining Hall, Houston Playhouse, ECAV",
+      "nearby":"BarH Dining Hall, Houston Playhouse, ECAV"
     },
     {
       "id":"bray",
@@ -157,7 +157,7 @@
         "Study Room(s)":" Yes ",
         "Wireless":" Yes "
       },
-      "nearby":"Common Dining Hall, RPI Union, Mueller Center",
+      "nearby":"Common Dining Hall, RPI Union, Mueller Center"
     },
     {
       "id":"davison",
@@ -236,7 +236,7 @@
         "Study Room(s)":" No ",
         "Wireless":" Yes "
       },
-      "nearby":"Common Dining Hall, RPI Union, Mueller Center",
+      "nearby":"Common Dining Hall, RPI Union, Mueller Center"
     },
     {
       "id":"barton",
@@ -314,7 +314,7 @@
         "Study Room(s)":" Yes ",
         "Wireless":" Yes "
       },
-      "nearby":"Common Dining Hall, RPI Union, Mueller Center",
+      "nearby":"Common Dining Hall, RPI Union, Mueller Center"
     },
     {
       "id":"cary",
@@ -395,7 +395,7 @@
         "Study Room(s)":" Yes ",
         "Wireless":" Yes "
       },
-      "nearby":"Common Dining Hall, RPI Union, Mueller Center",
+      "nearby":"Common Dining Hall, RPI Union, Mueller Center"
     },
     {
       "id":"crockett",
@@ -476,7 +476,7 @@
         "Study Room(s)":" Yes ",
         "Wireless":" Yes "
       },
-      "nearby":"Common Dining Hall, RPI Union, Mueller Center",
+      "nearby":"Common Dining Hall, RPI Union, Mueller Center"
     },
     {
       "id":"ecomplex",
@@ -555,7 +555,7 @@
         "Study Room(s)":" No ",
         "Wireless":" Yes "
       },
-      "nearby":"Russell Sage Dining Hall",
+      "nearby":"Russell Sage Dining Hall"
     },
     {
       "id":"hall",
@@ -636,7 +636,7 @@
         "Study Room(s)":" Yes ",
         "Wireless":" Yes "
       },
-      "nearby":"Common Dining Hall, RPI Union, Mueller Center",
+      "nearby":"Common Dining Hall, RPI Union, Mueller Center"
     },
     {
       "id":"nason",
@@ -720,7 +720,7 @@
         "Study Room(s)":" Yes ",
         "Wireless":" Yes "
       },
-      "nearby":"Common Dining Hall, RPI Union, Mueller Center",
+      "nearby":"Common Dining Hall, RPI Union, Mueller Center"
     },
     {
       "id":"north",
@@ -798,7 +798,7 @@
         "Study Room(s)":" Yes ",
         "Wireless":" Yes "
       },
-      "nearby":"Russell Sage Dining Hall",
+      "nearby":"Russell Sage Dining Hall"
     },
     {
       "id":"warren",
@@ -878,7 +878,7 @@
         "Study Room(s)":" Yes ",
         "Wireless":" Yes "
       },
-      "nearby":"Common Dining Hall, RPI Union, Mueller Center",
+      "nearby":"Common Dining Hall, RPI Union, Mueller Center"
     },
     {
       "id":"sharp",
@@ -952,7 +952,7 @@
         "Study Room(s)":" Yes ",
         "Wireless":" Yes "
       },
-      "nearby":"Common Dining Hall, RPI Union, Mueller Center",
+      "nearby":"Common Dining Hall, RPI Union, Mueller Center"
     }
   ]
 }
