@@ -42,10 +42,10 @@ const RoommatePairing = ({ hidden }) => {
 
   const currentQuestion = questions[progress];
   return (
-      <div hidden={hidden} className="container">
+      <div hidden={hidden}>
         <div className="row">
           <div className="col-lg-8 offset-lg-2">
-            <div className="progress mt-2 mb-2">
+            <div className="progress mt-5 mb-5">
               <div
                   className="progress-bar"
                   role="progressbar"
@@ -56,7 +56,7 @@ const RoommatePairing = ({ hidden }) => {
               ></div>
             </div>
             {currentQuestion && (
-                <Form>
+                <Form className='mt-5 mb-5'>
                   <Form.Group>
                     <Form.Label>{currentQuestion.text}</Form.Label>
                     {currentQuestion.choices.map((choice) => (
