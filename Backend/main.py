@@ -8,7 +8,7 @@ import random
 
 if __name__ == "__main__":
     
-    with open("test.json") as json_file:
+    with open("Backend/json/test.json") as json_file:
         data = json.load(json_file)
 
     # with open("Smith.json") as json_file:
@@ -28,15 +28,15 @@ if __name__ == "__main__":
     # sort.firstSearch(data, t4)
     # sort.firstSearch(data, t5)
 
-    with open("names.json") as json_file:
+    with open("Backend/json/names.json") as json_file:
         names = json.load(json_file)
-    with open("states.json") as json_file:
+    with open("Backend/json/states.json") as json_file:
         states = json.load(json_file)
-    with open("majorsSmaller.json") as json_file:
+    with open("Backend/json/majors.json") as json_file:
         majors = json.load(json_file)
-    with open("music.json") as json_file:
+    with open("Backend/json/music.json") as json_file:
         music = json.load(json_file)
-    with open("hobbies.json") as json_file:
+    with open("Backend/json/hobbies.json") as json_file:
         hobbies = json.load(json_file)
     
     s = ["m", "f"]
@@ -84,7 +84,7 @@ if __name__ == "__main__":
 
         sort.firstSearch(data, randStudent)
 
-        with open("test.json", "w") as outf:
+        with open("Backend/json/test.json", "w") as outf:
             json.dump(data, outf, indent=4)
 
         st = str(i) + ".json"

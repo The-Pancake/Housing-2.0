@@ -1,9 +1,0 @@
-{
-    "name": "John Smith",
-    "sex": "m",
-    "major": "mech-e",
-    "dormPref": ["Nason"],
-    "dorm": "",
-    "year": "freshman",
-    "geo": "NY"
-}
