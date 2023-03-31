@@ -7,6 +7,7 @@ def check_Year(student1,student2):
         return True
     return False
 
+
 #this is so unbelievabley inefficent, i'm figuring out a way to make it better
 def check_groupSize(group, campus, building, floor, room):
     for building in campus:
@@ -26,3 +27,17 @@ def bestSearch(group,room):
             if(i["size"] == gs[1]):
                 for j in group['group']:
                     occupants.append(gs[0])
+
+class Rooms:
+    def __init__(room, building, gender, num, size, bathroom, year, occupants):
+        room.building = building
+        room.gender = gender
+        room.num = num
+        room.size = size
+        room.bathroom = bathroom
+        room.year = year
+        room.occupants = occupants
+
+def bestSearch():
+    return
+
