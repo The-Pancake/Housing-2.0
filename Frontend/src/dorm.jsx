@@ -8,6 +8,7 @@ const DormGrid = ({ hidden }) => {
       .then(response => response.json())
       .then(data => setDorms(data))
       .catch(error => console.error(error));
+      console.log(dorms);
 
   }, []);
 
