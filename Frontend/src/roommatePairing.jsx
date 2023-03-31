@@ -42,23 +42,38 @@ const RoommatePairing = ({ hidden }) => {
 
   const currentQuestion = questions[progress];
   return (
-    <div hidden={hidden}>
-      <ProgressBar now={progress / questions.length * 100} />
-      {currentQuestion && (
-        <Form>
-          <Form.Label>{currentQuestion.text}</Form.Label>
-          {currentQuestion.choices.map((choice) => (
-            <Form.Check
-              type="radio"
-              label={choice}
-              name="answer"
-              onChange={() => handleAnswer(choice)}
-            />
-          ))}
-        </Form>
-      )}
-      <Button onClick={handleRedo}>Redo</Button>
-    </div>
+      <div hidden={hidden}>
+        <div className="row">
+          <div className="col-lg-8 offset-lg-2">
+            <div className="progress mt-5 mb-5">
+              <div
+                  className="progress-bar"
+                  role="progressbar"
+                  style={{width: `${(progress / questions.length) * 100}%`}}
+                  aria-valuenow={progress}
+                  aria-valuemin="0"
+                  aria-valuemax={questions.length}
+              ></div>
+            </div>
+            {currentQuestion && (
+                <Form className='mt-5 mb-5'>
+                  <Form.Group>
+                    <Form.Label>{currentQuestion.text}</Form.Label>
+                    {currentQuestion.choices.map((choice) => (
+                        <Form.Check
+                            type="radio"
+                            label={choice}
+                            name="answer"
+                            onChange={() => handleAnswer(choice)}
+                        />
+                    ))}
+                  </Form.Group>
+                </Form>
+            )}
+            <Button onClick={handleRedo} variant="primary">Redo</Button>
+          </div>
+        </div>
+      </div>
   );
 };
 
