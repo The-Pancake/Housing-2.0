@@ -3,7 +3,7 @@
 # up the scale slowly and compare data structues with whatever else people write
 
 import json
-import sort
+import sortSingles
 import random
 
 if __name__ == "__main__":
@@ -82,7 +82,7 @@ if __name__ == "__main__":
             "hobbies": studentHobbies
         }
 
-        sort.firstSearch(data, randStudent)
+        sortSingles.firstSearch(data, randStudent)
 
         with open("Backend/json/test.json", "w") as outf:
             json.dump(data, outf, indent=4)
@@ -91,6 +91,3 @@ if __name__ == "__main__":
 
         #with open(st, "w") as out:
         #    json.dump(randStudent, out, indent=4)
-
-    
-    
