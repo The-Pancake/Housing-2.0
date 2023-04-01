@@ -7,6 +7,8 @@ import copy
 
 '''
 Will try to search for rooms with connected bathrooms in preferred dorms of the group preference
+
+NOTE: In this case "campus" is the dictionary we will modify to put a student into a room
 '''
 def ideal_split_search(group_list,group_preferences,campus):
   group_size = len(group_list)
@@ -29,8 +31,8 @@ def ideal_split_search(group_list,group_preferences,campus):
           if campus[dorm][connected_room]["size"] == len(group2) or len(campus[dorm][room]["Occupants"]) == 0:
             campus[dorm][room]["Occupants"] = copy.deepcopy(group1)
             campus[dorm][room]["Occupants"] = copy.deepcopy(group2)
-            a = open('C:/Users/dongm2/Documents/RPI/Personal_projects/Rcos/objects_changed.json', 'w')
-            json.dump(campus,a, indent = 2)
-            a.close()
-            return 1
-  return 0
+            # a = open('C:/Users/dongm2/Documents/RPI/Personal_projects/Rcos/objects_changed.json', 'w')
+            # json.dump(campus,a, indent = 2)
+            # a.close()
+            return True
+  return False

@@ -29,8 +29,27 @@ def best_split_search(group_list,campus):
           if campus[dorm][connected_room]["size"] == len(group2) or len(campus[dorm][room]["Occupants"]) == 0:
             campus[dorm][room]["Occupants"] = copy.deepcopy(group1)
             campus[dorm][room]["Occupants"] = copy.deepcopy(group2)
-            a = open('C:/Users/dongm2/Documents/RPI/Personal_projects/Rcos/objects_changed.json', 'w')
-            json.dump(campus,a, indent = 2)
-            a.close()
-            return 1
-  return 0
+            # a = open('C:/Users/dongm2/Documents/RPI/Personal_projects/Rcos/objects_changed.json', 'w')
+            # json.dump(campus,a, indent = 2)
+            # a.close()
+            return True
+  return False
+
+if __name__ == '__main__':
+  # Things to test for:
+  #   - if all rooms are empty
+  #   - if all rooms are Full
+  #   - if some rooms are Full
+  #   - if no rooms have a shared bathroom? (may created a list of dorms that have shared bathroom)
+  #   NOTE: hierarchy
+            # -search for full group (preferences)
+            # -search split for group (to potentially find housing in their preferences)
+            # -search for full group (no preferences)
+
+            # full group
+            # split group
+            # near group
+            # near building group
+
+
+
