@@ -44,45 +44,34 @@ const Profile = ({hidden}) => {
                                 <input type="checkbox" id="item5" />
                                 <label htmlFor="item5">Quiet</label>
                             </li>
-                            
+                            <li className="list-group-item">
+                                <input type="checkbox" id="item5" />
+                                <label htmlFor="item5">Clean</label>
+                            </li>
                         </ul>
 
 
-
-
-                        
-                        
-
-
-
                     </div>
-                    <div className="col-sm-4 bg-danger">
+                    <div className="col-sm-4 bg-danger align-items-center justify-content-center">
 
-          <form className="bg-transparent">
-            <h1>Update Preferences</h1>
-            <div className="form-group">
-              <a href="/application" className="btn btn-primary btn-lg btn-block mb-3">
-                Go to Application Page
-              </a>
-            </div>
-            <div className="form-group">
+                        <form className="bg-transparent update-form">
+                            <h1 className="h3 m-0 mb-3">Update Preferences</h1>
+                            <div className="form-group">
+                                <a href="/application" className="btn btn-primary btn-lg btn-block mb-3 my-5">
+                                    Go to Application Page
+                                </a>
+                            </div>
 
-            </div>
-            <div className="form-group">
-              <label htmlFor="bio">Update Bio</label>
-              <textarea
-                className="form-control"
-                id="bio"
-                rows="3"
-              />
-            </div>
-            <button type="submit" className="btn btn-primary btn-lg btn-block">Update Preferences</button>
-          </form>
-
-
-                        
-
-
+                            <div className="form-group mt-5">
+                            <label htmlFor="bio">Update Bio</label>
+                            <textarea
+                                className="form-control"
+                                id="bio"
+                                rows="3"
+                            />
+                            </div>
+                            <button type="submit" className="btn btn-primary btn-lg btn-block my-2">Update Bio</button>
+                        </form>
 
                     </div>
                 </div>
