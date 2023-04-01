@@ -1,0 +1,35 @@
+{
+    "Warren": {    
+        "Warren 1-1": {
+            "id": "101",
+            "size": 2,
+            "shared_bathroom": false,
+            "type": "freshman",
+            "Occupants": ["ur mom", "ur dad"]
+        },
+        "Warren 1-2": {
+            "id": "102",
+            "size": 2,
+            "shared_bathroom": false,
+            "type": "freshman",
+            "Occupants": []
+        },
+        "Warren 2-1": {
+            "id": "201",
+            "size": 2,
+            "shared_bathroom": false,
+            "type": "freshman",
+            "Occupants": []
+        }
+    },
+    "Nason": {
+        "Nason 1-1": {
+            "id": "101",
+            "size": 2,
+            "shared_bathroom": false,
+            "type": "freshman",
+            "Occupants": []
+        }
+    }
+    
+}
