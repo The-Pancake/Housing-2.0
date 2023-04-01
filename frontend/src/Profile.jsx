@@ -8,14 +8,14 @@ const Profile = ({hidden}) => {
     return ( 
         <div className="" hidden={hidden}>
            <div className="container-fluid">
-                <div className="row bg-primary full-height">
-                    <div className="col-sm-4 bg-warning p-0">
+                <div className="row full-height">
+                    <div className="col-sm-4 p-0">
 
-                        <div className="card p-3 m-3">
+                        <div className="card p-3 m-3 profile-card cool-bg">
                             <img src={profile_img} alt="profile" className="card-img-top ratio ratio-1x1 mt-2" id="profile" fluid/>
                             <div class="card-body m-0 p-0 pt-3">
-                                <h5 class="card-title">Ben Bittidle</h5>
-                                <p class="card-text">Hey there, I'm Ben Bittidle, a psychology student and a proud anime otaku. When I'm not studying or playing video games, you'll find me binge-watching anime or reading manga. I'm a bit of a nerd, but I'm always down for some friendly competition and socializing. In terms of living habits, I'm pretty low-maintenance and tidy. I'm respectful of my roommates' privacy and belongings, and I expect the same in return. I'm looking for like-minded otaku roommates to share a living space with. If you're into anime, gaming, and all things nerdy, then let's connect and see if we'd make great roommates!</p>
+                                <h5 class="card-title text-white">Ben Bittidle</h5>
+                                <p class="card-text text-white">Hey there, I'm Ben Bittidle, a psychology student and a proud anime otaku. When I'm not studying or playing video games, you'll find me binge-watching anime or reading manga. I'm a bit of a nerd, but I'm always down for some friendly competition and socializing. In terms of living habits, I'm pretty low-maintenance and tidy. I'm respectful of my roommates' privacy and belongings, and I expect the same in return. I'm looking for like-minded otaku roommates to share a living space with. If you're into anime, gaming, and all things nerdy, then let's connect and see if we'd make great roommates!</p>
                             </div>
                         </div>
                     </div>
@@ -23,41 +23,41 @@ const Profile = ({hidden}) => {
 
                         <h2 className="text-start">Preference</h2>
 
-                        <ul className="list-group text-start">
+                        <ul className="list-group text-start cool-bg">
                             <li className="list-group-item">
-                                <input type="checkbox" id="item1" />
-                                <label htmlFor="item1">Like anime</label>
+                                <input type="checkbox" id="item1" className="m-2" />
+                                <label htmlFor="item1 text-white">Like anime</label>
                             </li>
                             <li className="list-group-item">
-                                <input type="checkbox" id="item2" />
-                                <label htmlFor="item2">Same major</label>
+                                <input type="checkbox" id="item2" className="m-2"/>
+                                <label htmlFor="item2 text-white">Same major</label>
                             </li>
                             <li className="list-group-item">
-                                <input type="checkbox" id="item3" />
-                                <label htmlFor="item3">Like to watch movie together</label>
+                                <input type="checkbox" id="item3" className="m-2"/>
+                                <label htmlFor="item3 text-white">Like to watch movie together</label>
                             </li>
                             <li className="list-group-item">
-                                <input type="checkbox" id="item4" />
-                                <label htmlFor="item4">Likes board game</label>
+                                <input type="checkbox" id="item4" className="m-2"/>
+                                <label htmlFor="item4 text-white">Likes board game</label>
                             </li>
                             <li className="list-group-item">
-                                <input type="checkbox" id="item5" />
-                                <label htmlFor="item5">Quiet</label>
+                                <input type="checkbox" id="item5" className="m-2"/>
+                                <label htmlFor="item5 text-white">Quiet</label>
                             </li>
                             <li className="list-group-item">
-                                <input type="checkbox" id="item5" />
-                                <label htmlFor="item5">Clean</label>
+                                <input type="checkbox" id="item6" className="m-2"/>
+                                <label htmlFor="item6 text-white">Clean</label>
                             </li>
                         </ul>
 
 
                     </div>
-                    <div className="col-sm-4 bg-danger align-items-center justify-content-center">
+                    <div className="col-sm-4 align-items-center justify-content-center">
 
                         <form className="bg-transparent update-form">
-                            <h1 className="h3 m-0 mb-3">Update Preferences</h1>
+                            <h1 className="h3 m-0 mb-3 text-white">Update Preferences</h1>
                             <div className="form-group">
-                                <a href="/application" className="btn btn-primary btn-lg btn-block mb-3 my-5">
+                                <a href="/application" className="btn btn-lg btn-block mb-3 my-5 bg-primary text-white">
                                     Go to Application Page
                                 </a>
                             </div>
@@ -65,9 +65,10 @@ const Profile = ({hidden}) => {
                             <div className="form-group mt-5">
                             <label htmlFor="bio">Update Bio</label>
                             <textarea
-                                className="form-control"
+                                className="form-control cool-bg"
                                 id="bio"
                                 rows="3"
+
                             />
                             </div>
                             <button type="submit" className="btn btn-primary btn-lg btn-block my-2">Update Bio</button>
