@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import dormsData from "../campus.json";
 
 const DormGrid = ({ hidden }) => {
   const [dorms, setDorms] = useState([]);
@@ -8,38 +9,46 @@ const DormGrid = ({ hidden }) => {
       .then(response => response.json())
       .then(data => setDorms(data))
       .catch(error => console.error(error));
-      console.log(dorms);
+    console.log(dorms);
 
   }, []);
 
   return (
     <div hidden={hidden}>
-      {dorms.length === 0 && <p>Loading dorm data...</p>}
-      {dorms.length > 0 && (
-        <div className="row row-cols-1 row-cols-md-3 g-4">
-          {dorms.map(dorm => (
-            <div className="col" key={dorm.id}>
-              <div className="card h-100">
-                <div className="card-body">
-                  <div className="card-body">
-                    <h5 className="card-title">{dorm.name}</h5>
-                    <ul>
-                      {dorm.rooms.map(room => (
-                        <li key={room}>{room}</li>
-                      ))}
-                    </ul>
-                    <ul>
-                      {dorm.price.map(price => (
-                        <li key={price}>{price}</li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      )}
+      <div className="grid-container">
+        {dormsData.dorms.map((dorm) => (
+          <div className="card" key={dorm.id}>
+            <h2>{dorm.name}</h2>
+            <p>Type: {dorm.type}</p>
+            <p>Rooms: {dorm.rooms.join(", ")}</p>
+            <p>Price: {dorm.price.join(", ")}</p>
+            <p>Students per suite: {dorm.students_per_suite}</p>
+            <p>Number of occupants: {dorm.numOccu}</p>
+            <p>Number of floors: {dorm.numFloor}</p>
+            <p>Inclusive: {dorm.inclusive}</p>
+            <p>Restroom: {dorm.restroom}</p>
+            <p>Cleaning: {dorm.cleaning}</p>
+            <p>Schedule: {dorm.schedule}</p>
+            <p>Furniture:</p>
+            <ul>
+              {Object.entries(dorm.furniture).map(([name, value]) => (
+                <li key={name}>
+                  {name}: {Array.isArray(value) ? value.join(" ") : value}
+                </li>
+              ))}
+            </ul>
+            <p>Amenities:</p>
+            <ul>
+              {Object.entries(dorm.amenities).map(([name, value]) => (
+                <li key={name}>
+                  {name}: {Array.isArray(value) ? value.join(" ") : value}
+                </li>
+              ))}
+            </ul>
+            <p>Nearby: {dorm.nearby}</p>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
