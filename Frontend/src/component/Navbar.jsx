@@ -11,6 +11,9 @@ const Navbar = ({ fixed, viewSelector }) => {
    const selectContactView = useCallback(() => {
      viewSelector('contact');
    });
+   const selectFaqView = useCallback(() => {
+    viewSelector('faq');
+  });
    const selectTabsView = useCallback(() => {
      viewSelector('tabs');
    });
@@ -42,6 +45,9 @@ const Navbar = ({ fixed, viewSelector }) => {
                 </li>
                 <li className="nav-item" onClick={selectContactView}>
                   <a className="nav-link me-3" >Contact Us</a>
+                </li>
+                <li className="nav-item" onClick={selectFaqView}>
+                  <a className="nav-link me-3" >FAQ</a>
                 </li>
                 <li className="nav-item" onClick={selectProfileView}>
                   <a className="nav-link me-3">My Profile</a>

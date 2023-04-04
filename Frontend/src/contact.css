@@ -51,12 +51,14 @@ form {
     background-color: #54585a;
     color: white;
     overflow: hidden;
-    margin-bottom: 100px;
+    /* margin-bottom: 100px; */
+    padding-bottom: 40px;
+    padding-top: 40px;
   }
   
   .footer img {
     float: left;
-    margin-left: 15px;
+    margin-left: 25px;
     margin-right: 20px;
     margin-top: 15px;
     max-width: 100%;
