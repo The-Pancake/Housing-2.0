@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import dormsData from "../campus.json";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './dorm.css';
+import { Container, Row, Col } from "react-bootstrap";
 
 const DormGrid = ({ hidden }) => {
   const [dorms, setDorms] = useState([]);
@@ -17,10 +18,10 @@ const DormGrid = ({ hidden }) => {
 
   return (
     <div hidden={hidden}>
-      <div className="container">
-        <div className="row">
+      <Container className="mt-5" maxWidth="xl">
+        <Row className="g-4">
           {dormsData.dorms.map((dorm) => (
-            <div className="col-sm-6 col-md-4 col-lg-3" key={dorm.id}>
+            <Col xs={12} md={6} lg={4} key={dorm.id}>
               <div className="card">
                 <h2>{dorm.name}</h2>
                 <p>Type: {dorm.type}</p>
@@ -37,7 +38,8 @@ const DormGrid = ({ hidden }) => {
                 <ul>
                   {Object.entries(dorm.furniture).map(([name, value]) => (
                     <li key={name}>
-                      {name}: {Array.isArray(value) ? value.join(" ") : value}
+                      {name}:{" "}
+                      {Array.isArray(value) ? value.join(" ") : value}
                     </li>
                   ))}
                 </ul>
@@ -45,16 +47,17 @@ const DormGrid = ({ hidden }) => {
                 <ul>
                   {Object.entries(dorm.amenities).map(([name, value]) => (
                     <li key={name}>
-                      {name}: {Array.isArray(value) ? value.join(" ") : value}
+                      {name}:{" "}
+                      {Array.isArray(value) ? value.join(" ") : value}
                     </li>
                   ))}
                 </ul>
                 <p>Nearby: {dorm.nearby}</p>
               </div>
-            </div>
+            </Col>
           ))}
-        </div>
-      </div>
+        </Row>
+      </Container>
     </div>
   );
 };
