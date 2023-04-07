@@ -6,7 +6,9 @@ import { Container, Row, Col } from "react-bootstrap";
 
 const DormGrid = ({ hidden }) => {
   const [dorms, setDorms] = useState([]);
-  const [showDetails, setShowDetails] = useState(false);
+  const [showDetails, setShowDetails] = useState(
+    Array(dormsData.dorms.length).fill(false)
+  );
 
   useEffect(() => {
     fetch('../campus.json')
@@ -19,47 +21,53 @@ const DormGrid = ({ hidden }) => {
 
   return (
     <div hidden={hidden}>
-       <div className="grid-container">
-      {dormsData.dorms.map((dorm) => (
-        <div className="card" key={dorm.id}>
-          <h2>{dorm.name}</h2>
-          <p>Type: {dorm.type}</p>
-          {showDetails && (
-            <>
-              <p>Rooms: {dorm.rooms.join(", ")}</p>
-              <p>Price: {dorm.price.join(", ")}</p>
-              <p>Students per suite: {dorm.students_per_suite}</p>
-              <p>Number of occupants: {dorm.numOccu}</p>
-              <p>Number of floors: {dorm.numFloor}</p>
-              <p>Inclusive: {dorm.inclusive}</p>
-              <p>Restroom: {dorm.restroom}</p>
-              <p>Cleaning: {dorm.cleaning}</p>
-              <p>Schedule: {dorm.schedule}</p>
-              <p>Furniture:</p>
-              <ul>
-                {Object.entries(dorm.furniture).map(([name, value]) => (
-                  <li key={name}>
-                    {name}: {Array.isArray(value) ? value.join(" ") : value}
-                  </li>
-                ))}
-              </ul>
-              <p>Amenities:</p>
-              <ul>
-                {Object.entries(dorm.amenities).map(([name, value]) => (
-                  <li key={name}>
-                    {name}: {Array.isArray(value) ? value.join(" ") : value}
-                  </li>
-                ))}
-              </ul>
-              <p>Nearby: {dorm.nearby}</p>
-            </>
-          )}
-          <button onClick={() => setShowDetails(!showDetails)}>
-            {showDetails ? "Show less" : "Show more"}
-          </button>
-        </div>
-      ))}
-    </div>
+      <div className="grid-container">
+        {dormsData.dorms.map((dorm, index) => (
+          <div className="card" key={dorm.id}>
+            <h2>{dorm.name}</h2>
+            <p>Type: {dorm.type}</p>
+            {showDetails[index] && (
+              <>
+                <p>Rooms: {dorm.rooms.join(", ")}</p>
+                <p>Price: {dorm.price.join(", ")}</p>
+                <p>Students per suite: {dorm.students_per_suite}</p>
+                <p>Number of occupants: {dorm.numOccu}</p>
+                <p>Number of floors: {dorm.numFloor}</p>
+                <p>Inclusive: {dorm.inclusive}</p>
+                <p>Restroom: {dorm.restroom}</p>
+                <p>Cleaning: {dorm.cleaning}</p>
+                <p>Schedule: {dorm.schedule}</p>
+                <p>Furniture:</p>
+                <ul>
+                  {Object.entries(dorm.furniture).map(([name, value]) => (
+                    <li key={name}>
+                      {name}: {Array.isArray(value) ? value.join(" ") : value}
+                    </li>
+                  ))}
+                </ul>
+                <p>Amenities:</p>
+                <ul>
+                  {Object.entries(dorm.amenities).map(([name, value]) => (
+                    <li key={name}>
+                      {name}: {Array.isArray(value) ? value.join(" ") : value}
+                    </li>
+                  ))}
+                </ul>
+                <p>Nearby: {dorm.nearby}</p>
+              </>
+            )}
+            <button
+              onClick={() => {
+                const newShowDetails = [...showDetails];
+                newShowDetails[index] = !newShowDetails[index];
+                setShowDetails(newShowDetails);
+              }}
+            >
+              {showDetails[index] ? "Show less" : "Show more"}
+            </button>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
