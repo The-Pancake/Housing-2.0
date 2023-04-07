@@ -2,8 +2,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import React , {useCallback, useState} from 'react';
 
 
-const Navbar = ({ fixed, viewSelector }) => {
-  const [navbarOpen, setNavbarOpen] = React.useState(false);
+const Navbar = ({  viewSelector }) => {
   const selectRoommateView = useCallback(() => {
       viewSelector('roommate');
   })
