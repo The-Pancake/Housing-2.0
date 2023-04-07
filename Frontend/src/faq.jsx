@@ -2,7 +2,7 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './faq.css';
 
-const faq = ({hidden}) => {
+const Faq = ({hidden}) => {
   return (
     <div hidden={hidden}>
       <h1 className='m-5'>Frequently Asked Questions</h1>
@@ -38,4 +38,4 @@ const faq = ({hidden}) => {
   );
 };
 
-export default faq;
+export default Faq;

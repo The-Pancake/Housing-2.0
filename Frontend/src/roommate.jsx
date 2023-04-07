@@ -1,7 +1,13 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+
+
 const Roommates = ({hidden}) => {
+
+  const handleButtonClick = () => {
+    history.push('/roommate-pairing');
+  };
   const personalInfo = {
     name: 'Your Name',
     interests: ['Interest 1', 'Interest 2', 'Interest 3'],
@@ -37,7 +43,7 @@ const Roommates = ({hidden}) => {
       marginBottom: '5%',
       marginTop: '5%',
     }} hidden={hidden}>
-      <h1 className="my-4">Personal Information</h1>
+      <p className={'text-center fs-1'}>Personal Information</p>
       <div className="card mb-4" style={{ width: '100%' }}>
         <div className="card-body">
           <h5 className="card-title">{personalInfo.name}</h5>
@@ -62,7 +68,7 @@ const Roommates = ({hidden}) => {
         ))}
       </div>
 
-      <button className="btn btn-primary mb-2">Go to Roommate Pairing System</button>
+      <p className={"fs-4"}> Take the quiz to find your perfect roommate! </p>
     </div>
   );
 };

@@ -26,6 +26,9 @@ const Navbar = ({  viewSelector }) => {
     const selectRoommatePairingView = useCallback(() => {
     viewSelector('roommatePairing');
     })
+        function refresh_page(){
+        window.location.reload();
+        }
   
   ;
     return (
@@ -60,7 +63,7 @@ const Navbar = ({  viewSelector }) => {
               </ul>
               <ul className="navbar-nav ms-auto mx-auto">
                 <li className="nav-item">
-                  <a className="nav-link me-3" href="#">Log Out</a>
+                  <a className="nav-link me-3" onClick={refresh_page}>Log Out</a>
                 </li>
               </ul>
             </div>

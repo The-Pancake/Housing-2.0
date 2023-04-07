@@ -43,5 +43,7 @@ The app should now be running on `http://localhost:5173`.
 (The port may be different if you have other apps running on port 5173.)
 
 ## Troubleshooting
+[View Troubleshooting Guide](troubleShooting.md)
 
-If you encounter any issues during the installation process, please [open an issue](<repository-url>/issues/new) on GitHub.
+
+If you encounter any issues during the installation process, please on GitHub.
