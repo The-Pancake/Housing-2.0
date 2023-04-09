@@ -8,8 +8,11 @@ def idealSearch(name, data, groupSize, preferred):
     # returns a string of the best dorm available for them
     # data is read from a json file
     # if group size is alr 4, just get them a room
-    if groupSize == 2:
+    given_dorm = ""
+    room = ""
+    if groupSize == 2 or groupSize == 4:
         # if groupsize is 2 for a double (basically fresh housing or quad)
+        # what it needs to do: add one person to a room w one person
         first_choice = preferred[0]
         hall = data[first_choice]
         count = 0
@@ -18,31 +21,42 @@ def idealSearch(name, data, groupSize, preferred):
             occ = room_one["Occupants"]
             size_ = room_one["size"]
             if len(occ) == 0:
-                occ.append(name)
+                for x in name:
+                    occ.append(x)
                 count += 1
+                room = first_choice
+                break
         if count == 0:
             next_choice = preferred[1]
+            room = next_choice
             hall = data[next_choice]
             for i in hall:
                 room_one = hall[i]
                 occ = room_one["Occupants"]
                 size_ = room_one["size"]
                 if len(occ) < size_:
-                    occ.append(name)
+                    for x in name:
+                        occ.append(x)
                     count+=1
                     break
-    # check each preferred building in order
-    first_choice = preferred[0]
-    hall = data[first_choice]
-    for i in hall:
-        room_one = hall[i]
-        occ = room_one["Occupants"]
-        size_ = room_one["size"]
-        if len(occ) < size_:
-            occ.append(name)
-            break
+    elif groupSize == 1:
+        first_choice = preferred[0]
+        hall = data[first_choice]
+        count = 0
+        for i in hall:
+            room_one = hall[i]
+            occ = room_one["Occupants"]
+            size_ = room_one["size"]
+            if len(occ) == 1:
+                for x in name:
+                    occ.append(x)
+                count += 1
+                room = first_choice
+                break
+    
+    given_dorm = room + " " + room_one["id"]
 
-    return data
+    return data, given_dorm
 
 def printData(data):
     for i in data:
@@ -64,9 +78,10 @@ def printData(data):
 
 f = open("test.json")
 data = json.load(f)
-groupSize = 4
 preferred1 = ["Warren", "Nason", "Davison"]
 preferred2 = ["Sharp", "Hall"]
-name = ["kellie", "nancy"]
-data = idealSearch(name, data, groupSize, preferred1)
+name = ["kellie"]
+groupSize = len(name)
+data, given_room = idealSearch(name, data, groupSize, preferred1)
 printData(data)
+print(given_room)
