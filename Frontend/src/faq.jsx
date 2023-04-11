@@ -56,9 +56,13 @@ const Faq = ({ hidden }) => {
     },
   ];
 
+  if (hidden) {
+    return null;
+  }
+
   return (
     <div className="FAQ">
-      {/* <h1>Frequently Asked Questions</h1>
+      <h1>Frequently Asked Questions</h1>
       {faqs.map((faq, index) => (
         <div key={index}>
           <div className="question" onClick={() => toggleAnswer(index)}>
@@ -66,7 +70,7 @@ const Faq = ({ hidden }) => {
           </div>
           {open === index && <div className="answer">{faq.answer}</div>}
         </div>
-      ))} */}
+      ))}
     </div>
   );
 };
