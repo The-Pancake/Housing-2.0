@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './FAQ.css';
 
-const faq = () => {
+const Faq = ({ hidden }) => {
   const [open, setOpen] = useState(null);
 
   const toggleAnswer = (index) => {
@@ -57,7 +58,7 @@ const faq = () => {
 
   return (
     <div className="FAQ">
-      <h1>Frequently Asked Questions</h1>
+      {/* <h1>Frequently Asked Questions</h1>
       {faqs.map((faq, index) => (
         <div key={index}>
           <div className="question" onClick={() => toggleAnswer(index)}>
@@ -65,9 +66,9 @@ const faq = () => {
           </div>
           {open === index && <div className="answer">{faq.answer}</div>}
         </div>
-      ))}
+      ))} */}
     </div>
   );
 };
 
-export default faq;
+export default Faq;
