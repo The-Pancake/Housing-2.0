@@ -56,7 +56,7 @@ const RoommatePairing = ({ hidden }) => {
         ></div>
       </div>
       {currentQuestion && (
-        <Form className="mt-5 mb-5">
+        <Form className="mt-5 mb-5 bg-light">
           <Form.Group>
             <Form.Label className="h4">{currentQuestion.text}</Form.Label>
             {currentQuestion.choices.map((choice) => (
