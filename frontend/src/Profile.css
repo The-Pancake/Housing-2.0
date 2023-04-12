@@ -3,8 +3,7 @@
   }
 
 #profile {
-    width: 100%;
-    aspect-ratio: 1/1;
+    width: 80%;
     overflow: hidden;
     position: relative;
 }
@@ -22,4 +21,9 @@
 .cool-bg li{
   background: rgba(33, 37, 41, 0.65);
   color: white;
+}
+
+p {
+  font-size: 18px;
+  line-height: 23px;
 }
