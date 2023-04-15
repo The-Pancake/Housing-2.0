@@ -26,7 +26,7 @@ const DormGrid = ({ hidden }) => {
     <div hidden={hidden}>
       <div className="grid-container">
         {dormsData.dorms.map((dorm) => (
-          <div className="card" key={dorm.id}>
+          <div className="card cool-bg text-white" key={dorm.id}>
             <h2>{dorm.name}</h2>
             <p>Type: {dorm.type}</p>
             <button onClick={() => setSelectedDorm(dorm)}>Show more</button>

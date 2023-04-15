@@ -70,3 +70,7 @@
   margin-top: 0;
   text-align: center;
 }
+
+.cool-bg {
+  background: rgba(33, 37, 41, 0.65);
+}
