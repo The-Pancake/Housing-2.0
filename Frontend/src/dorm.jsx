@@ -1,26 +1,24 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 import dormsData from "../campus.json";
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './dorm.css';
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./dorm.css";
 import { Container, Row, Col } from "react-bootstrap";
 import { Modal } from "react-bootstrap";
 
 const DormGrid = ({ hidden }) => {
-  const [dorms, setDorms] = useState([]);
-  const [showDetails, setShowDetails] = useState(
-    Array(dormsData.dorms.length).fill(false)
-  );
-  const [selectedDorm, setSelectedDorm] = useState(null);
+    const [dorms, setDorms] = useState([]);
+    const [showDetails, setShowDetails] = useState(
+        Array(dormsData.dorms.length).fill(false)
+    );
+    const [selectedDorm, setSelectedDorm] = useState(null);
 
-  useEffect(() => {
-    fetch('../campus.json')
-      .then(response => response.json())
-      .then(data => setDorms(data))
-      .catch(error => console.error(error));
-    console.log(dorms);
-
-  }, []);
-
+    useEffect(() => {
+        fetch("../campus.json")
+            .then((response) => response.json())
+            .then((data) => setDorms(data))
+            .catch((error) => console.error(error));
+        console.log(dorms);
+    }, []);
 
   return (
     <div hidden={hidden}>
