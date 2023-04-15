@@ -9,9 +9,9 @@
         "Triple (240 sqft)"
       ],
       "price":[
-        "$10,610",
-        "$9,370",
-        "$8,190"
+        "Single $10,610",
+        "Double $9,370",
+        "Triple $8,190"
       ],
       "type":"Suite",
       "students_per_suite":"2 to 6",
@@ -71,12 +71,13 @@
         ],
         "Printer in Building":[
           " Yes ",
-          "Third floor study room"
+          "(Third floor study room)"
         ],
         "Study Room(s)":" Yes ",
         "Wireless":" Yes "
       },
-      "nearby":"BarH Dining Hall, Houston Playhouse, ECAV"
+      "nearby":"BarH Dining Hall, Houston Playhouse, ECAV",
+      "address":"2116 Burdett Ave, Troy, NY 12180"
     },
     {
       "id":"bray",
@@ -87,9 +88,9 @@
         "Triple (260 sqft)"
       ],
       "price":[
-        "$10,610",
-        "$9,370",
-        "$8,190"
+        "Singel $10,610",
+        "Double $9,370",
+        "Triple $8,190"
       ],
       "type":"Traditional",
       "students_per_suite":"N/A",
@@ -144,15 +145,15 @@
         "Indoor Bicycle Storage":" Yes ",
         "Kitchen/Kitchenette":[
           " Yes ",
-          "First floor"
+          "(First floor)"
         ],
         "Laundry":[
           " Yes ",
-          "Basement"
+          "(Basement)"
         ],
         "Printer in Building":[
           " Yes ",
-          "Third floor study room"
+          "(Third floor study room)"
         ],
         "Study Room(s)":" Yes ",
         "Wireless":" Yes "
@@ -167,8 +168,8 @@
         "Double (250 sqft)"
       ],
       "price":[
-        "$10,610",
-        "$9,370"
+        "Single $10,610",
+        "Double $9,370"
       ],
       "type":"Suite",
       "students_per_suite":"2",
@@ -223,15 +224,15 @@
         "Indoor Bicycle Storage":" No ",
         "Kitchen/Kitchenette":[
           " Yes ",
-          "First floor"
+          "(First floor)"
         ],
         "Laundry":[
           " Yes ",
-          "First floor"
+          "(First floor)"
         ],
         "Printer in Building":[
           " Yes ",
-          "Main lounge"
+          "(Main lounge)"
         ],
         "Study Room(s)":" No ",
         "Wireless":" Yes "
@@ -245,7 +246,7 @@
         "Triple (215 sqft)"
       ],
       "price":[
-        "$9,690"
+        "Triple $9,690"
       ],
       "type":"Suite/Traditional",
       "students_per_suite":"3 to 6",
@@ -301,15 +302,15 @@
         "Indoor Bicycle Storage":" Yes ",
         "Kitchen/Kitchenette":[
           " Yes ",
-          "Each floor"
+          "(Each floor)"
         ],
         "Laundry":[
           " Yes ",
-          "Second  floor"
+          "(Second floor)"
         ],
         "Printer in Building":[
           " Yes ",
-          "Third floor A-wing study room"
+          "(Third floor A-wing study room)"
         ],
         "Study Room(s)":" Yes ",
         "Wireless":" Yes "
@@ -325,9 +326,9 @@
         "Triple (260 sqft)"
       ],
       "price":[
-        "$10,610",
-        "$9,370",
-        "$8,190"
+        "Single $10,610",
+        "Double $9,370",
+        "Triple $8,190"
       ],
       "type":"Traditional",
       "students_per_suite":"N/A",
@@ -382,15 +383,15 @@
         "Indoor Bicycle Storage":" Yes ",
         "Kitchen/Kitchenette":[
           " Yes ",
-          "First floor"
+          "(First floor)"
         ],
         "Laundry":[
           " Yes ",
-          "Basement"
+          "(Basement)"
         ],
         "Printer in Building":[
           " Yes ",
-          "Third floor study room"
+          "(Third floor study room)"
         ],
         "Study Room(s)":" Yes ",
         "Wireless":" Yes "
@@ -406,9 +407,9 @@
         "Triple (260 sqft)"
       ],
       "price":[
-        "$10,610",
-        "$9,370",
-        "$8,190"
+        "Single $10,610",
+        "Double $9,370",
+        "Triple $8,190"
       ],
       "type":"Traditional",
       "students_per_suite":"N/A",
@@ -463,15 +464,15 @@
         "Indoor Bicycle Storage":" No ",
         "Kitchen/Kitchenette":[
           " Yes ",
-          "First floor"
+          "(First floor)"
         ],
         "Laundry":[
           " Yes ",
-          "Basement"
+          "(Basement)"
         ],
         "Printer in Building":[
           " Yes ",
-          "Third floor study room"
+          "(Third floor study room)"
         ],
         "Study Room(s)":" Yes ",
         "Wireless":" Yes "
@@ -487,8 +488,8 @@
         "Double (200 sqft)"
       ],
       "price":[
-        "$10,610",
-        "$9,370"
+        "Single $10,610",
+        "Double $9,370"
       ],
       "type":"Traditional",
       "students_per_suite":"N/A",
@@ -543,11 +544,11 @@
         "Indoor Bicycle Storage":" No ",
         "Kitchen/Kitchenette":[
           " Yes ",
-          "First floor"
+          "(First floor)"
         ],
         "Laundry":[
           " Yes ",
-          "Basement"
+          "(Basement)"
         ],
         "Printer in Building":[
           " No "
@@ -566,9 +567,9 @@
         "Triple (260 sqft)"
       ],
       "price":[
-        "$10,610",
-        "$9,370",
-        "$8,190"
+        "Single $10,610",
+        "Double $9,370",
+        "Triple $8,190"
       ],
       "type":"Traditional",
       "students_per_suite":"N/A",
@@ -623,15 +624,15 @@
         "Indoor Bicycle Storage":" Yes ",
         "Kitchen/Kitchenette":[
           " Yes ",
-          "First floor"
+          "(First floor)"
         ],
         "Laundry":[
           " Yes ",
-          "Basement"
+          "(Basement)"
         ],
         "Printer in Building":[
           " Yes ",
-          "Third floor study room"
+          "(Third floor study room)"
         ],
         "Study Room(s)":" Yes ",
         "Wireless":" Yes "
@@ -647,9 +648,9 @@
         "Triple (260 sqft)"
       ],
       "price":[
-        "$10,610",
-        "$9,370",
-        "$8,190"
+        "Single $10,610",
+        "Double $9,370",
+        "Triple $8,190"
       ],
       "type":"Traditional",
       "students_per_suite":"N/A",
@@ -707,15 +708,15 @@
         "Indoor Bicycle Storage":" No ",
         "Kitchen/Kitchenette":[
           " Yes ",
-          "First floor"
+          "(First floor)"
         ],
         "Laundry":[
           " Yes ",
-          "Basement"
+          "(Basement)"
         ],
         "Printer in Building":[
           " Yes ",
-          "Third floor study room"
+          "(Third floor study room)"
         ],
         "Study Room(s)":" Yes ",
         "Wireless":" Yes "
@@ -730,8 +731,8 @@
         "Double (140 sqft)"
       ],
       "price":[
-        "$10,610",
-        "$9,370"
+        "Single $10,610",
+        "Double $9,370"
       ],
       "type":"Traditional",
       "students_per_suite":"N/A",
@@ -785,15 +786,15 @@
         "Indoor Bicycle Storage":" No ",
         "Kitchen/Kitchenette":[
           " Yes ",
-          "First floor"
+          "(First floor)"
         ],
         "Laundry":[
           " Yes ",
-          "First floor"
+          "(First floor)"
         ],
         "Printer in Building":[
           " Yes ",
-          "First floor"
+          "(First floor)"
         ],
         "Study Room(s)":" Yes ",
         "Wireless":" Yes "
@@ -808,8 +809,8 @@
         "Double (231 sqft)"
       ],
       "price":[
-        "$10,610",
-        "$9,370"
+        "Single $10,610",
+        "Double $9,370"
       ],
       "type":"Suite",
       "students_per_suite":"N/A",
@@ -865,15 +866,15 @@
         "Indoor Bicycle Storage":" Yes ",
         "Kitchen/Kitchenette":[
           " Yes ",
-          "First floor"
+          "(First floor)"
         ],
         "Laundry":[
           " Yes ",
-          "Basement"
+          "(Basement)"
         ],
         "Printer in Building":[
           " Yes ",
-          "Third floor study room"
+          "(Third floor study room)"
         ],
         "Study Room(s)":" Yes ",
         "Wireless":" Yes "
@@ -887,7 +888,7 @@
         "Single (101 sqft)"
       ],
       "price":[
-        "$10,610"
+        "Single $10,610"
       ],
       "type":"Suite",
       "students_per_suite":"6",
@@ -939,15 +940,15 @@
         "Indoor Bicycle Storage":" No ",
         "Kitchen/Kitchenette":[
           " Yes ",
-          "Basement"
+          "(Basement)"
         ],
         "Laundry":[
           " Yes ",
-          "Basement"
+          "(Basement)"
         ],
         "Printer in Building":[
           " Yes ",
-          "Basement"
+          "(Basement)"
         ],
         "Study Room(s)":" Yes ",
         "Wireless":" Yes "
