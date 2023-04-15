@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { ProgressBar, Form, Button } from 'react-bootstrap';
+import "./roommatePairing.css";
+
 
 const RoommatePairing = ({ hidden }) => {
   const [progress, setProgress] = useState(0);
@@ -56,16 +58,16 @@ const RoommatePairing = ({ hidden }) => {
         ></div>
       </div>
       {currentQuestion && (
-        <Form className="mt-5 mb-5 bg-light">
-          <Form.Group>
-            <Form.Label className="h4">{currentQuestion.text}</Form.Label>
+        <Form className="mt-5 mb-5 text-white" style={{ backgroundColor: 'rgba(33, 37, 41, 0.65)'}}>
+          <Form.Group >
+            <Form.Label className="h5 m-0">{currentQuestion.text}</Form.Label>
             {currentQuestion.choices.map((choice) => (
               <Form.Check
                 type="radio"
                 label={choice}
                 name="answer"
                 onChange={() => handleAnswer(choice)}
-                className="h5"
+                className="h5 m-2 my-3"
               />
             ))}
           </Form.Group>
