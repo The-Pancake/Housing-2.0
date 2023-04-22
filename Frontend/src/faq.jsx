@@ -67,17 +67,17 @@ const Faq = ({ hidden }) => {
 
     return (
         <div className="FAQ">
-            <h1>Frequently Asked Questions</h1>
+            <h1 className="text-white">Frequently Asked Questions</h1>
             {faqs.map((faq, index) => (
                 <div key={index}>
                     <div
-                        className="question"
+                        className="question cool-bg text-white m-0"
                         onClick={() => toggleAnswer(index)}
                     >
                         {faq.question}
                     </div>
                     {open === index && (
-                        <div className="answer">{faq.answer}</div>
+                        <div className="answer cool-bg text-white mb-4">{faq.answer}</div>
                     )}
                 </div>
             ))}
