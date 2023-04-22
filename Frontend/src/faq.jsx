@@ -4,6 +4,7 @@ import "./FAQ.css";
 
 const Faq = ({ hidden }) => {
     const [open, setOpen] = useState(null);
+    const [searchTerm, setSearchTerm] = useState("");
 
     const toggleAnswer = (index) => {
         if (open === index) {
@@ -59,7 +60,13 @@ const Faq = ({ hidden }) => {
             question: "When will the housing application close?",
             answer: "Please complete your application by May 24, 2021, to ensure the best chance to be assigned your preferred housing. Students who do not complete the application by May 24, 2021, will still receive a housing assignment, but they may miss the opportunity to be placed with preferred roommates/suitemates or in a preferred residence hall.",
         },
+
+        
     ];
+
+    const filteredFaqs = faqs.filter((faq) =>
+    faq.question.toLowerCase().includes(searchTerm.toLowerCase())
+);
 
     if (hidden) {
         return null;
@@ -67,21 +74,27 @@ const Faq = ({ hidden }) => {
 
     return (
         <div className="FAQ">
-            <h1 className="text-white">Frequently Asked Questions</h1>
-            {faqs.map((faq, index) => (
-                <div key={index}>
-                    <div
-                        className="question cool-bg text-white m-0"
-                        onClick={() => toggleAnswer(index)}
-                    >
-                        {faq.question}
-                    </div>
-                    {open === index && (
-                        <div className="answer cool-bg text-white mb-4">{faq.answer}</div>
-                    )}
+        <h1>Frequently Asked Questions</h1>
+        <input
+            type="text"
+            placeholder="Search FAQ"
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+        />
+        {filteredFaqs.map((faq, index) => (
+            <div key={index}>
+                <div
+                    className="question"
+                    onClick={() => toggleAnswer(index)}
+                >
+                    {faq.question}
                 </div>
-            ))}
-        </div>
+                {open === index && (
+                    <div className="answer">{faq.answer}</div>
+                )}
+            </div>
+        ))}
+    </div>
     );
 };
 
