@@ -7,7 +7,7 @@ const ContactUs = ({ hidden }) => {
         <div hidden={hidden}>
             <h1></h1>
             <h1 className="m-5">Contact Us</h1>
-            <form className={"contact-form m-5"}>
+            <form className={"contact-form m-5 cool-bg"}>
                 <label htmlFor="name" className="text-white">
                     Name:
                 </label>
@@ -30,12 +30,12 @@ const ContactUs = ({ hidden }) => {
                 <input type="submit" value="Submit" />
             </form>
 
-            <div className="footer">
+            <div className="footer cool-bg">
                 <img
                     src="https://my.aacsb.edu/Portals/0/assets/images/contact/Rensselaer.png"
                     alt="Footer image"
                 />
-                <div className="footer-info">
+                <div className="footer-info ">
                     <h2>Contact</h2>
                     <p>Student Living and Learning</p>
                     <p>Commons West</p>

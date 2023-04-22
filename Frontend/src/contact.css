@@ -80,3 +80,7 @@ h1 {
 .footer-info {
   float: left;
 }
+
+.cool-bg {
+  background: rgba(33, 37, 41, 0.65);
+}
