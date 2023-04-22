@@ -37,14 +37,13 @@ const Roommates = ({hidden}) => {
   ];
 
   return (
-    <div className="container" style={{
-      backgroundColor: '#f8f9fa',
+    <div className="container p-4 my-5" style={{
+      backgroundColor: 'rgba(33, 37, 41, 0.65)',
       borderRadius: '10px',
-      marginBottom: '5%',
-      marginTop: '5%',
+      width: '50%'
     }} hidden={hidden}>
-      <p className={'text-center fs-1'}>Personal Information</p>
-      <div className="card mb-4" style={{ width: '100%' }}>
+      <p className={'text-center fs-1 text-white'}>Personal Information</p>
+      <div className="card mb-4 text-white" style={{ width: '100%' , backgroundColor: 'rgba(33, 37, 41, 0.65)'}}>
         <div className="card-body">
           <h5 className="card-title">{personalInfo.name}</h5>
           <p className="card-text"><strong>Interests:</strong> {personalInfo.interests.join(', ')}</p>
@@ -52,11 +51,11 @@ const Roommates = ({hidden}) => {
         </div>
       </div>
 
-      <h2 className="my-4">Potential Roommates</h2>
+      <h2 className="my-4 text-white">Potential Roommates</h2>
       <div className="row">
         {potentialRoommates.map((roommate, index) => (
           <div key={index} className="col-md-6">
-            <div className="card mb-4" style={{ width: '100%' }}>
+            <div className="card mb-4 text-white" style={{ width: '100%', backgroundColor: 'rgba(33, 37, 41, 0.65)' }}>
               <div className="card-body">
                 <h5 className="card-title">{roommate.name}</h5>
                 <p className="card-text"><strong>Interests:</strong> {roommate.interests.join(', ')}</p>
@@ -68,7 +67,7 @@ const Roommates = ({hidden}) => {
         ))}
       </div>
 
-      <p className={"fs-4"}> Take the quiz to find your perfect roommate! </p>
+      <p className={"fs-4 text-white"}> Take the quiz to find your perfect roommate! </p>
     </div>
   );
 };
