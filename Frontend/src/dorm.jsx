@@ -33,11 +33,11 @@ const DormGrid = ({ hidden }) => {
                     </div>
                 ))}
             </div>
-            <Modal
+            <Modal className="text-white"
                 show={selectedDorm !== null}
                 onHide={() => setSelectedDorm(null)}
-            >
-                <Modal.Header closeButton>
+            ><div className="cool-bg2">
+                                <Modal.Header closeButton>
                     <Modal.Title>{selectedDorm?.name}</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
@@ -81,6 +81,9 @@ const DormGrid = ({ hidden }) => {
                     </ul>
                     <p>Nearby: {selectedDorm?.nearby}</p>
                 </Modal.Body>
+
+
+            </div>
             </Modal>
         </div>
     );
