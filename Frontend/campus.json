@@ -158,7 +158,8 @@
         "Study Room(s)":" Yes ",
         "Wireless":" Yes "
       },
-      "nearby":"Common Dining Hall, RPI Union, Mueller Center"
+      "nearby":"Common Dining Hall, RPI Union, Mueller Center",
+      "address":"Bray Hall, Sage Ave, Troy, NY 12180"
     },
     {
       "id":"davison",
@@ -237,7 +238,9 @@
         "Study Room(s)":" No ",
         "Wireless":" Yes "
       },
-      "nearby":"Common Dining Hall, RPI Union, Mueller Center"
+      "nearby":"Common Dining Hall, RPI Union, Mueller Center",
+      "address":"1999 Burdett Ave, Troy, NY 12180"
+
     },
     {
       "id":"barton",

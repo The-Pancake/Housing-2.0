@@ -1,39 +1,10 @@
-import React, { useState } from "react";
-import { ProgressBar, Form, Button } from "react-bootstrap";
-import "./roommatePairing.css";
+import { useState } from "react";
+import { Form, Button } from "react-bootstrap";
+import questions from "./quiz.json";
 
 const RoommatePairing = ({ hidden }) => {
     const [progress, setProgress] = useState(0);
     const [answers, setAnswers] = useState([]);
-
-    const questions = [
-        {
-            text: "What's your living style?",
-            choices: ["Neat and tidy", "Relaxed and casual", "A bit of both"],
-        },
-        {
-            text: "What time do you usually wake up?",
-            choices: ["Early bird", "Night owl", "It varies"],
-        },
-        {
-            text: "What's your favorite food?",
-            choices: [
-                "Chinese",
-                "Japanese",
-                "Korean",
-                "Western",
-                "Indian",
-                "Thai",
-                "Vietnamese",
-                "Other",
-            ],
-        },
-        {
-            text: "What's your favorite drink?",
-            choices: ["Coffee", "Tea", "Juice", "Milk", "Water", "Other"],
-        },
-        // Add 10 more questions here
-    ];
 
     const handleAnswer = (answer) => {
         setProgress(progress + 1);
@@ -77,9 +48,9 @@ const RoommatePairing = ({ hidden }) => {
                         >
                             <Form.Group>
                                 <Form.Label className="h5 m-0">
-                                    {currentQuestion.text}
+                                    {currentQuestion.question}
                                 </Form.Label>
-                                {currentQuestion.choices.map((choice) => (
+                                {currentQuestion.answer.map((choice) => (
                                     <Form.Check
                                         type="radio"
                                         label={choice}
