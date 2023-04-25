@@ -7,7 +7,7 @@
 }
 
 .login {
-    margin-top: 2%;
+    margin-top: 5%;
 }
 
 button {
@@ -16,9 +16,12 @@ button {
 
 .login_info {
     background: rgba(244, 245, 246, 0.65);
+    width:95%;
+    height:100%;
+    
     padding: 10px 50px;
     font-size: 30px;
-    margin: 2rem;
+    margin: 1rem;
     color: red;
 
 }
