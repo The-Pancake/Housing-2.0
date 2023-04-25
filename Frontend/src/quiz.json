@@ -1,0 +1,82 @@
+[
+  {
+    "question": "What's your living style?",
+    "answer": ["Neat and tidy", "Relaxed and casual", "A bit of both"]
+  },
+  {
+    "question": "What time do you usually wake up?",
+    "answer": ["Early bird", "Night owl", "It varies"]
+  },
+  {
+    "question": "What's your favorite food?",
+    "answer": ["Chinese", "Japanese", "Korean", "Western", "Indian", "Thai", "Vietnamese", "Other"]
+  },
+  {
+    "question": "What's your favorite drink?",
+    "answer": ["Coffee", "Tea", "Juice", "Milk", "Water", "Other"]
+  },
+  {
+    "question": "Do you smoke?",
+    "answer": ["Yes", "No", "Occasionally"]
+  },
+  {
+    "question": "Do you have any pets?",
+    "answer": ["Yes", "No"]
+  },
+  {
+    "question": "How often do you have guests over?",
+    "answer": ["Frequently", "Occasionally", "Rarely", "Never"]
+  },
+  {
+    "question": "What is your preferred room temperature?",
+    "answer": ["Warm", "Cool", "Neutral"]
+  },
+  {
+    "question": "Do you prefer to live with someone of the same gender?",
+    "answer": ["Yes", "No", "No preference"]
+  },
+  {
+    "question": "Do you prefer to live with someone of a similar age?",
+    "answer": ["Yes", "No", "No preference"]
+  },{
+    "question": "Do you have any dietary restrictions?",
+    "answer": ["Vegetarian", "Vegan", "Gluten-free", "Lactose-free", "Kosher", "Halal", "None"]
+},
+{
+    "question": "Do you prefer to cook or eat out?",
+    "answer": ["Cook", "Eat out", "A bit of both"]
+},
+{
+    "question": "How do you feel about having overnight guests?",
+    "answer": ["I don't mind", "I prefer not to have overnight guests", "It depends on the guest"]
+},
+{
+    "question": "Do you prefer to live in a house or an apartment?",
+    "answer": ["House", "Apartment", "No preference"]
+},
+{
+    "question": "Do you prefer to live in the city or the suburbs?",
+    "answer": ["City", "Suburbs", "No preference"]
+},
+{
+    "question": "Do you prefer to live in a furnished or unfurnished place?",
+    "answer": ["Furnished", "Unfurnished", "No preference"]
+},
+{
+    "question": "Do you have a car?",
+    "answer": ["Yes", "No"]
+},
+{
+    "question": "Do you prefer to live with someone who shares your interests?",
+    "answer": ["Yes", "No", "No preference"]
+},
+{
+    "question": "Do you prefer to live with someone who shares your values?",
+    "answer": ["Yes", "No", "No preference"]
+},
+{
+    "question": "How do you feel about sharing personal items (e.g. food, toiletries, etc.)?",
+    "answer": ["I don't mind sharing", "I prefer not to share", "It depends on the item"]
+}
+
+]
