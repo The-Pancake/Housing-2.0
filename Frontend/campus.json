@@ -562,7 +562,8 @@
         "Study Room(s)":" No ",
         "Wireless":" Yes "
       },
-      "nearby":"Russell Sage Dining Hall"
+      "nearby":"Russell Sage Dining Hall",
+      "address":"Sage Ave, Troy, NY 12180"
     },
     {
       "id":"hall",
@@ -643,7 +644,8 @@
         "Study Room(s)":" Yes ",
         "Wireless":" Yes "
       },
-      "nearby":"Common Dining Hall, RPI Union, Mueller Center"
+      "nearby":"Common Dining Hall, RPI Union, Mueller Center",
+      "address":"Hall Hall, Troy, NY 12180"
     },
     {
       "id":"nason",
