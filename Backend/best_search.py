@@ -63,4 +63,3 @@ if __name__ == "__main__":
         occupants = currRoom['occupants']
         newRoom = Rooms(name, gender, num, size, bathroom, year, occupants)
         allrooms.append(newRoom)
-
