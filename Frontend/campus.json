@@ -9,9 +9,9 @@
         "Triple (240 sqft)"
       ],
       "price":[
-        "Single $10,610",
-        "Double $9,370",
-        "Triple $8,190"
+        "Single ($10,610)",
+        "Double ($9,370)",
+        "Triple ($8,190)"
       ],
       "type":"Suite",
       "students_per_suite":"2 to 6",
@@ -88,9 +88,9 @@
         "Triple (260 sqft)"
       ],
       "price":[
-        "Singel $10,610",
-        "Double $9,370",
-        "Triple $8,190"
+        "Singel ($10,610)",
+        "Double ($9,370)",
+        "Triple ($8,190)"
       ],
       "type":"Traditional",
       "students_per_suite":"N/A",
@@ -169,8 +169,8 @@
         "Double (250 sqft)"
       ],
       "price":[
-        "Single $10,610",
-        "Double $9,370"
+        "Single ($10,610)",
+        "Double ($9,370)"
       ],
       "type":"Suite",
       "students_per_suite":"2",
@@ -249,7 +249,7 @@
         "Triple (215 sqft)"
       ],
       "price":[
-        "Triple $9,690"
+        "Triple ($9,690)"
       ],
       "type":"Suite/Traditional",
       "students_per_suite":"3 to 6",
@@ -330,9 +330,9 @@
         "Triple (260 sqft)"
       ],
       "price":[
-        "Single $10,610",
-        "Double $9,370",
-        "Triple $8,190"
+        "Single ($10,610)",
+        "Double ($9,370)",
+        "Triple ($8,190)"
       ],
       "type":"Traditional",
       "students_per_suite":"N/A",
@@ -412,9 +412,9 @@
         "Triple (260 sqft)"
       ],
       "price":[
-        "Single $10,610",
-        "Double $9,370",
-        "Triple $8,190"
+        "Single ($10,610)",
+        "Double ($9,370)",
+        "Triple ($8,190)"
       ],
       "type":"Traditional",
       "students_per_suite":"N/A",
@@ -494,8 +494,8 @@
         "Double (200 sqft)"
       ],
       "price":[
-        "Single $10,610",
-        "Double $9,370"
+        "Single ($10,610)",
+        "Double ($9,370)"
       ],
       "type":"Traditional",
       "students_per_suite":"N/A",
@@ -574,9 +574,9 @@
         "Triple (260 sqft)"
       ],
       "price":[
-        "Single $10,610",
-        "Double $9,370",
-        "Triple $8,190"
+        "Single ($10,610)",
+        "Double ($9,370)",
+        "Triple ($8,190)"
       ],
       "type":"Traditional",
       "students_per_suite":"N/A",
@@ -656,9 +656,9 @@
         "Triple (260 sqft)"
       ],
       "price":[
-        "Single $10,610",
-        "Double $9,370",
-        "Triple $8,190"
+        "Single ($10,610)",
+        "Double ($9,370)",
+        "Triple ($8,190)"
       ],
       "type":"Traditional",
       "students_per_suite":"N/A",
@@ -740,8 +740,8 @@
         "Double (140 sqft)"
       ],
       "price":[
-        "Single $10,610",
-        "Double $9,370"
+        "Single ($10,610)",
+        "Double ($9,370)"
       ],
       "type":"Traditional",
       "students_per_suite":"N/A",
@@ -819,8 +819,8 @@
         "Double (231 sqft)"
       ],
       "price":[
-        "Single $10,610",
-        "Double $9,370"
+        "Single ($10,610)",
+        "Double ($9,370)"
       ],
       "type":"Suite",
       "students_per_suite":"N/A",
@@ -898,7 +898,7 @@
         "Single (101 sqft)"
       ],
       "price":[
-        "Single $10,610"
+        "Single ($10,610)"
       ],
       "type":"Suite",
       "students_per_suite":"6",
