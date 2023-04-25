@@ -11,6 +11,7 @@ out to others in a set specified vicinity (which a short algorithm below also ha
 
 dorms = ['Barton',	'Bray',	'BarH',	'Cary',	'Crockett',	'Davison',	'E_Complex',	'Hall',	'Nason',	'North',	'Quad',	'Sharp',	'Warren',	'Rahps_B',	'Blitman',	'Bryckwyck',	'Colonie',	'Rahps_A',	'Stacwyck',	'City_Station_West',	'City_Station_South',	'Polytechnic']
 
+
 Barton_Weights = {	          'Barton' : 0,	'Bray' : 1,	'BarH' : 3,	'Cary' : 1,	'Crockett' : 1,	'Davison' : 1,	'E-Complex' : 2,	'Hall' : 1,	'Nason' : 1,	'North' : 2,	'Quad' : 2,	'Sharp' : 2,	'Warren' : 1,	'Beman and Brinsmade (Rahps B)' : 5,	'Blitman' : 5,	'Bryckwyck' : 6,	'Colonie' : 5,	'Colvin and Albright (Rahps A)' : 3,	'Stacwyck' : 5,	'City Station West' : 6,	'City Station South' : 6,	'Polytechnic' : 5}
 Bray_Weights = {	          'Barton' : 1,	'Bray' : 0,	'BarH' : 2,	'Cary' : 1,	'Crockett' : 1,	'Davison' : 1,	'E-Complex' : 3,	'Hall' : 1,	'Nason' : 1,	'North' : 3,	'Quad' : 2,	'Sharp' : 1,	'Warren' : 1,	'Beman and Brinsmade (Rahps B)' : 5,	'Blitman' : 5,	'Bryckwyck' : 6,	'Colonie' : 5,	'Colvin and Albright (Rahps A)' : 3,	'Stacwyck' : 5,	'City Station West' : 6,	'City Station South' : 6,	'Polytechnic' : 5}
 BarH_Weights = {	          'Barton' : 3,	'Bray' : 2,	'BarH' : 0,	'Cary' : 3,	'Crockett' : 3,	'Davison' : 3,	'E-Complex' : 3,	'Hall' : 3,	'Nason' : 3,	'North' : 3,	'Quad' : 3,	'Sharp' : 3,	'Warren' : 3,	'Beman and Brinsmade (Rahps B)' : 3,	'Blitman' : 6,	'Bryckwyck' : 4,	'Colonie' : 3,	'Colvin and Albright (Rahps A)' : 1,	'Stacwyck' : 3,	'City Station West' : 8,	'City Station South' : 8,	'Polytechnic' : 6}
