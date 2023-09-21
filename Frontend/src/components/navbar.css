@@ -1,0 +1,14 @@
+#navbar {
+  display: flex;
+  gap: 10px;
+  justify-content: end;
+  align-items: center;
+}
+
+#navbar li {
+  list-style: none;
+}
+
+.logo {
+  flex-grow: 1;
+}
