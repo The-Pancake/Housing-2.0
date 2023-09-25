@@ -1,10 +1,17 @@
-# what I maybe plan to do is that if there are no "perfect" matches,
+#   _   _   _   _   _   _   _   _   _   _  
+#  / \ / \ / \ / \ / \ / \ / \ / \ / \ / \ 
+# ( H | o | u | s | i | n | g | 2 | . | 0 )
+#  \_/ \_/ \_/ \_/ \_/ \_/ \_/ \_/ \_/ \_/ 
+#
+ 
+# Original Author: Jack Sherick
+# What I maybe plan to do is that if there are no "perfect" matches,
 # collect rooms that are good matches and sort between those and pick
 # the best of them - this sort of emulates a best fit and ideal fit at
 # the same time (will be two seperate sort functions *if a perfect fit
 # is not found*)
 
-# i want to have it working with just induvial students before I implement
+# I want to have it working with just individual students before I implement
 # groups - though that shouldn't be hard since groups will pretty much always
 # fit under the perfect fit category of things
 
@@ -46,15 +53,16 @@ def weightRoom(room, currStudent):
     # Holds room weight 
     weight = 0
 
+    print(room)
     # Searches through occupants calculating weight based on a variety of factors
     # aStudent represents a occupant in the room 
     for aStudent in room["occupants"]:
         # Compare majors
-        weight += 5 if (aStudent["major"] == currStudent["major"]) else weight
+        weight += 5 if (aStudent["major"] == currStudent["major"]) else 0
 
         # Compare geography (aka where they are from )
-        weight += 3 if (aStudent["geo"] == currStudent["geo"]) else weight
-        
+        weight += 3 if (aStudent["geo"] == currStudent["geo"]) else 0
+
         # Compare sleep hours, this is stored as a array where the sleep hours of a student looks like this:
         #
         # [ (Start Bedtime), (End Bedtime) ]
@@ -64,15 +72,15 @@ def weightRoom(room, currStudent):
             if (aStudent["sleepHours"][sleepIndex] == currStudent["sleepHours"][sleepIndex] or 
                 aStudent["sleepHours"][sleepIndex] + 1 == currStudent["sleepHours"] or 
                 aStudent["sleepHours"][sleepIndex] - 1 == currStudent["sleepHours"]         ):
-                commonalityScore += 1
+                weight += 1
 
         # Compare music preference between the two students
         for musicPref in aStudent["musicPreference"]:
-            weight += 1 if (musicPref in currStudent["musicPreference"]) else weight
-        
+            weight += 1 if (musicPref in currStudent["musicPreference"]) else 0
+
         # Compare hobbies between the two students
         for hobby in aStudent["hobbies"]:
-            weight += 1 if (hobby in currStudent["hobbies"]) else weight
+            weight += 1 if (hobby in currStudent["hobbies"]) else 0
 
     # If there is no one in the room we increase the weight
     if (weight == 0 and len(room["occupants"]) == 0):
@@ -80,7 +88,7 @@ def weightRoom(room, currStudent):
 
     # Increase the weight if the room is in a dorm of a student's preference
     
-    weight += 5 if (room["name"] in currStudent["dormPref"]) else weight
+    weight += 5 if (room["name"] in currStudent["dormPref"]) else 0
 
     # Jacks original code for calculating weight if dorm room is a student's preference
     # k = 0
@@ -138,10 +146,10 @@ def isPerfectMatch(room, student):
     for occupant in room["occupants"]:
 
         # Major takes priority if determinging commonality between two students 
-        commonalityScore += 5 if (occupant["major"] == student["major"]) else commonalityScore
+        commonalityScore += 5 if (occupant["major"] == student["major"]) else 0
 
         # Check to see if students are from the same place    
-        commonalityScore += 1 if (occupant["geo"] == student["geo"]) else commonalityScore
+        commonalityScore += 1 if (occupant["geo"] == student["geo"]) else 0
 
         # Following checks sleep hours making sure the two students sleep within a good time with one another
         for sleepIndex in range(2):
@@ -152,11 +160,11 @@ def isPerfectMatch(room, student):
         
         # Following checks music preferences
         for music in occupant["musicPreference"]:
-            commonalityScore += 1 if (music in student["musicPreference"]) else commonalityScore
+            commonalityScore += 1 if (music in student["musicPreference"]) else 0
         
         # Following checks hobbies 
         for k in occupant["hobbies"]:
-            commonalityScore += 1 if (music in student["hobbies"]) else commonalityScore
+            commonalityScore += 1 if (music in student["hobbies"]) else 0
 
     # CommonalityScore threshold is 4 [SUBJECT TO CHANGE]
     if (commonalityScore > 4): 
@@ -199,7 +207,7 @@ def firstSearch(data, student):
                                 return True
                             # Add to potential rooms
                             else:
-                                potentialRooms.append(data[j])
+                                potentialRooms.append(data[dorm])
 
                         # IF dorm room is empty just add it 
                         if (len(data[dorm]["occupants"]) == 0):
@@ -220,7 +228,6 @@ def firstSearch(data, student):
                 # for k in data[j]["occupants"]:
                 #     if k["name"] == student["name"]:
                 #         return False
-                
 
                 if (len(data[dorm]["occupants"]) > 0):
                     if (isPerfectMatch(data[dorm], student)):
