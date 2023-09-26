@@ -35,4 +35,23 @@ def printData(data):
             for occupant in room_data["Occupants"]:
                 print("\t", occupant)
 
+# Load the JSON data
+filename = "Backend/Campus_data_structures/campus2.json"
+with open(filename) as f:
+    data = json.load(f)
+
+preferred1 = ["Warren", "Nason", "Davison"]
+preferred2 = ["Sharp", "Hall"]
+students = ["kellie", "Becky"]
+groupSize = len(students)
+
+room_found, given_room = idealSearch(data, groupSize, preferred1, students)
+
+if room_found:
+    updateJSON(filename, data)
+    print("Room found:", given_room)
+else:
+    print("No suitable room found for the group.")
+    
+printData(data)
 
