@@ -24,14 +24,14 @@ def General_Near_Search(group_list,campus):
     room_id2 = -1
     #loops through the rooms in the building and checks:
     # if the current room is empty and if so store the room id and trigger room found flag to true
-    for room in campus[dorm]:#loops through the rooms in the building
-      if len(campus[dorm][room]["Occupants"]) == 0:
-        room_id1 = room
+    for room1 in campus[dorm]:#loops through the rooms in the building
+      if len(campus[dorm][room1]["Occupants"]) == 0:
+        room_id1 = room1
         room1_found = True
         
-        for room in campus[dorm]:
-          if len(campus[dorm][room]["Occupants"]) == 0 and room != room_id1:
-            room_id2 = room
+        for room2 in campus[dorm]:
+          if len(campus[dorm][room2]["Occupants"]) == 0 and room2 != room_id1:
+            room_id2 = room2
             room2_found = True
 
     #if two rooms can be found within the same building, assign the rooms to the group

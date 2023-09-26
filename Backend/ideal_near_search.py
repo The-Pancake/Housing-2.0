@@ -1,4 +1,5 @@
 import copy
+import json
 #do we priortize earlier four person group (now two 2person groups), or later 2 person group?
 #fiure out all different ways rpi labels rooms (letters,numbers,letters and numbers?)
 
@@ -10,7 +11,7 @@ import copy
 #In the case that General search and Ideal search fail to find a room for a group
 #this algorithm splits the groups up and tries to find 2 rooms within the same building (building is selected from their list) to assign
 #the students to
-def ideal_near_seach(group_list,group_preferences,campus):
+def Ideal_Near_Search(group_list,group_preferences,campus):
   group_size = len(group_list)
   # print(buildings) #used for checking if the buildings are read in correctly
 
@@ -27,22 +28,32 @@ def ideal_near_seach(group_list,group_preferences,campus):
     #loops through the rooms in the building and checks:
     # if the current room is empty and if so store the room id and trigger room found flag to true
     for room1 in campus[dorm]:#loops through the rooms in the building
-      if len(room1["Occupants"]) == 0:
-        room_id1 = room1["id"]
+      if len(campus[dorm][room1]["Occupants"]) == 0:
+        room_id1 = room1
         room1_found = True
-
-    for room2 in campus[dorm]:
-      if len(room1["Occupants"]) == 0 and room2["id"] != room_id1:
-        room_id2 = room2["id"]
-        room2_found = True
         
+        for room2 in campus[dorm]:
+          if len(campus[dorm][room2]["Occupants"]) == 0 and room2 != room_id1:
+            room_id2 = room2
+            room2_found = True
+
     #if two rooms can be found within the same building, assign the rooms to the group
-    #note: may change campus data structure to remove for-loop here
-    if room1_found == True and room2_found == True:
-      for room in campus[dorm]:
-        if room["id"] == room_id1:
-          room["Occupants"] = copy.deepcopy(group1)
-        if room["id"] == room_id2:
-          room["Occupants"] = copy.deepcopy(group2)
+    if room1_found and room2_found:
+      campus[dorm][room_id1]["Occupants"] = copy.deepcopy(group1)
+      campus[dorm][room_id2]["Occupants"] = copy.deepcopy(group2)
       return True
   return False
+
+if __name__ == '__main__':
+  campus = open("./Campus_data_structures/campus3.json")
+  campus = json.load(campus)
+  group = ["Dom", "Bob", "Paul", "Ben"]
+  dorm_pref = ["warren"]
+  if Ideal_Near_Search(group,dorm_pref,campus):
+    print(campus)
+  else:
+    print("did not find room for group :(")
+  # for x in campus:
+  #   for y in campus[x]:
+  #     str = "string " + y + " has int:"
+  #     print(str,int(y))
