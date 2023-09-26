@@ -6,16 +6,16 @@ def idealSearch(data, groupSize, preferred, students):
         for room_id, room_data in hall.items():
             occupants = room_data["Occupants"]
             size = room_data["size"]
-            if len(occupants) + groupSize <= size:  # Check if groupSize can fit in the room
+            if len(occupants) + groupSize <= size:
                 for student in students:
                     occupants.append(student)
                 room_data["Occupants"] = occupants
-                return True, pref + " " + room_id
-            elif len(occupants) == 0 and groupSize <= size:  # If room is empty, assign if groupSize can fit
+                return True, pref + " " + room_id  
+            elif len(occupants) == 0 and groupSize <= size:
                 for student in students[:size]:
                     occupants.append(student)
                 room_data["Occupants"] = occupants
-                return True, pref + " " + room_id
+                return True, pref + " " + room_id  
     return False, None
 
 def updateJSON(filename, data):
@@ -27,7 +27,6 @@ def printData(data):
         print(hall, ":")
         for room_id, room_data in rooms.items():
             print("  ", room_id, ":")
-            print("    room number:", room_data["id"])
             print("    room size:", room_data["size"])
             print("    shared bathroom:", room_data["shared_bathroom"])
             print("    type:", room_data["type"])
@@ -36,13 +35,13 @@ def printData(data):
                 print("\t", occupant)
 
 # Load the JSON data
-filename = "Backend/Campus_data_structures/campus2.json"
+filename = "Backend/Campus_data_structures/campus3.json"
 with open(filename) as f:
     data = json.load(f)
 
 preferred1 = ["Warren", "Nason", "Davison"]
 preferred2 = ["Sharp", "Hall"]
-students = ["kellie", "Becky"]
+students = ["kellie", "Becky", "Billy"]
 groupSize = len(students)
 
 room_found, given_room = idealSearch(data, groupSize, preferred1, students)
@@ -54,4 +53,5 @@ else:
     print("No suitable room found for the group.")
     
 printData(data)
+
 
