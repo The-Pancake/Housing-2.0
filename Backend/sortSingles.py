@@ -53,16 +53,15 @@ def weightRoom(room, currStudent):
     # Holds room weight 
     weight = 0
 
-    print(room)
     # Searches through occupants calculating weight based on a variety of factors
     # aStudent represents a occupant in the room 
     for aStudent in room["occupants"]:
         # Compare majors
         weight += 5 if (aStudent["major"] == currStudent["major"]) else 0
-
+        
         # Compare geography (aka where they are from )
         weight += 3 if (aStudent["geo"] == currStudent["geo"]) else 0
-
+        
         # Compare sleep hours, this is stored as a array where the sleep hours of a student looks like this:
         #
         # [ (Start Bedtime), (End Bedtime) ]
@@ -71,12 +70,14 @@ def weightRoom(room, currStudent):
         for sleepIndex in range(2):
             if (aStudent["sleepHours"][sleepIndex] == currStudent["sleepHours"][sleepIndex] or 
                 aStudent["sleepHours"][sleepIndex] + 1 == currStudent["sleepHours"] or 
-                aStudent["sleepHours"][sleepIndex] - 1 == currStudent["sleepHours"]         ):
+                aStudent["sleepHours"][sleepIndex] - 1 == currStudent["sleepHours"]):
                 weight += 1
+                
 
         # Compare music preference between the two students
         for musicPref in aStudent["musicPreference"]:
             weight += 1 if (musicPref in currStudent["musicPreference"]) else 0
+            
 
         # Compare hobbies between the two students
         for hobby in aStudent["hobbies"]:
@@ -112,7 +113,7 @@ def idealSearch(student):
     for i in range(len(potentialRooms)):
         w = weightRoom(potentialRooms[i], student)
         
-        # If current weight is greater than highst weight, update bestMatch and highest weight
+        # If current weight is greater than highest weight, update bestMatch and highest weight
         if (w > highestWeight):
             bestMatch = potentialRooms[i]
             highestWeight = i
@@ -127,6 +128,7 @@ def idealSearch(student):
     # Update student dorm name to the best match 
     student["dorm"] = bestMatch["name"]
 
+    print(bestMatch)
     return # End function 
 
 # -----------------------------------------------------------------------------------------------------------------
@@ -245,7 +247,7 @@ def firstSearch(data, student):
     # Return false if first search has failed 
     else:
         return False
-    
+
 # Empty Function, unfinished by Jack, Probably useless 
 def groupSort(students):
 
