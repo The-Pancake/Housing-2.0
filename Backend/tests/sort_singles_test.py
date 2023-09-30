@@ -70,7 +70,7 @@ class sortSinglesTest(unittest.TestCase):
         
         # Thanks to mock, we can modify the return value of weightroom
         mock_weightRoom.return_value = 6
-        mock_weightRoom.student =
+        mock_weightRoom.student = self.student
 
         # Giving a sample potential rooms for the function to use
         sampleRooms = [
