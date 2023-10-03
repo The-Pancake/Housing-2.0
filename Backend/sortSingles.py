@@ -20,7 +20,6 @@
 # September 22th, 2023 Changes - Daniel he
 # - I believe documentation is almost finished, starting tests right now 
 
-
 # -----------------------------------------------------------------------------------------
 # Helper function - Daniel 
 # Checking to see if an attribute for a student exists by calling the isinstance and checking 
@@ -101,6 +100,12 @@ def weightRoom(room, currStudent):
     # Return calculated weight
     return weight
 
+# Function: idealSearch ()
+# Description: Places a student into a potential room based on calculated weight of the
+# room. 
+# NOTE: for now the database is not modified, idealSearch returns a bestMatch instead for testing purposes
+# Parameters: student
+# Returns: bestMatch 
 
 # After first search, uses potentialRooms to look
 def idealSearch(student):
@@ -108,7 +113,7 @@ def idealSearch(student):
     # Store best match and highest weight of a room below: 
     bestMatch = potentialRooms[0]
     highestWeight = 0
-
+    
     # For each of the potential rooms, get a weight
     for i in range(len(potentialRooms)):
         w = weightRoom(potentialRooms[i], student)
@@ -128,8 +133,7 @@ def idealSearch(student):
     # Update student dorm name to the best match 
     student["dorm"] = bestMatch["name"]
 
-    print(bestMatch)
-    return # End function 
+    return bestMatch # End function 
 
 # -----------------------------------------------------------------------------------------------------------------
 
@@ -139,7 +143,6 @@ def idealSearch(student):
 # Description: Looks to see if two students have commonality
 # Parameters: Takes a Room and a Student [2 dictionaries]
 # Returns: True if student can fit well into the room, False otherwise
-
 def isPerfectMatch(room, student):
 
     commonalityScore = 0    # Determine if student is valid for 
@@ -176,9 +179,8 @@ def isPerfectMatch(room, student):
 # Function: firstSearch
 # Description: if there is a "perfect" fit, it matches the student there, otherwise collecting other
 # decent fits to use in a sort of ideal search
-# Parameters: data/campus information and student information [ Two dictionaries]
-# Returns: 
-
+# Parameters: data/campus information and student information [Two dictionaries]
+# Returns: True on sucess, False otherwise  
 def firstSearch(data, student):
 
     # Make sure that the global list of potential rooms is empty
@@ -244,6 +246,7 @@ def firstSearch(data, student):
     # if no potential rooms we can perform an ideal search for the student
     if (len(potentialRooms) != 0):
         idealSearch(student)
+        return True
     # Return false if first search has failed 
     else:
         return False
