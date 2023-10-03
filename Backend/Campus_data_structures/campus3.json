@@ -11,7 +11,8 @@
             "size": 2,
             "shared_bathroom": 106,
             "type": "junior",
-            "Occupants": []
+            "Occupants": [
+            ]
         },
         "106": {
             "size": 2,

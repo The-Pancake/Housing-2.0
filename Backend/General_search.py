@@ -1,21 +1,15 @@
 import json
 
-def idealSearch(data, groupSize, preferred, students):
-    for pref in preferred:
-        hall = data.get(pref, {})
-        for room_id, room_data in hall.items():
+def findAvailableRoom(data, groupSize, students):
+    for hall, rooms in data.items():
+        for room_id, room_data in rooms.items():
             occupants = room_data["Occupants"]
             size = room_data["size"]
             if len(occupants) + groupSize <= size:
                 for student in students:
                     occupants.append(student)
                 room_data["Occupants"] = occupants
-                return True, pref + " " + room_id  
-            elif len(occupants) == 0 and groupSize <= size:
-                for student in students[:size]:
-                    occupants.append(student)
-                room_data["Occupants"] = occupants
-                return True, pref + " " + room_id  
+                return True, hall + " " + room_id
     return False, None
 
 def updateJSON(filename, data):
@@ -39,12 +33,10 @@ filename = "Backend/Campus_data_structures/campus3.json"
 with open(filename) as f:
     data = json.load(f)
 
-preferred1 = ["Davison"]
-preferred2 = ["Sharp"]
-students = ["kellie", "Becky"]
+students = ["John", "Bill"]
 groupSize = len(students)
 
-room_found, given_room = idealSearch(data, groupSize, preferred1, students)
+room_found, given_room = findAvailableRoom(data, groupSize, students)
 
 if room_found:
     updateJSON(filename, data)
@@ -53,5 +45,3 @@ else:
     print("No suitable room found for the group.")
     
 printData(data)
-
-
