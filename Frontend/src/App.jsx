@@ -4,11 +4,13 @@ import Account from "./routes/account";
 import Contact from "./routes/contact";
 import Application from "./routes/application";
 import Layout from "./routes/layout";
+import Signup from "./routes/signup";
 
 import { BrowserRouter } from "react-router-dom";
 
 import { Route, Routes } from "react-router";
-import Signup from "./routes/signup";
+
+import "./app.css"
 
 export default function App() {
   return (
