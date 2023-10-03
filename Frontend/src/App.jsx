@@ -8,6 +8,7 @@ import Layout from "./routes/layout";
 import { BrowserRouter } from "react-router-dom";
 
 import { Route, Routes } from "react-router";
+import Signup from "./routes/signup";
 
 export default function App() {
   return (
@@ -16,6 +17,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<Root />} />
+            <Route path="/signup" element={<Signup />} />
             <Route path="/dorms" element={<Dorms />} />
             <Route path="/account" element={<Account />} />
             <Route path="/contact" element={<Contact />} />
