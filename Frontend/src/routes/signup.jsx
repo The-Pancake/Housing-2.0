@@ -1,9 +1,38 @@
 
 
+import { useState } from "react";
 import "./signup.css"
 
 
 export default function Signup() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  function handleEmailChange(e) {
+    setEmail(e.target.value);
+  }
+
+  function handlePasswordChange(e) {
+    setPassword(e.target.value);
+  }
+
+  function submit() {
+    console.log(email)
+    console.log(password)
+    let data = { email, password}
+    console.log(data)
+    /*
+    This is an example fetch call
+    We don't have an API yet, but it would be something like this
+    fetch("http://localhost:8000/items", {
+      method: "POST",
+      body: JSON.stringify(data)
+    }).then(res => res.json())
+      .then(res => {
+        console.log(res)
+    })
+    */
+  }
 
   return (
     <div className="signupBg">
@@ -16,13 +45,13 @@ export default function Signup() {
           </div>
           <div className="inputs">
             <label htmlFor="email">RPI Email Address</label>
-            <input name="email"></input>
+            <input name="email" value={email} onChange={handleEmailChange}></input>
 
             <label htmlFor="password">password</label>
-            <input name="password"></input>
+            <input name="password" value={password} onChange={handlePasswordChange}></input>
           </div>
-          <div class="bottom">
-            <button className="btn">Sign Up/Log In</button>
+          <div className="bottom">
+            <button className="btn" onClick={() => submit()}>Sign Up/Log In</button>
           </div>
         </div>
       </div>
