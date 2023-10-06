@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+  font-family: "poppins"
+}
+
+.signupBg {
+  display: flex;
+  flex-direction: row;
+  background-image: url("../assets/rpi1.png");
+  height: 90vh;
+}
+
+.signupBg > div {
+  flex-basis: 50%;
+}
+
+
+.whiteBg {
+  background-color: white;
+  /* margin: 10%; */
+}
+
+.content {
+  margin: 10%;
+  display: flex;
+  flex-direction: column;
+  height: 50vh;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+}
+
+.bottom {
+  margin-top: auto;
+  flex-grow: 1;
+}

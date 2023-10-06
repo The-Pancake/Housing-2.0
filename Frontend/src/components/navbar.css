@@ -3,6 +3,8 @@
   gap: 10px;
   justify-content: end;
   align-items: center;
+  width: 97%;
+  margin: 0 auto;
 }
 
 #navbar li {

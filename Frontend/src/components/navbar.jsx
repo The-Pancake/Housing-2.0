@@ -24,6 +24,10 @@ export default function Navbar() {
       path: "application",
       name: "application status"
     },
+    {
+      path: "signup",
+      name: "signup page"
+    }
   ];
 
   return (
