@@ -1,97 +1,41 @@
+import React from 'react';
 import { useLocation } from 'react-router-dom';
+import './styles.css';
 
 export default function Application() {
-  const location = useLocation();
-  const firstName = "Firstname";
-  const lastName = "Lastname";
-  
-  const currentStep = 3; // current step value
-  const totalSteps = 5;
-  const loadingPercentage = (currentStep / totalSteps) * 100;
-  const student_email = "lastnf@rpi.edu";
-  const student_phone_number = "+1 (518)-***-****";
-  return (
-    <>
-      <div style={{
-        textAlign: 'left', paddingLeft: '1.4em', fontSize: '1.9em',
-        fontWeight: 'bold', marginBottom: '1em'
-      }}>
-        {lastName}, {' '}{firstName}
-      </div>
-      <div style={{
-        display: 'flex', justifyContent: 'center', alignItems: 'center',
-        gap: '4em', height: '70vh'
-      }}>
-        <div style={{
-          width: '30%',
-          backgroundColor: 'lightgray',
-          padding: '1em',
-          boxSizing: 'border-box',
-          height: '60vh',
-          display: 'flex', 
-          flexDirection: 'column',
-          justifyContent: 'space-between',
-          borderRadius:'10px'
-        }}>
-          <div style={{ fontWeight: 'bold', fontSize: '1.5em' }}>Personal Information</div>
+    const location = useLocation();
+    const firstName = "Firstname";
+    const lastName = "Lastname";
 
-          {/* Peronsal info*/}
-          <div style={{alignSelf: '',
-          fontSize: '1.3em',
-          height: '5vh'}}>Email: {student_email}</div> 
+    const currentStep = 3;
+    const totalSteps = 5;
+    const loadingPercentage = (currentStep / totalSteps) * 100;
+    const student_email = "lastnf@rpi.edu";
+    const student_phone_number = "+1 (518)-***-****";
 
-          <div style= {{alignSelf: '',
-          fontSize: '1.3em', 
-          height: '20vh'}}>Phone: {student_phone_number}</div>
-
-          <button style={{ alignSelf: 'flex-end', fontSize: '1em' }}>Edit Contact Info</button>
-        </div>
-        <div style={{
-          width: '30%',
-          backgroundColor: 'lightgray',
-          padding: '1em',
-          boxSizing: 'border-box',
-          height: '60vh',
-          display: 'flex', 
-          flexDirection: 'column',
-          justifyContent: 'space-between',
-          borderRadius: '10px'
-        }}>
-          <div style={{ fontWeight: 'bold', fontSize: '1.5em' }}>Application Status</div>
-          
-          {/* Loading Bar */}
-          <div style={{
-            height: '40px', 
-            width: '100%',
-            backgroundColor: '#E0E0E0', 
-            position: 'relative',
-            marginTop: '10px',
-            borderRadius: '4px'
-          }}>
-            <div style={{
-              height: '100%',
-              width: `${loadingPercentage}%`,
-              backgroundColor: 'green'
-            }} />
-            <div style={{
-              position: 'absolute',
-              top: '50%',
-              left: '50%',
-              transform: 'translate(-50%, -50%)',
-              color: 'black',
-              fontSize: '1.2em',
-              fontWeight: 'bold'
-            }}>
-              {loadingPercentage}%
+    return (
+        <>
+            <div className="user-name">
+                {lastName}, {' '}{firstName}
             </div>
-          </div>
-          
-          <div style={{fontSize: '1.3em', marginTop: '5px', height: '10vh'}}>Step: {currentStep}/{totalSteps}</div>
-          
-          <button style={{ alignSelf: 'flex-end', fontSize: '1em' }}>Continue Application</button>
-        </div>
-      </div>
-      <div>Current path: {location.pathname} </div>
-    </>
-  );
+            <div className="info-container">
+                <div className="info-box personal-info-box">
+                    <div className="box-header">Personal Information</div>
+                    <div className="personal-info">Email: {student_email}</div>
+                    <div className="personal-info phone-info">Phone: {student_phone_number}</div>
+                    <button className="edit-info-button">Edit Contact Info</button>
+                </div>
+                <div className="info-box status-info-box">
+                    <div className="box-header">Application Status</div>
+                    <div className="loading-bar-container">
+                        <div className="loading-bar" style={{ width: `${loadingPercentage}%` }}></div>
+                        <div className="loading-text">{loadingPercentage}%</div>
+                    </div>
+                    <div className="step-info">Step: {currentStep}/{totalSteps}</div>
+                    <button className="continue-application-button">Continue Application</button>
+                </div>
+            </div>
+            <div className="path-info">Current path: {location.pathname}</div>
+        </>
+    );
 }

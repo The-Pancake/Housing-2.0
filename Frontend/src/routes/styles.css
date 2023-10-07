@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+
+body, div, h1, h2, p, button {
+    font-family: 'Poppins', sans-serif;
+}
+
+.user-name {
+    text-align: left;
+    padding-left: 1.4em;
+    font-size: 2.7em;
+    font-weight: bold;
+    margin-bottom: 1em;
+}
+
+.info-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4em;
+    height: 70vh;
+}
+
+.info-box {
+    width: 30%;
+    background-color: #DBDCEB; 
+    padding: 1em;
+    box-sizing: border-box;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.box-header {
+    font-weight: bold;
+    font-size: 2.0em;
+}
+
+.personal-info {
+    font-size: 1.5em;
+}
+
+.phone-info {
+    height: 20vh;
+}
+
+.edit-info-button, .continue-application-button {
+    align-self: flex-end;
+    font-size: 1em;
+    border-radius: 10px;
+}
+
+.loading-bar-container {
+    height: 40px;
+    width: 100%;
+    background-color: #E0E0E0;
+    position: relative;
+    margin-top: 10px;
+    border-radius: 4px;
+}
+
+.loading-bar {
+    height: 100%;
+    background-color: green;
+}
+
+.loading-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.step-info {
+    font-size: 1.5em;
+    margin-top: 5px;
+    height: 10vh;
+}
+
+.path-info {
+    margin-top: 1em;
+}
