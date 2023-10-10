@@ -27,10 +27,13 @@ async def signup(req: Request, res: Response):
     res.status_code = 400
     return {"message": "Error: missing email or password"}
 
-  loginFile = open("./data/logins.json", "r+")
+  loginFile = open("./data/logins.json", "r")
   loginInfo = json.load(loginFile)
   
   loginInfo[email] = password
+  loginFile.close()
+  loginFile = open("./data/logins.json", "w")
+  
 
   json.dump(loginInfo, loginFile)
 
