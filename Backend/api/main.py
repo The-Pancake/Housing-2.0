@@ -14,9 +14,28 @@ async def root():
   return {"message": "Hello World"}
 
 
+@app.post("/signin")
+async def signin(req: Request, res: Response):
+  # todo: add error checking
+  reqJson = await req.json()
+  email = reqJson.get("email")
+  password = reqJson.get("password")
+  if (not email or not password):
+    res.status_code = 400
+    return {"message": "Error: missing email or password"}
+
+  loginFile = open("./data/logins.json", "r")
+  loginInfo = json.load(loginFile)
+
+  if (loginInfo.get(email) == password):
+    return True
+  return False
+
 @app.post("/signup")
 async def signup(req: Request, res: Response):
   # todo: add error checking here
+  # also maybe try to store just the password hashes
+  #  instead of the passwords in plaintext
 
   # validate that there is email and password present
   #  in the request body
