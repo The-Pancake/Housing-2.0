@@ -89,45 +89,44 @@ body, div, h1, h2, p, button {
     margin-top: 1em;
 }
 
-/* styles for the edit-contact-info page */
+/* styles.css */
 
 .profile-container {
-    width: 70%;
-    margin: 2rem auto;
-    background-color: #DBDCEB;
-    padding: 1em;
+    padding: 20px;
+    background-color: #f9f9f9;
     border-radius: 10px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    margin: 50px auto;
   }
   
   .profile-title {
+    font-size: 24px;
     text-align: center;
-    font-size: 2.2em;
-    margin-bottom: 1.5rem;
+    color: #333;
   }
   
   .profile-section {
-    margin-bottom: 1.5rem;
-    font-size: 1.3em;
+    margin: 15px 0;
   }
   
   .profile-label {
     font-weight: bold;
-    margin-right: 1rem;
+    margin-right: 10px;
   }
   
   .profile-edit-button {
     display: block;
-    margin: 1.5rem auto 0;
-    padding: 0.7rem 2rem;
-    background-color: rgb(93, 219, 93);
-    border: none;
-    border-radius: 10px;
-    font-weight: bold;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #007BFF;
     color: white;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
   }
   
   .profile-edit-button:hover {
-    background-color: rgb(80, 200, 80);
+    background-color: #0056b3;
   }
   

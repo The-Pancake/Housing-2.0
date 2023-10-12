@@ -31,7 +31,7 @@ export default function Application() {
                     <button className="edit-info-button" onClick={handleEditInfoClick}>
                         Edit Contact Info
                     </button>
-                </div>
+                </div>  
                 <div className="info-box status-info-box">
                     <div className="box-header">Application Status</div>
                     <div className="loading-bar-container">
