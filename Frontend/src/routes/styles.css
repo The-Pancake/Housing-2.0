@@ -1,6 +1,7 @@
+/* class for profile menu page*/
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 
-
+/* styes for profile view*/
 body, div, h1, h2, p, button {
     font-family: 'Poppins', sans-serif;
 }
@@ -36,11 +37,12 @@ body, div, h1, h2, p, button {
 
 .box-header {
     font-weight: bold;
-    font-size: 2.0em;
+    font-size: 1.8em;
+    align-self: center;
 }
 
 .personal-info {
-    font-size: 1.5em;
+    font-size: 1.3em;
 }
 
 .phone-info {
@@ -62,9 +64,9 @@ body, div, h1, h2, p, button {
     border-radius: 4px;
 }
 
-.loading-bar {
+.loading-bar { 
     height: 100%;
-    background-color: green;
+    background-color: rgb(93, 219, 93);
 }
 
 .loading-text {
@@ -73,12 +75,12 @@ body, div, h1, h2, p, button {
     left: 50%;
     transform: translate(-50%, -50%);
     color: black;
-    font-size: 1.2em;
+    font-size: 1.0em;
     font-weight: bold;
 }
 
 .step-info {
-    font-size: 1.5em;
+    font-size: 1.3em;
     margin-top: 5px;
     height: 10vh;
 }
@@ -86,3 +88,46 @@ body, div, h1, h2, p, button {
 .path-info {
     margin-top: 1em;
 }
+
+/* styles for the edit-contact-info page */
+
+.profile-container {
+    width: 70%;
+    margin: 2rem auto;
+    background-color: #DBDCEB;
+    padding: 1em;
+    border-radius: 10px;
+  }
+  
+  .profile-title {
+    text-align: center;
+    font-size: 2.2em;
+    margin-bottom: 1.5rem;
+  }
+  
+  .profile-section {
+    margin-bottom: 1.5rem;
+    font-size: 1.3em;
+  }
+  
+  .profile-label {
+    font-weight: bold;
+    margin-right: 1rem;
+  }
+  
+  .profile-edit-button {
+    display: block;
+    margin: 1.5rem auto 0;
+    padding: 0.7rem 2rem;
+    background-color: rgb(93, 219, 93);
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .profile-edit-button:hover {
+    background-color: rgb(80, 200, 80);
+  }
+  
