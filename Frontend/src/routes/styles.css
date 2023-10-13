@@ -139,7 +139,7 @@ body, div, h1, h2, p, button {
     cursor: pointer;
     border: none;
     border-radius: 5px;
-    margin: 5px 5px;
+    margin: 5px 0px; /* changed from 5px 5px */
     /* display: block;
     margin: 20px auto;
     padding: 10px 20px;
