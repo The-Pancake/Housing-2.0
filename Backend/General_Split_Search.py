@@ -1,9 +1,5 @@
 import json
 import copy
-# Implement Algorithm Here:
-
-# def idealSplitSearch():
-#     return
 
 '''
 Will try to search for rooms with connected bathrooms in preferred dorms of the group preference
