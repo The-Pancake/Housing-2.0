@@ -1,0 +1,31 @@
+.parent {
+    text-align: center;
+    display: flex;
+    height: 100%;
+    width: 100vw;
+}
+
+.child {
+    width: 50%; /* Each child div will take half the screen width */
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.leftSide {
+    margin-left: 0%;
+    margin-right: 5%;
+    background-color: aquamarine;
+    height:100vh;
+    background-image: url('https://news.rpi.edu/sites/default/files/DJI_0154%20copy.jpg');
+    /* background-size: cover;  */
+    background-repeat: no-repeat; /* This ensures no repeating of the image */
+}
+
+.rightSide {
+    margin-right: 10%;
+    margin-top: 15%;
+}
+
+Form {
+    width: 80%;
+}
