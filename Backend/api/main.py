@@ -14,6 +14,17 @@ async def root():
   return {"message": "Hello World"}
 
 
+@app.get("/profile")
+async def profile(res: Request):
+  # is user signed in?
+  if (not res.cookies.get("account")):
+    return False
+
+
+  print(res.cookies.get("account"))
+  return {"message": "tbd"}
+
+
 @app.post("/signin")
 async def signin(req: Request, res: Response):
   # todo: add error checking
@@ -28,6 +39,7 @@ async def signin(req: Request, res: Response):
   loginInfo = json.load(loginFile)
 
   if (loginInfo.get(email) == password):
+    res.set_cookie(key="account", value=email)
     return True
   return False
 
