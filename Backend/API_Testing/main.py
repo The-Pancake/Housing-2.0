@@ -5,7 +5,7 @@ import pydantic
 # import fast API
 app = fastapi.FastAPI()
 
-# Declare a student class 
+# Declare a student class, this is all the information on the student that is recieved from the front end 
 class Student(pydantic.BaseModel):
     name: str
     sex: str
@@ -18,12 +18,17 @@ class Student(pydantic.BaseModel):
     hobbies: list
     dorm: str
 
+# Declaring a sample Student to send to "backend"
+students = {
+    0: Student(name='john', sex='m', major='Computer Science', dormPref='', year='freshman', geo='NY',sleepHours=[9,10], musicPreference=['Pop'], hobbies=['Gaming'], dorm='')
+}
+
 # Sample get message
 @app.get("/")
 async def root():
     return {"message": "Hello World"}
 
-# Get a student from "front-end" and return it 
+# Following returns the student dictionary 
 @app.get("/students/")
-async def student(info: Student):
-    return info
+async def students() -> dict[str, dict[int, Student]]:
+    return {0: students}
