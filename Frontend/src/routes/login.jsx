@@ -6,7 +6,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./signup.css"
 
 
-export default function Signup() {
+export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -43,7 +43,7 @@ export default function Signup() {
                     <img src="https://news.rpi.edu/sites/default/files/DJI_0154%20copy.jpg"/> 
                 </div>
                 <div className='child rightSide'>
-                    <h1 style={{textAlign:"left"}}>Signup</h1>
+                    <h1 style={{textAlign:"left"}}>Login</h1>
                     <h3 style={{textAlign:"left"}}>Tagline</h3>
                     <Form className="formInfo">
                         <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -63,7 +63,7 @@ export default function Signup() {
                         </Button>
                         <br/>
                         <Form.Text style={{textAlign:"left"}}>
-                            Already have an account? <b><u>Log in</u></b>
+                            Dont have an account? <b><u>Sign up</u></b>
                         </Form.Text>
                     </Form>
                 </div>

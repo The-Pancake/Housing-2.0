@@ -15,7 +15,6 @@
   flex-basis: 50%;
 }
 
-
 .whiteBg {
   background-color: white;
   /* margin: 10%; */
@@ -37,3 +36,37 @@
   margin-top: auto;
   flex-grow: 1;
 }
+.parent {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;    /* Make sure children stretch to fill the parent's height */
+  width: 100%;
+  height: 100vh;          /* Take the full viewport height */
+}
+
+.child {
+  flex: 1;
+  padding: 10px;
+  box-sizing: border-box; /* Include padding and border in child's total width and height */
+}
+
+.leftSide img {
+  width: auto;            /* Maintain the aspect ratio */
+  height: 100%;           /* Make the image height match its container */
+  display: block;         /* Remove any bottom spacing */
+  max-height: 100vh;      /* Ensure it doesn't exceed viewport height */
+  object-fit: cover;      /* Ensure the image covers the container without distortion */
+}
+
+.leftSide {
+  overflow: hidden;       /* Clip the image if it overflows */
+}
+
+.rightSide {
+  display: flex;
+  flex-direction: column;   /* Stack children vertically */
+  justify-content: center;  /* Center children vertically */
+  align-items: center;      /* Center children horizontally */
+}
+
+
