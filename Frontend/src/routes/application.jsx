@@ -2,17 +2,18 @@ import React from 'react';
 import { useLocation, Outlet, useNavigate } from 'react-router-dom';
 import './styles.css';
 
+
+//import {last_name} from './edit_contact_info.jsx';
+//import {first_name} from './edit_contact_info.jsx';
+
+import {profileData} from './edit_contact_info.jsx';
+
 export default function Application() {
     const location = useLocation();
     const navigate = useNavigate();
-
-    const firstName = "Firstname";
-    const lastName = "Lastname";
     const currentStep = 3;
     const totalSteps = 5;
     const loadingPercentage = (currentStep / totalSteps) * 100;
-    const student_email = "lastnf@rpi.edu";
-    const student_phone_number = "+1 (518)-***-****";
 
     const handleEditInfoClick = () => {
         navigate('/edit-profile');
@@ -21,15 +22,16 @@ export default function Application() {
     return (
         <>
             <div className="user-name">
-                {lastName}, {' '}{firstName}
+                {profileData.lastName}, {' '}{profileData.firstName}
             </div>
             <div className="info-container">
                 <div className="info-box personal-info-box">
                     <div className="box-header">Personal Information</div>
-                    <div className="personal-info">Email: {student_email}</div>
-                    <div className="personal-info phone-info">Phone: {student_phone_number}</div>
+                    <div className="personal-info">Email: {profileData.email}</div>
+                    <div className="personal-info">Class: {profileData.class}</div>
+                    <div className="personal-info RIN-info">RIN: {profileData.RIN}</div>
                     <button className="edit-info-button" onClick={handleEditInfoClick}>
-                        Edit Contact Info
+                        Edit Other Contact Info
                     </button>
                 </div>  
                 <div className="info-box status-info-box">
