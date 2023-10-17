@@ -1,7 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.css';
 // import NavbarLink from "../components/Navbar.jsx";
 // import NavbarLink from '../components/Navbar.jsx';
-import "./quiz.css";
+import "./Quiz.css";
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';

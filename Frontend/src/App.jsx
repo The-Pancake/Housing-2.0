@@ -8,6 +8,7 @@ import Layout from "./routes/layout";
 import Signup from "./routes/signup";
 import Quiz from "./routes/quiz";
 import QuizQuestions from "./routes/quizQuestions";
+import FAQ from "./routes/faq";
 
 import { BrowserRouter } from "react-router-dom";
 
@@ -30,6 +31,7 @@ export default function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/application" element={<Application />} />
             <Route path="/quizQuestions" element={<QuizQuestions />} />
+            <Route path="/faq" element={<FAQ />} />
           </Route>
         </Routes>
       </BrowserRouter>

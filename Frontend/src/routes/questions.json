@@ -6,5 +6,9 @@
     {
         "question": "What's your favorite animal?",
         "answers": ["Dog", "Cat", "Bird", "Fish"]
+    },
+    {
+        "question": "What's your favorite animal?",
+        "answers": ["Dog", "Cat", "Bird", "Fish"]
     }
 ]
