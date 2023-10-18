@@ -6,7 +6,8 @@ import './styles.css';
 //import {last_name} from './edit_contact_info.jsx';
 //import {first_name} from './edit_contact_info.jsx';
 
-import {profileData} from './edit_contact_info.jsx';
+import { profileData, hasMissingInformation } from './edit_contact_info.jsx';
+
 
 export default function Application() {
     const location = useLocation();
@@ -31,8 +32,11 @@ export default function Application() {
                     <div className="personal-info">Class: {profileData.class}</div>
                     <div className="personal-info RIN-info">RIN: {profileData.RIN}</div>
                     <button className="edit-info-button" onClick={handleEditInfoClick}>
-                        Edit Other Contact Info
+                        Edit Other Information 
+                        {hasMissingInformation(profileData) && 
+                            <span className="missing-info"> (missing information)</span>}
                     </button>
+
                 </div>  
                 <div className="info-box status-info-box">
                     <div className="box-header">Application Status</div>
@@ -44,7 +48,7 @@ export default function Application() {
                     <button className="continue-application-button">Continue Application</button>
                 </div>
             </div>
-            <div className="path-info">Current path: {location.pathname}</div>
+            {/*<div className="path-info">Current path: {location.pathname}</div>*/}
             <Outlet />  {/* This will render the nested routes */}
         </>
     );

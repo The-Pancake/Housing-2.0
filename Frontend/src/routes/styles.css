@@ -113,28 +113,33 @@ body, div, h1, h2, p, button {
     height: 85vh;
   }
   
+  /*edit profile title*/
   .profile-title {
     font-size: 24px;
     text-align: center;
     color: #333;
   }
   
+  /*profile section*/
   .profile-section {
     margin: 10px;
   }
   
+  /*profile labels inside edit profile*/
   .profile-label {
     font-weight: bold;
     margin-right: 10px;
     align-content: left;
   }
 
+  
 .button-group {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
   
+  /*edit other contact info button*/
   .profile-edit-button, .profile-save-changes-button {
     padding: 10px 20px;
     border-radius: 5px;
@@ -152,25 +157,27 @@ body, div, h1, h2, p, button {
     cursor: pointer; */
   }
   
+  /*edit details profile button*/
   .profile-edit-button {
     background-color: #007BFF;
     color: white;
   }
-  
+
   .profile-edit-button:hover {
     background-color: #0056b3;
   }
   
+  /*submit button to save profile changes*/
   .profile-save-changes-button {
     background-color: #4CAF50; 
     color: white;
   }
-  
   .profile-save-changes-button:hover {
     background-color: #45a049; 
   }
   
   
+  /*each row in the edit profile section*/
   .row {
     display: flex;
     justify-content: space-between;
@@ -180,5 +187,14 @@ body, div, h1, h2, p, button {
 
 
   
+/*Missing information text*/
+  .missing-info {
+    color: red;
+}
 
-  
+.mandatory-field {
+  color: red;
+  font-size: 1.2em;
+  vertical-align: top;
+  margin-left: 2px;
+}

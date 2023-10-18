@@ -2,6 +2,8 @@ import React from 'react';
 import './styles.css';
 
 
+
+
 export const profileData = {
   firstName: 'Jeremy',
   lastName: 'Lin',
@@ -11,39 +13,60 @@ export const profileData = {
   streetAddress: '12345 Alfredo Ave',
   city: 'Savannah',
   state: 'GA',
-  country: 'United States',
+  country: '',
   zipcode: '45649',
-  phone: '+1 (518)-999-9999',
+  phone: '+1(518)-999-9999',
   RIN: '666666666',
   email: 'doejo2@rpi.edu',
   gender: 'Male',
   pronouns: 'He/Him'
 };
 
+export function hasMissingInformation(data) {
+  const keysToCheck = [
+    'firstName', 'lastName', 'class', 'dob', 'streetAddress', 
+    'city', 'state', 'country', 'zipcode', 'phone', 
+    'RIN', 'email', 'gender', 'pronouns'
+  ];
+  
+  for (let key of keysToCheck) {
+    if (!data[key] || data[key].trim() === '') {
+      return true;
+    }
+  }
+
+  return false;
+}
+
 export default function EditProfile() {
   return (
     <div className="edit-profile-background">
       <div className="profile-container">
         <h1 className="profile-title">Edit Profile</h1>
-
+z``
         <div className="row">
           <div className="profile-section">
-            <span className="profile-label">First Name:</span> {profileData.firstName}
+              <span className="profile-label"><span className="mandatory-field">*</span>First Name:</span> 
+              {profileData.firstName}
           </div>
           <div className="profile-section">
-            <span className="profile-label">Last Name:</span> {profileData.lastName}
+              <span className="profile-label"><span className="mandatory-field">*</span>Last Name:</span> 
+              {profileData.lastName}
           </div>
         </div>
 
         <div className="row">
           <div className="profile-section">
-            <span className="profile-label">RIN:</span> {profileData.RIN}
+              <span className="profile-label"><span className="mandatory-field">*</span>RIN:</span> 
+              {profileData.RIN}
           </div>
           <div className="profile-section">
-            <span className="profile-label">Email:</span> {profileData.email}
+              <span className="profile-label"><span className="mandatory-field">*</span>Email:</span> 
+              {profileData.email}
           </div>
           <div className="profile-section">
-            <span className="profile-label">Class:</span> {profileData.class}
+              <span className="profile-label"><span className="mandatory-field">*</span>Class:</span>
+              {profileData.class}
           </div>
         </div>
 
