@@ -80,4 +80,3 @@ group2_pref = ["Sharp", "BarH", "Cary"]
 
 result = find_nearest_available_buildings(data, group1_pref, group2_pref, group1, group2)
 print(f"Nearest Buildings with available rooms for the groups are: {result}")
-
