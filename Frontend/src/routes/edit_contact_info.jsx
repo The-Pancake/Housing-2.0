@@ -3,17 +3,16 @@ import './styles.css';
 
 
 
-
 export const profileData = {
   firstName: 'Jeremy',
   lastName: 'Lin',
-  class: 'Junior',
+  class: '',
   dob: '1990-01-01',
   address: '12345 Alfredo St, Savannah, GA, 45469',
   streetAddress: '12345 Alfredo Ave',
   city: 'Savannah',
   state: 'GA',
-  country: '',
+  country: 'United States',
   zipcode: '45649',
   phone: '+1(518)-999-9999',
   RIN: '666666666',
@@ -21,6 +20,9 @@ export const profileData = {
   gender: 'Male',
   pronouns: 'He/Him'
 };
+
+
+const mandatoryFields = ['firstName', 'lastName', 'RIN', 'email'];
 
 export function hasMissingInformation(data) {
   const keysToCheck = [
@@ -34,16 +36,25 @@ export function hasMissingInformation(data) {
       return true;
     }
   }
-
   return false;
 }
+
+export function hasMandatoryMissing(data) {
+  for (let field of mandatoryFields) {
+    if (!data[field] || data[field].trim() === '') {
+      return true;
+    }
+  }
+  return false;
+}
+
+
 
 export default function EditProfile() {
   return (
     <div className="edit-profile-background">
       <div className="profile-container">
         <h1 className="profile-title">Edit Profile</h1>
-z``
         <div className="row">
           <div className="profile-section">
               <span className="profile-label"><span className="mandatory-field">*</span>First Name:</span> 

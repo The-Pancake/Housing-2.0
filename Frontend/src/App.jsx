@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; //using version 6
-import Root from "./routes/root";
+//import Root from "./routes/root";
 import Dorms from "./routes/dorms";
 import Account from "./routes/account";
 import Contact from "./routes/contact";
@@ -8,6 +8,7 @@ import AppRouter from './routes/AppRouter';
 import Layout from "./routes/layout";
 import EditProfile from './routes/edit_contact_info';
 import Navbar from './components/navbar';
+
 
 export default function App() {
   return (

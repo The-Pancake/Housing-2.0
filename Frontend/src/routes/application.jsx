@@ -1,12 +1,14 @@
-import React from 'react';
+//import React from 'react';
 import { useLocation, Outlet, useNavigate } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { profileData, hasMissingInformation } from './edit_contact_info.jsx';
 import './styles.css';
 
 
 //import {last_name} from './edit_contact_info.jsx';
 //import {first_name} from './edit_contact_info.jsx';
 
-import { profileData, hasMissingInformation } from './edit_contact_info.jsx';
+//import { profileData, hasMissingInformation } from './edit_contact_info.jsx';
 
 
 export default function Application() {
@@ -15,6 +17,11 @@ export default function Application() {
     const currentStep = 3;
     const totalSteps = 5;
     const loadingPercentage = (currentStep / totalSteps) * 100;
+    const [showMissingInfoPopup, setShowMissingInfoPopup] = useState(false);
+
+    useEffect(() => {
+        setShowMissingInfoPopup(hasMissingInformation(profileData));
+    }, []);
 
     const handleEditInfoClick = () => {
         navigate('/edit-profile');
@@ -22,6 +29,13 @@ export default function Application() {
 
     return (
         <>
+            {showMissingInfoPopup && (
+                <div className="missing-info-popup">
+                    Missing information in profile, 
+                    <span className="popup-link" onClick={handleEditInfoClick}> click here</span> to finish profile.
+                </div>
+            )}
+
             <div className="user-name">
                 {profileData.lastName}, {' '}{profileData.firstName}
             </div>
@@ -33,10 +47,7 @@ export default function Application() {
                     <div className="personal-info RIN-info">RIN: {profileData.RIN}</div>
                     <button className="edit-info-button" onClick={handleEditInfoClick}>
                         Edit Other Information 
-                        {hasMissingInformation(profileData) && 
-                            <span className="missing-info"> (missing information)</span>}
                     </button>
-
                 </div>  
                 <div className="info-box status-info-box">
                     <div className="box-header">Application Status</div>
@@ -48,7 +59,6 @@ export default function Application() {
                     <button className="continue-application-button">Continue Application</button>
                 </div>
             </div>
-            {/*<div className="path-info">Current path: {location.pathname}</div>*/}
             <Outlet />  {/* This will render the nested routes */}
         </>
     );
