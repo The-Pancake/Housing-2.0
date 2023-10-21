@@ -21,7 +21,7 @@ app = fastapi.FastAPI()
 
 # Declaring a sample Student to send to "backend"
 studentDatabase = {
-    0: Student(name='john', sex='m', major='Computer Science', dormPref='', year='freshman', geo='NY',sleepHours=[9,10], musicPreference=['Pop'], hobbies=['Gaming'], dorm='')uvi
+    0: Student(name='john', sex='m', major='Computer Science', dormPref='', year='freshman', geo='NY',sleepHours=[9,10], musicPreference=['Pop'], hobbies=['Gaming'], dorm='')
 }
 
 # Sample get message
