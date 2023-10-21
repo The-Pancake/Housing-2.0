@@ -252,6 +252,6 @@ def firstSearch(data, student):
         return False
 
 # Empty Function, unfinished by Jack, Probably useless 
-def groupSort(students):
+# def groupSort(students):
 
-    return
+#     return
