@@ -1,174 +1,257 @@
-# what I maybe plan to do is that if there are no "perfect" matches,
+#   _   _   _   _   _   _   _   _   _   _  
+#  / \ / \ / \ / \ / \ / \ / \ / \ / \ / \ 
+# ( H | o | u | s | i | n | g | 2 | . | 0 )
+#  \_/ \_/ \_/ \_/ \_/ \_/ \_/ \_/ \_/ \_/ 
+#
+ 
+# Original Author: Jack Sherick
+# What I maybe plan to do is that if there are no "perfect" matches,
 # collect rooms that are good matches and sort between those and pick
 # the best of them - this sort of emulates a best fit and ideal fit at
 # the same time (will be two seperate sort functions *if a perfect fit
 # is not found*)
 
-# i want to have it working with just induvial students before I implement
+# I want to have it working with just individual students before I implement
 # groups - though that shouldn't be hard since groups will pretty much always
 # fit under the perfect fit category of things
 
-potentialRooms = []
+# September 19th, 2023 Changes - Daniel He 
+# - Going to review/ modify code written by Jack adding comments 
+# September 22th, 2023 Changes - Daniel he
+# - I believe documentation is almost finished, starting tests right now 
 
-# weights rooms on a bunch of variables - to change, currently acts as just an example 
-# of what it will be
-def weightRoom(room, student):
+# -----------------------------------------------------------------------------------------
+# Helper function - Daniel 
+# Checking to see if an attribute for a student exists by calling the isinstance and checking 
+# the data type to determine if the attribute exists -- Requires testing
+def checkAttribute (student, attri): 
 
-    i = 0
+    if(isinstance(student[attri], list) and len(student[attri]) == 0):
+        return False
+    if(isinstance(student[attri], str) and len(student[attri]) == 0):
+        return False
+    if(isinstance(student[attri], int) and student[attri] == 0):
+        return False
+    # Attribute Exists return True
+    return True
 
-    for j in room["occupants"]:
-        if (j["major"] == student["major"]):
-            i += 5
+# -----------------------------------------------------------------------------------------
 
-        if (j["geo"] == student["geo"]):
-            i += 3
+# Start of ideal Search 
+
+potentialRooms = [] # Houses potential rooms for the student
+
+# Function: weightRoom()
+# Description: Weighs a room based  on a bunch of variables - to change, currently acts as just an example 
+# of what it will be, function is very flexible and can always add more comparisons. Helper for ideal search 
+# Parameters: Takes in room information as well as stuent information
+# Returns: Weight calculated 
+
+def weightRoom(room, currStudent):
+
+    # Holds room weight 
+    weight = 0
+
+    # Searches through occupants calculating weight based on a variety of factors
+    # aStudent represents a occupant in the room 
+    for aStudent in room["occupants"]:
+        # Compare majors
+        weight += 5 if (aStudent["major"] == currStudent["major"]) else 0
         
-        for k in range(2):
-            if (j["sleepHours"][k] == student["sleepHours"][k] or j["sleepHours"][k] + 1 == student["sleepHours"] or j["sleepHours"][k] - 1 == student["sleepHours"]):
-                i += 1
+        # Compare geography (aka where they are from )
+        weight += 3 if (aStudent["geo"] == currStudent["geo"]) else 0
         
-        for k in j["musicPreference"]:
-            if (k in student["musicPreference"]):
-                i += 1
-        
-        for k in j["hobbies"]:
-            if (k in student["musicPreference"]):
-                i += 1
+        # Compare sleep hours, this is stored as a array where the sleep hours of a student looks like this:
+        #
+        # [ (Start Bedtime), (End Bedtime) ]
+        #         0              1           
+        #
+        for sleepIndex in range(2):
+            if (aStudent["sleepHours"][sleepIndex] == currStudent["sleepHours"][sleepIndex] or 
+                aStudent["sleepHours"][sleepIndex] + 1 == currStudent["sleepHours"] or 
+                aStudent["sleepHours"][sleepIndex] - 1 == currStudent["sleepHours"]):
+                weight += 1
+                
 
-    if (i == 0 and len(room["occupants"]) == 0):
-        i += 1
+        # Compare music preference between the two students
+        for musicPref in aStudent["musicPreference"]:
+            weight += 1 if (musicPref in currStudent["musicPreference"]) else 0
+            
 
-    k = 0    
+        # Compare hobbies between the two students
+        for hobby in aStudent["hobbies"]:
+            weight += 1 if (hobby in currStudent["hobbies"]) else 0
+
+    # If there is no one in the room we increase the weight
+    if (weight == 0 and len(room["occupants"]) == 0):
+        weight += 1
+
+    # Increase the weight if the room is in a dorm of a student's preference
     
-    for j in student["dormPref"]:
-        if (j == room["name"]):
-            i += 5 - k
-            k += 1
+    weight += 5 if (room["name"] in currStudent["dormPref"]) else 0
 
-    return i
+    # Jacks original code for calculating weight if dorm room is a student's preference
+    # k = 0
+    # for dorm in currStudent["dormPref"]:
+    #     if (dorm == room["name"]):
+    #         weight += 5 - k
+    #         k += 1
 
-# after first search, uses potentialRooms to look
+    # Return calculated weight
+    return weight
+
+# Function: idealSearch ()
+# Description: Places a student into a potential room based on calculated weight of the
+# room. 
+# NOTE: for now the database is not modified, idealSearch returns a bestMatch instead for testing purposes
+# Parameters: student
+# Returns: bestMatch 
+
+# After first search, uses potentialRooms to look
 def idealSearch(student):
-
+    
+    # Store best match and highest weight of a room below: 
     bestMatch = potentialRooms[0]
     highestWeight = 0
-
+    
+    # For each of the potential rooms, get a weight
     for i in range(len(potentialRooms)):
         w = weightRoom(potentialRooms[i], student)
         
+        # If current weight is greater than highest weight, update bestMatch and highest weight
         if (w > highestWeight):
             bestMatch = potentialRooms[i]
-            highestWeight= i
-            
-
+            highestWeight = i
+    
+    # Checking sex of best match
+    # e = empty? 
     if (bestMatch["sex"] == "e"):
         bestMatch["sex"] = student["sex"]
 
+    # Add the student to the "occupants in the room"
     bestMatch["occupants"].append(student)
+    # Update student dorm name to the best match 
     student["dorm"] = bestMatch["name"]
 
-    return
+    return bestMatch # End function 
 
-# looks to see if two students have commonality
+# -----------------------------------------------------------------------------------------------------------------
+
+# Start of firstSearch 
+
+# Function: isPerfectMatch 
+# Description: Looks to see if two students have commonality
+# Parameters: Takes a Room and a Student [2 dictionaries]
+# Returns: True if student can fit well into the room, False otherwise
 def isPerfectMatch(room, student):
 
-    i = 0
+    commonalityScore = 0    # Determine if student is valid for 
 
-    for j in room["occupants"]:
-        if (j["major"] == student["major"]):
-            # print("same major")
-            i += 5
+    # Loop through all students in a room and check too see if student would fit in here 
+    for occupant in room["occupants"]:
 
-        if (j["geo"] == student["geo"]):
-            i += 1
+        # Major takes priority if determinging commonality between two students 
+        commonalityScore += 5 if (occupant["major"] == student["major"]) else 0
 
-        for k in range(2):
-            if (j["sleepHours"][k] == student["sleepHours"][k] or j["sleepHours"][k] + 1 == student["sleepHours"] or j["sleepHours"][k] - 1 == student["sleepHours"]):
-                i += 1
+        # Check to see if students are from the same place    
+        commonalityScore += 1 if (occupant["geo"] == student["geo"]) else 0
+
+        # Following checks sleep hours making sure the two students sleep within a good time with one another
+        for sleepIndex in range(2):
+            if (occupant["sleepHours"][sleepIndex] == student["sleepHours"][sleepIndex] or 
+                occupant["sleepHours"][sleepIndex] + 1 == student["sleepHours"] or 
+                occupant["sleepHours"][sleepIndex] - 1 == student["sleepHours"]         ):
+                commonalityScore += 1
         
-        for k in j["musicPreference"]:
-            if (k in student["musicPreference"]):
-                i += 1
+        # Following checks music preferences
+        for music in occupant["musicPreference"]:
+            commonalityScore += 1 if (music in student["musicPreference"]) else 0
         
-        for k in j["hobbies"]:
-            if (k in student["musicPreference"]):
-                i += 1
-        
+        # Following checks hobbies 
+        for k in occupant["hobbies"]:
+            commonalityScore += 1 if (music in student["hobbies"]) else 0
 
-    if (i > 4): 
+    # CommonalityScore threshold is 4 [SUBJECT TO CHANGE]
+    if (commonalityScore > 4): 
         return True
-
     return False
 
-# if there is a "perfect" fit, it matches the student there, otherwise collecting other
+# Function: firstSearch
+# Description: if there is a "perfect" fit, it matches the student there, otherwise collecting other
 # decent fits to use in a sort of ideal search
+# Parameters: data/campus information and student information [Two dictionaries]
+# Returns: True on sucess, False otherwise  
 def firstSearch(data, student):
 
+    # Make sure that the global list of potential rooms is empty
     potentialRooms.clear()
 
     if (len(student["dormPref"]) != 0): # if there is a preferred dorm, look through those
         
-        for i in student["dormPref"]:
+        # move through dorm prefs - later on we can just move the iterablle to specific points in the array
+        for preference in student["dormPref"]:
             
-            # move through dorm prefs - later on we can just move the iterablle to specific points in the array
-            dorm = data.keys()  # list of dorms to use as keys
+            dormList = data.keys()  # list of dorms to use as keys
 
-            for j in dorm:
-                if (i in j): # find preferred dorm
+            for dorm in dormList:
+                if (preference in dorm): # find preferred dorm
                     
                     # see if possible to move into room
-                    if ((student["sex"] == data[j]["sex"] or data[j]["sex"] == "e" or data[j]["sex"] == "i") and student["year"] == data[j]["year"] and 
-                    len(data[j]["occupants"]) < data[j]["size"]) and data[j]["ra room"] == False:
-                        
-                        # for k in data[j]["occupants"]:
-                        #     if k["name"] == student["name"]:
-                        #             return False
-                    
-                        if (len(data[j]["occupants"]) > 0):
-                            
-                            if (isPerfectMatch(data[j], student)):
-                                data[j]["occupants"].append(student)
+                    if ((student["sex"] == data[dorm]["sex"] or data[dorm]["sex"] == "e" or data[dorm]["sex"] == "i") and 
+                        student["year"] == data[dorm]["year"] and 
+                        len( data[dorm]["occupants"] ) < data[dorm]["size"]) and data[dorm]["ra room"] == False:
 
+                        # If there are occupants let's see if the student is a good match 
+                        if (len(data[dorm]["occupants"]) > 0):
+                            # Calling is Perfect Match, 
+                            if (isPerfectMatch(data[dorm], student)):
+                                # Add student to the dorm room as a occupant 
+                                data[dorm]["occupants"].append(student)
+                                # Return True on success
                                 return True
+                            # Add to potential rooms
                             else:
-                                potentialRooms.append(data[j])
+                                potentialRooms.append(data[dorm])
 
-                        if (len(data[j]["occupants"]) == 0):
-                            potentialRooms.append(data[j])
+                        # IF dorm room is empty just add it 
+                        if (len(data[dorm]["occupants"]) == 0):
+                            potentialRooms.append(data[dorm])
 
-    # the case in no dorm pref, or if it couldn't find it regardless
+    # Case where no potential rooms are found 
     if (len(potentialRooms) == 0):
-        dorm = data.keys()
-        # print(student)
-        for j in dorm:
+        
+        # Again get a list of dorm keys 
+        dormList = data.keys()
 
-            if ((student["sex"] == data[j]["sex"] or data[j]["sex"] == "e" or data[j]["sex"] == "i") and student["year"] == data[j]["year"] and 
-                len(data[j]["occupants"]) < data[j]["size"] and data[j]["ra room"] == False):
-                #print(student)
+        for dorm in dormList:
+            
+            # Same checks from code above
+            if ((student["sex"] == data[dorm]["sex"] or data[dorm]["sex"] == "e" or data[dorm]["sex"] == "i") and student["year"] == data[dorm]["year"] and 
+                len(data[dorm]["occupants"]) < data[dorm]["size"] and data[dorm]["ra room"] == False):
                 
                 # for k in data[j]["occupants"]:
                 #     if k["name"] == student["name"]:
                 #         return False
-                
-                if (len(data[j]["occupants"]) > 0):
-                    
-                    if (isPerfectMatch(data[j], student)):
-                        
-                        data[j]["occupants"].append(student)
 
+                if (len(data[dorm]["occupants"]) > 0):
+                    if (isPerfectMatch(data[dorm], student)):
+                        data[dorm]["occupants"].append(student)
                         return True
                     else:
-                        potentialRooms.append(data[j])
+                        potentialRooms.append(data[dorm])
 
-                if (len(data[j]["occupants"]) == 0):
-                    potentialRooms.append(data[j])
-               
+                if (len(data[dorm]["occupants"]) == 0):
+                    potentialRooms.append(data[dorm])
+    
+    # if no potential rooms we can perform an ideal search for the student
     if (len(potentialRooms) != 0):
         idealSearch(student)
+        return True
+    # Return false if first search has failed 
     else:
         return False
-    
 
+# Empty Function, unfinished by Jack, Probably useless 
 def groupSort(students):
 
     return

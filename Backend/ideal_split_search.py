@@ -10,7 +10,7 @@ Will try to search for rooms with connected bathrooms in preferred dorms of the 
 
 NOTE: In this case "campus" is the dictionary we will modify to put a student into a room
 '''
-def ideal_split_search(group_list,group_preferences,campus):
+def Ideal_Split_Search(group_list,group_preferences,campus):
   group_size = len(group_list)
   buildings = campus.keys()
   print(buildings)
@@ -26,11 +26,11 @@ def ideal_split_search(group_list,group_preferences,campus):
       if campus[dorm][room]["size"] != len(group1) or len(campus[dorm][room]["Occupants"]) > 0: 
         continue
       else:
-        if campus[dorm][room]["shared_bathroom"] == True:
-          connected_room = campus[dorm][room]["shared_bathroom"]
-          if campus[dorm][connected_room]["size"] == len(group2) or len(campus[dorm][room]["Occupants"]) == 0:
+        if campus[dorm][room]["shared_bathroom"] != False:
+          connected_room = str(campus[dorm][room]["shared_bathroom"])
+          if campus[dorm][connected_room]["size"] == len(group2) and len(campus[dorm][connected_room]["Occupants"]) == 0:
             campus[dorm][room]["Occupants"] = copy.deepcopy(group1)
-            campus[dorm][room]["Occupants"] = copy.deepcopy(group2)
+            campus[dorm][connected_room]["Occupants"] = copy.deepcopy(group2)
             # a = open('C:/Users/dongm2/Documents/RPI/Personal_projects/Rcos/objects_changed.json', 'w')
             # json.dump(campus,a, indent = 2)
             # a.close()

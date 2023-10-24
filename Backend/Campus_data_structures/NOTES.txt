@@ -1,0 +1,6 @@
+campus.json will not be used as the "floor" level of the campus dictionary is unnecessary
+
+campus2.json is currently being used as the current model
+
+campus3.json will be future model as "room" name will be replaced with string equivalent of 
+room number as JSON only supports strings as keys
