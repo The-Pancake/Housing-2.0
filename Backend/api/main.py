@@ -36,19 +36,16 @@ async def profile(res: Request):
 @app.post("/signin")
 async def signin(req: Request, res: Response):
     # todo: add error checking
-    reqJson = await req.json()
-    email = reqJson.get("email")
-    password = reqJson.get("password")
+    req_json = await req.json()
+    email = req_json.get("email")
+    password = req_json.get("password")
     if (not email or not password):
         res.status_code = 400
         return {"message": "Error: missing email or password"}
 
 
-    # loginFile = open("./data/logins.json", "r")
-    # loginInfo = json.load(loginFile)
-
-    loginInfo = client["Student_Info"]["Logins"].find_one({"email": email, "password": password})
-    if (loginInfo == None):
+    login_info = client["Student_Info"]["Logins"].find_one({"email": email, "password": password})
+    if (login_info == None):
         return False
     res.set_cookie(key="account", value=email)
     return True
@@ -62,23 +59,15 @@ async def signup(req: Request, res: Response):
 
     # validate that there is email and password present
     #  in the request body
-    reqJson = await req.json()
-    email = reqJson.get("email")
-    password = reqJson.get("password")
+    req_json = await req.json()
+    email = req_json.get("email")
+    password = req_json.get("password")
     if (not email or not password):
         res.status_code = 400
         return {"message": "Error: missing email or password"}
 
-    loginFile = open("./data/logins.json", "r")
-    loginInfo = json.load(loginFile)
+    client["Student_Info"]["Logins"].update_one({"email": email}, {"$set": {"password": password}}, upsert=True)
 
-    loginInfo[email] = password
-    loginFile.close()
-    loginFile = open("./data/logins.json", "w")
-
-    json.dump(loginInfo, loginFile)
-
-    loginFile.close()
     res.status_code = 200
     return {"message": f"Successfully created new account {email} {password}"}
 
