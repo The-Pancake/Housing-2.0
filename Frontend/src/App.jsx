@@ -21,7 +21,7 @@ export default function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Layout />}>
+          {/* <Route path="/" element={<Layout />}> */}
             <Route index element={<Root />} />
             <Route path="/signup" element={<Signup />} />
             <Route path="/login" element={<Login />} />
@@ -32,7 +32,7 @@ export default function App() {
             <Route path="/application" element={<Application />} />
             <Route path="/quizQuestions" element={<QuizQuestions />} />
             <Route path="/faq" element={<FAQ />} />
-          </Route>
+          {/* </Route> */}
         </Routes>
       </BrowserRouter>
     </div>
