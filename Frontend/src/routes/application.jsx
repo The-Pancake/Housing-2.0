@@ -24,8 +24,9 @@ export default function Application() {
     }, []);
 
     const handleEditInfoClick = () => {
-        navigate('/edit-profile');
+        navigate('/application/edit-profile');
     };
+    
 
     return (
         <>

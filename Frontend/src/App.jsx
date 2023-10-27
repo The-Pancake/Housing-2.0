@@ -5,7 +5,7 @@ import Dorms from "./routes/dorms";
 import Account from "./routes/account";
 import Contact from "./routes/contact";
 import AppRouter from './routes/AppRouter';
-import Layout from "./routes/layout";
+//import Layout from "./routes/layout";
 import EditProfile from './routes/edit_contact_info';
 import Navbar from './components/navbar';
 import Login from "./routes/login"
@@ -15,8 +15,7 @@ import Signup from "./routes/signup";
 import Quiz from "./routes/quiz";
 import QuizQuestions from "./routes/quizQuestions";
 import FAQ from "./routes/faq";
-
-
+import Root from "./routes/root.jsx";
 import "./app.css"
 
 export default function App() {
@@ -25,7 +24,6 @@ export default function App() {
       <Router>
         <Navbar /> 
         <Routes>
-          {/* <Route path="/" element={<Layout />}> */}
             <Route index element={<Root />} />
             <Route path="/signup" element={<Signup />} />
             <Route path="/login" element={<Login />} />
@@ -33,10 +31,11 @@ export default function App() {
             <Route path="/quiz" element={<Quiz />} />
             <Route path="/account" element={<Account />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="/application" element={<Application />} />
+            <Route path="/application" element={<AppRouter />}>
+                <Route path="edit-profile" element={<EditProfile />} />
+            </Route>
             <Route path="/quizQuestions" element={<QuizQuestions />} />
             <Route path="/faq" element={<FAQ />} />
-          {/* </Route> */}
         </Routes>
       </Router>
     </div>
