@@ -1,0 +1,25 @@
+.leftDiv {
+    /* Custom styles for the left column */
+    width: 50%;
+    margin-left: 20vw;
+    margin-bottom: 25vw;
+}
+
+.Motto {
+    /* Custom styles for the motto container */
+}
+
+.roommateText {
+    /* Custom styles for the main text on the left side */
+    font-size: 3vw;
+}
+
+.rightDiv {
+    /* Custom styles for the right column */
+    width: 50%;
+}
+
+.quizImage {
+    /* Custom styles for the quiz image */
+    width: 40%;
+}

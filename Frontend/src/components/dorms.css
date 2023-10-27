@@ -1,0 +1,9 @@
+.grid {
+    min-height: 20%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+.grid img{
+    width:40%;
+}

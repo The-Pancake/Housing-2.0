@@ -8,7 +8,16 @@ import AppRouter from './routes/AppRouter';
 import Layout from "./routes/layout";
 import EditProfile from './routes/edit_contact_info';
 import Navbar from './components/navbar';
+import Login from "./routes/login"
+import Application from "./routes/application";
+import Layout from "./routes/layout";
+import Signup from "./routes/signup";
+import Quiz from "./routes/quiz";
+import QuizQuestions from "./routes/quizQuestions";
+import FAQ from "./routes/faq";
 
+
+import "./app.css"
 
 export default function App() {
   return (
@@ -16,12 +25,18 @@ export default function App() {
       <Router>
         <Navbar /> 
         <Routes>
-          <Route path="/" element={<Layout/>} />
-          <Route path="/dorms" element={<Dorms/>} />
-          <Route path="/account" element={<Account/>} />
-          <Route path="/contact" element={<Contact/>} />
-          <Route path="/application" element={<AppRouter/>} />
-          <Route path="/edit-profile" element={<EditProfile />} />
+          {/* <Route path="/" element={<Layout />}> */}
+            <Route index element={<Root />} />
+            <Route path="/signup" element={<Signup />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/dorms" element={<Dorms />} />
+            <Route path="/quiz" element={<Quiz />} />
+            <Route path="/account" element={<Account />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/application" element={<Application />} />
+            <Route path="/quizQuestions" element={<QuizQuestions />} />
+            <Route path="/faq" element={<FAQ />} />
+          {/* </Route> */}
         </Routes>
       </Router>
     </div>
