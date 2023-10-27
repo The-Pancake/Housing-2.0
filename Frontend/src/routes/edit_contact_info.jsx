@@ -6,7 +6,7 @@ import './styles.css';
 export const profileData = {
   firstName: 'Jeremy',
   lastName: 'Lin',
-  class: '',
+  class: 'Junior',
   dob: '1990-01-01',
   address: '12345 Alfredo St, Savannah, GA, 45469',
   streetAddress: '12345 Alfredo Ave',
@@ -132,3 +132,5 @@ export default function EditProfile() {
     </div>
   );
 }
+
+
