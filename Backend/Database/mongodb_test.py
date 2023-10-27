@@ -13,24 +13,14 @@ try:
 except Exception as e:
     print(e)
 
-db = client["Campus"]["Dorms"]
+# Connect to database => "Campus" and collection => "Dorms_Daniel"
+db = client["Campus"]["Dorms_Daniel"]
 
-query = {}
+# Print everything out in collection using: 
+# for doc in db.find():
+#     print(doc)
 
-result = db.find(query)
+Crockett = db.find_one()
 
-for something in result:
-    print(something)
+# With this we have access the the data base 
 
-db.insert_one(
-    {
-     "_id": 6969696969,
-     "Dorm": "Blitman", 
-     "RoomNum": 104, 
-     "Size": 2, 
-     "sharedBathroom": True, 
-     "sharedRoom": 2, 
-     "type": "Freshman", 
-     "Occupants": ["Rachael", "Michelle"]
-    }
-    )
