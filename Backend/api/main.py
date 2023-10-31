@@ -1,10 +1,7 @@
 
-
 from fastapi import FastAPI, Request, Response
 import uvicorn
-import json
 from pymongo import MongoClient
-
 
 
 # ------------------ Database ------------------
@@ -26,7 +23,7 @@ async def root():
 @app.get("/profile")
 async def profile(res: Request):
     # is user signed in?
-    if (not res.cookies.get("account")):
+    if not res.cookies.get("account"):
         return False
 
     print(res.cookies.get("account"))
@@ -43,8 +40,8 @@ async def signin(req: Request, res: Response):
         res.status_code = 400
         return {"message": "Error: missing email or password"}
 
-
-    login_info = client["Student_Info"]["Logins"].find_one({"email": email, "password": password})
+    login_info = client["Student_Info"]["Logins"].find_one(
+        {"email": email, "password": password})
     if (login_info == None):
         return False
     res.set_cookie(key="account", value=email)
@@ -66,7 +63,8 @@ async def signup(req: Request, res: Response):
         res.status_code = 400
         return {"message": "Error: missing email or password"}
 
-    client["Student_Info"]["Logins"].update_one({"email": email}, {"$set": {"password": password}}, upsert=True)
+    client["Student_Info"]["Logins"].update_one(
+        {"email": email}, {"$set": {"password": password}}, upsert=True)
 
     res.status_code = 200
     return {"message": f"Successfully created new account {email} {password}"}
@@ -75,20 +73,3 @@ async def signup(req: Request, res: Response):
 if __name__ == "__main__":
     uvicorn.run("main:app", host="127.0.0.1", port=3001,
                 log_level="info", reload=True)
-
-
-
-
-
-# This is added so that many files can reuse the function get_database()
-if __name__ == "__main__":
-
-    # Get the database
-    dbname = get_database("Campus")
-    print(dbname)
-    print(dbname.list_collection_names())
-    temp = dbname["Dorms"].find()
-    print(temp)
-    print(type(temp))
-    for x in temp:
-        print(x)
