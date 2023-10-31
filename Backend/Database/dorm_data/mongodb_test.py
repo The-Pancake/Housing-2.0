@@ -1,11 +1,12 @@
 from pymongo.mongo_client import MongoClient
 from pymongo.server_api import ServerApi
 
+# Module will have the uri to establish connection ... 
 uri = "mongodb+srv://housing20rcos:nQWnpyw4PsFk78eJ@housing2.elxx6hn.mongodb.net/?retryWrites=true&w=majority"
 
 # MongoDB operations to be used in other directories
 
-def connect_to_database(uri: str, db_name: str):
+def connect_to_database(db_name: str):
     # Create a new client and connect to the server
     client = MongoClient(uri, server_api=ServerApi('1'))
 
@@ -23,6 +24,8 @@ def get_all_data(collection):
     return list(collection.find())
 
 
+def update_data_base(): 
+    pass 
 # Connect to database => "Campus" and collection => "Dorms_Daniel"
 # db = client["Campus"]["Dorms_Daniel"]
 

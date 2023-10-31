@@ -21,6 +21,7 @@ import json
 import time
 
 # First grabbing some json ... 
+# Replace with your own path! 
 with open('/home/beef-patty/Desktop/Housing2.0_Fall_2023/Housing-2.0/Backend/json/hobbies.json') as f:
     hobbies = json.load(f) # A list of hobbies 
 
