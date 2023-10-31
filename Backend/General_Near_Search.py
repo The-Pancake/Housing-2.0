@@ -1,4 +1,6 @@
 import copy
+from pymongo.mongo_client import MongoClient
+from pymongo.server_api import ServerApi
 
 #General Near Search algorithm:
 # Argurments:
@@ -7,36 +9,45 @@ import copy
 #In the case that General search and Ideal search fail to find a room for a group
 #this algorithm splits the groups up and tries to find 2 rooms within the same building to assign
 #the students to
-def General_Near_Search(group_list,campus):
+def General_Near_Search(group_list, dorms, campus_dorm_rooms):
   group_size = len(group_list)
-  buildings = campus.keys()
-  # print(buildings) #used for checking if the buildings are read in correctly
+  
 
   middle_index = group_size // 2
-
-  #divide the group up into two and default rooms found to false
   group1 = group_list[:middle_index]
   group2 = group_list[middle_index:]
-  room1_found = False
-  room2_found = False
-  for dorm in buildings:#loops through all the dorms
-    room_id1 = -1 #variables to store room id's
-    room_id2 = -1
-    #loops through the rooms in the building and checks:
-    # if the current room is empty and if so store the room id and trigger room found flag to true
-    for room1 in campus[dorm]:#loops through the rooms in the building
-      if len(campus[dorm][room1]["Occupants"]) == 0:
-        room_id1 = room1
-        room1_found = True
-        
-        for room2 in campus[dorm]:
-          if len(campus[dorm][room2]["Occupants"]) == 0 and room2 != room_id1:
-            room_id2 = room2
-            room2_found = True
 
-    #if two rooms can be found within the same building, assign the rooms to the group
-    if room1_found and room2_found:
-      campus[dorm][room_id1]["Occupants"] = copy.deepcopy(group1)
-      campus[dorm][room_id2]["Occupants"] = copy.deepcopy(group2)
+  for dorm in dorms:
+    query = {
+        "$and" : [
+          {"Dorm": dorm},
+          {"Size": 2},
+          {"Occupants" : {"$size" : 0}}
+        ]
+    }
+    rooms = list(campus_dorm_rooms.find(query))
+    
+    if len(rooms) < 2:
+      continue
+    else:
+      room1_id = rooms[0].get("_id")
+      room2_id = rooms[1].get("_id")
+      campus_dorm_rooms.update_one({"_id":room1_id}, { "$set" : {"Occupants": group1}})
+      campus_dorm_rooms.update_one({"_id":room2_id}, { "$set" : {"Occupants": group2}})
       return True
   return False
+
+
+
+if __name__ == '__main__':
+  uri = "mongodb+srv://housing20rcos:nQWnpyw4PsFk78eJ@housing2.elxx6hn.mongodb.net/?retryWrites=true&w=majority"
+  dorms = ["Blitman", "Warren", "Hall"]
+  group = ["Tom", "Bob", "Tim", "Bib"]
+
+  client = MongoClient(uri, server_api=ServerApi('1'))
+  campus = client["Campus"]
+  campus_dorm_rooms = campus["Dorms_Michael"]
+  General_Near_Search(group, dorms, campus_dorm_rooms)
+
+
+
