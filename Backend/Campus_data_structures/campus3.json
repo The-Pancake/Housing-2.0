@@ -1,22 +1,18 @@
 {
     "Warren": {
-        "room1": {
-            "id": 104,
+        "104": {
             "size": 2,
             "shared_bathroom": false,
             "type": "freshman",
-            "Occupants": [
-            ]
+            "Occupants": []
         },
-        "room2": {
-            "id": 105,
+        "105": {
             "size": 2,
             "shared_bathroom": 106,
             "type": "junior",
             "Occupants": []
         },
-        "room3": {
-            "id": 105,
+        "106": {
             "size": 2,
             "shared_bathroom": 105,
             "type": "junior",
@@ -24,15 +20,13 @@
         }
     },
     "Hall": {
-        "room1": {
-            "id": 104,
+        "104": {
             "size": 2,
             "shared_bathroom": false,
             "type": "freshman",
             "Occupants": []
         },
-        "room2": {
-            "id": 105,
+        "105": {
             "size": 2,
             "shared_bathroom": false,
             "type": "junior",

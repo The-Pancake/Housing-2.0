@@ -1,0 +1,32 @@
+Pages to develop suggestion:
+
+Contact us:
+Contact Form
+Displays housing administrator contact information
+
+Housing Info:
+Building descriptions and amenities
+Floor plans
+Neighborhood information
+FAQs
+
+My Account:
+View Application Status
+Edit personal information
+Manage group
+View your housing assignment
+Communication with housing administrators
+
+Housing Application:
+Inviting group members
+Edit group name
+Select Building/Dorm preferences
+Roommate Pairing System (Implemented backend)
+Reviewing and Submitting the Application
+
+Homepage:
+A description about Housing 2.0
+An area for you to login/registration
+View RPI Housing Policy
+A section/tab to view available housing and prices for said housing
+A tab to start application

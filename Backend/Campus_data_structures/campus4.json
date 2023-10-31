@@ -1,0 +1,130 @@
+{
+    "Warren": {
+        "Rooms": {
+            "104": {
+                "size": 2,
+                "shared_bathroom": false,
+                "type": "freshman",
+                "Occupants": []
+            },
+            "105": {
+                "size": 2,
+                "shared_bathroom": 106,
+                "type": "junior",
+                "Occupants": []
+            },
+            "106": {
+                "size": 2,
+                "shared_bathroom": 105,
+                "type": "junior",
+                "Occupants": []
+            }
+        },
+        "Distances": {
+            "Davison": 15,
+            "Barton": 25,
+            "Bray": 35,
+            "Sharp": 45,
+            "BarH": 55,
+            "Cary": 65,
+            "Hall": 20
+        }
+    },
+    "Hall": {
+        "Rooms": {
+            "104": {
+                "size": 2,
+                "shared_bathroom": false,
+                "type": "freshman",
+                "Occupants": []
+            },
+            "105": {
+                "size": 2,
+                "shared_bathroom": false,
+                "type": "junior",
+                "Occupants": []
+            }
+        },
+        "Distances": {
+            "Davison": 30,
+            "Barton": 20,
+            "Bray": 10,
+            "Sharp": 40,
+            "BarH": 50,
+            "Cary": 60,
+            "Warren": 20
+        }
+    },
+    "Davison": {
+        "Rooms": {},
+        "Distances": {
+            "Sharp": 10,
+            "BarH": 20,
+            "Cary": 30,
+            "Warren": 15,
+            "Hall": 30,
+            "Barton": 5,
+            "Bray": 7
+        }
+    },
+    "Barton": {
+        "Rooms": {},
+        "Distances": {
+            "Davison": 5,
+            "Sharp": 12,
+            "BarH": 24,
+            "Cary": 35,
+            "Warren": 25,
+            "Hall": 20,
+            "Bray": 6
+        }
+    },
+    "Bray": {
+        "Rooms": {},
+        "Distances": {
+            "Davison": 7,
+            "Barton": 6,
+            "Sharp": 8,
+            "BarH": 18,
+            "Cary": 40,
+            "Warren": 35,
+            "Hall": 10
+        }
+    },
+    "Sharp": {
+        "Rooms": {},
+        "Distances": {
+            "Davison": 10,
+            "Barton": 12,
+            "Bray": 8,
+            "BarH": 9,
+            "Cary": 28,
+            "Warren": 45,
+            "Hall": 40
+        }
+    },
+    "BarH": {
+        "Rooms": {},
+        "Distances": {
+            "Davison": 20,
+            "Barton": 24,
+            "Bray": 18,
+            "Sharp": 9,
+            "Cary": 17,
+            "Warren": 55,
+            "Hall": 50
+        }
+    },
+    "Cary": {
+        "Rooms": {},
+        "Distances": {
+            "Davison": 30,
+            "Barton": 35,
+            "Bray": 40,
+            "Sharp": 28,
+            "BarH": 17,
+            "Warren": 65,
+            "Hall": 60
+        }
+    }
+}

@@ -360,25 +360,6 @@
                     "Instrument"
                 ],
                 "dorm": "Warren"
-            },
-            {
-                "name": "Lorelei",
-                "sex": "m",
-                "major": "Music Theory and Composition",
-                "dormPref": "",
-                "year": "freshman",
-                "geo": "TX",
-                "sleepHours": [
-                    10,
-                    9
-                ],
-                "musicPreference": [
-                    "Classical"
-                ],
-                "hobbies": [
-                    "Gaming"
-                ],
-                "dorm": "Warren"
             }
         ],
         "ra room": false
