@@ -99,14 +99,14 @@ def generate_sleep_schedule() -> list:
 # Function to generate crockett ... 
 # For now the function can only generate the first floor due to lack of information 
 def generate_dorm() -> dict: 
-    resultDict = {}
+    resultList = []
 
     # Let's say that there are 20 rooms on the first floor ... 
     for i in range(1, 20):
         new_room = generate_room(1, i + 100, 2, "m", False)
-        resultDict.update(new_room)
+        resultList.append(new_room)
 
-    return resultDict
+    return resultList
 
 # Helper function to generate room 
 def generate_room(floor: int, roomNum: int, size: int, sex: str, shared_bathroom: bool) -> dict:
@@ -121,18 +121,19 @@ def generate_room(floor: int, roomNum: int, size: int, sex: str, shared_bathroom
     return resultDict
 
 # Given a dorm and students, populate the dorm with students, return True on success
-def populate(dorm: dict, students: list) -> bool: 
+def populate(dorm: list, students: list) -> bool: 
     
     students_index = 0
     num_students = len(students)
 
     while students_index < num_students: 
         # Pick a random room: 
-        random_room = random.choice( list(dorm.keys()) )
+        random_room = random.choice( dorm )
+        key = next(iter(random_room))
         # Check if room is full
-        if len(dorm[random_room]["occupants"]) < dorm[random_room]["size"]:
+        if len( random_room[key]["occupants"]) < random_room[key]["size"]:
             # If not, put student inside, increment index
-            dorm[random_room]["occupants"].append(students[students_index])
+            random_room[key]["occupants"].append(students[students_index])
             students_index += 1
         else: 
             # Else go to next room 
@@ -173,7 +174,7 @@ if __name__ == "__main__":
     print("Writing to json ... ")
 
     # Serializing json
-    json_object = json.dumps(crockett, indent=4)
+    json_object = json.dumps( crockett , indent=4)
  
     # Writing to sample.json
     with open("crockett.json", "w") as outfile:

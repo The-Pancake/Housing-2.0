@@ -1,6 +1,6 @@
 import fastapi 
-import json
 import pydantic
+import uvicorn
 
 # Class objects come before app declaration
 # Declare a student class, this is all the information on the student that is recieved from the front end 
@@ -39,3 +39,10 @@ async def students(student_id: int):
     
     # Return student 
     return studentDatabase[student_id]
+    
+
+if __name__ == "__main__":
+
+
+    # Execute uvicorn in command line so we don't need to type if every time
+    uvicorn.run("main:app", host="127.0.0.1", port=8000, log_level="info")

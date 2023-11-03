@@ -1,688 +1,738 @@
-{
-    "Crockett1-101": {
-        "name": "Crockett",
-        "sex": "m",
-        "size": 2,
-        "shared_bathroom": false,
-        "year": "freshman",
-        "occupants": [
-            {
-                "name": "Brock",
-                "sex": "m",
-                "major": "Chemistry, General",
-                "dormPref": "",
-                "year": "freshman",
-                "geo": "NH",
-                "sleepHours": [
-                    9,
-                    6
-                ],
-                "musicPreference": [
-                    "Indie"
-                ],
-                "hobbies": [],
-                "dorm": "Crockett"
-            },
-            {
-                "name": "Derek",
-                "sex": "m",
-                "major": "Biomedical/Medical Engineering",
-                "dormPref": "",
-                "year": "freshman",
-                "geo": "IL",
-                "sleepHours": [
-                    12,
-                    5
-                ],
-                "musicPreference": [],
-                "hobbies": [],
-                "dorm": "Crockett"
-            }
-        ]
+[
+    {
+        "Crockett1-101": {
+            "name": "Crockett",
+            "sex": "m",
+            "size": 2,
+            "shared_bathroom": false,
+            "year": "freshman",
+            "occupants": [
+                {
+                    "name": "Riku",
+                    "sex": "m",
+                    "major": "Aerospace, Aeronautical and Astronautical Engineering",
+                    "dormPref": "",
+                    "year": "freshman",
+                    "geo": "PA",
+                    "sleepHours": [
+                        10,
+                        8
+                    ],
+                    "musicPreference": [],
+                    "hobbies": [
+                        "Photography",
+                        "Table Top Games",
+                        "Dancing"
+                    ],
+                    "dorm": "Crockett"
+                },
+                {
+                    "name": "Federico",
+                    "sex": "m",
+                    "major": "Computer Technology/Computer Systems Technology",
+                    "dormPref": "",
+                    "year": "freshman",
+                    "geo": "VA",
+                    "sleepHours": [
+                        11,
+                        10
+                    ],
+                    "musicPreference": [
+                        "Metal/Grunge",
+                        "Pop"
+                    ],
+                    "hobbies": [
+                        "Dancing",
+                        "Artistty",
+                        "Writing"
+                    ],
+                    "dorm": "Crockett"
+                }
+            ]
+        }
     },
-    "Crockett1-102": {
-        "name": "Crockett",
-        "sex": "m",
-        "size": 2,
-        "shared_bathroom": false,
-        "year": "freshman",
-        "occupants": [
-            {
-                "name": "Adam",
-                "sex": "m",
-                "major": "Physics, General",
-                "dormPref": "",
-                "year": "freshman",
-                "geo": "OK",
-                "sleepHours": [
-                    8,
-                    9
-                ],
-                "musicPreference": [],
-                "hobbies": [],
-                "dorm": "Crockett"
-            },
-            {
-                "name": "Misty",
-                "sex": "m",
-                "major": "Business Administration and Management, General",
-                "dormPref": "",
-                "year": "freshman",
-                "geo": "IA",
-                "sleepHours": [
-                    10,
-                    6
-                ],
-                "musicPreference": [],
-                "hobbies": [
-                    "Hiking",
-                    "Fishing",
-                    "Table Top Games"
-                ],
-                "dorm": "Crockett"
-            }
-        ]
+    {
+        "Crockett1-102": {
+            "name": "Crockett",
+            "sex": "m",
+            "size": 2,
+            "shared_bathroom": false,
+            "year": "freshman",
+            "occupants": [
+                {
+                    "name": "Ali",
+                    "sex": "m",
+                    "major": "Architecture",
+                    "dormPref": "",
+                    "year": "freshman",
+                    "geo": "CA",
+                    "sleepHours": [
+                        12,
+                        5
+                    ],
+                    "musicPreference": [
+                        "Hip-Hop",
+                        "Jazz",
+                        "Jazz",
+                        "Jazz",
+                        "Hip-Hop",
+                        "Country/Folk"
+                    ],
+                    "hobbies": [
+                        "Artistty",
+                        "Fishing",
+                        "Fishing",
+                        "Sports"
+                    ],
+                    "dorm": "Crockett"
+                },
+                {
+                    "name": "Raine",
+                    "sex": "m",
+                    "major": "Multi-/Interdisciplinary Studies, Other",
+                    "dormPref": "",
+                    "year": "freshman",
+                    "geo": "CT",
+                    "sleepHours": [
+                        10,
+                        8
+                    ],
+                    "musicPreference": [
+                        "Classical"
+                    ],
+                    "hobbies": [
+                        "Reading",
+                        "Cooking",
+                        "Table Top Games"
+                    ],
+                    "dorm": "Crockett"
+                }
+            ]
+        }
     },
-    "Crockett1-103": {
-        "name": "Crockett",
-        "sex": "m",
-        "size": 2,
-        "shared_bathroom": false,
-        "year": "freshman",
-        "occupants": []
+    {
+        "Crockett1-103": {
+            "name": "Crockett",
+            "sex": "m",
+            "size": 2,
+            "shared_bathroom": false,
+            "year": "freshman",
+            "occupants": []
+        }
     },
-    "Crockett1-104": {
-        "name": "Crockett",
-        "sex": "m",
-        "size": 2,
-        "shared_bathroom": false,
-        "year": "freshman",
-        "occupants": []
+    {
+        "Crockett1-104": {
+            "name": "Crockett",
+            "sex": "m",
+            "size": 2,
+            "shared_bathroom": false,
+            "year": "freshman",
+            "occupants": [
+                {
+                    "name": "Willem",
+                    "sex": "m",
+                    "major": "Biomedical/Medical Engineering",
+                    "dormPref": "",
+                    "year": "freshman",
+                    "geo": "ND",
+                    "sleepHours": [
+                        8,
+                        8
+                    ],
+                    "musicPreference": [],
+                    "hobbies": [],
+                    "dorm": "Crockett"
+                }
+            ]
+        }
     },
-    "Crockett1-105": {
-        "name": "Crockett",
-        "sex": "m",
-        "size": 2,
-        "shared_bathroom": false,
-        "year": "freshman",
-        "occupants": [
-            {
-                "name": "Ian",
-                "sex": "m",
-                "major": "Philosophy",
-                "dormPref": "",
-                "year": "freshman",
-                "geo": "TN",
-                "sleepHours": [
-                    11,
-                    5
-                ],
-                "musicPreference": [],
-                "hobbies": [
-                    "Gaming",
-                    "Dancing",
-                    "Instrument"
-                ],
-                "dorm": "Crockett"
-            },
-            {
-                "name": "Jason",
-                "sex": "m",
-                "major": "Biological and Biomedical Sciences, Other",
-                "dormPref": "",
-                "year": "freshman",
-                "geo": "IL",
-                "sleepHours": [
-                    12,
-                    5
-                ],
-                "musicPreference": [],
-                "hobbies": [],
-                "dorm": "Crockett"
-            }
-        ]
+    {
+        "Crockett1-105": {
+            "name": "Crockett",
+            "sex": "m",
+            "size": 2,
+            "shared_bathroom": false,
+            "year": "freshman",
+            "occupants": [
+                {
+                    "name": "Asher",
+                    "sex": "m",
+                    "major": "Mechanical Engineering",
+                    "dormPref": "",
+                    "year": "freshman",
+                    "geo": "IN",
+                    "sleepHours": [
+                        12,
+                        9
+                    ],
+                    "musicPreference": [],
+                    "hobbies": [],
+                    "dorm": "Crockett"
+                },
+                {
+                    "name": "Brett",
+                    "sex": "m",
+                    "major": "Multi-/Interdisciplinary Studies, Other",
+                    "dormPref": "",
+                    "year": "freshman",
+                    "geo": "NC",
+                    "sleepHours": [
+                        11,
+                        10
+                    ],
+                    "musicPreference": [
+                        "Hip-Hop",
+                        "Metal/Grunge",
+                        "Electronic",
+                        "Indie",
+                        "Metal/Grunge",
+                        "Rock"
+                    ],
+                    "hobbies": [],
+                    "dorm": "Crockett"
+                }
+            ]
+        }
     },
-    "Crockett1-106": {
-        "name": "Crockett",
-        "sex": "m",
-        "size": 2,
-        "shared_bathroom": false,
-        "year": "freshman",
-        "occupants": [
-            {
-                "name": "Ike",
-                "sex": "m",
-                "major": "Physics, General",
-                "dormPref": "",
-                "year": "freshman",
-                "geo": "CA",
-                "sleepHours": [
-                    9,
-                    8
-                ],
-                "musicPreference": [
-                    "Pop",
-                    "Classical",
-                    "Electronic",
-                    "Classical",
-                    "Country/Folk"
-                ],
-                "hobbies": [
-                    "Cycling"
-                ],
-                "dorm": "Crockett"
-            },
-            {
-                "name": "Leslie",
-                "sex": "m",
-                "major": "Engineering Science",
-                "dormPref": "",
-                "year": "freshman",
-                "geo": "MN",
-                "sleepHours": [
-                    9,
-                    5
-                ],
-                "musicPreference": [
-                    "Country/Folk",
-                    "Pop",
-                    "Hip-Hop",
-                    "Metal/Grunge",
-                    "Country",
-                    "Pop",
-                    "Country/Folk",
-                    "Country/Folk",
-                    "Metal/Grunge"
-                ],
-                "hobbies": [],
-                "dorm": "Crockett"
-            }
-        ]
+    {
+        "Crockett1-106": {
+            "name": "Crockett",
+            "sex": "m",
+            "size": 2,
+            "shared_bathroom": false,
+            "year": "freshman",
+            "occupants": [
+                {
+                    "name": "Wayne",
+                    "sex": "m",
+                    "major": "Biology/Biological Sciences, General",
+                    "dormPref": "",
+                    "year": "freshman",
+                    "geo": "KY",
+                    "sleepHours": [
+                        9,
+                        5
+                    ],
+                    "musicPreference": [
+                        "Classical",
+                        "Country",
+                        "Hip-Hop",
+                        "Hip-Hop",
+                        "Metal/Grunge",
+                        "Country/Folk"
+                    ],
+                    "hobbies": [
+                        "Sports"
+                    ],
+                    "dorm": "Crockett"
+                },
+                {
+                    "name": "Norman",
+                    "sex": "m",
+                    "major": "Industrial Engineering",
+                    "dormPref": "",
+                    "year": "freshman",
+                    "geo": "PA",
+                    "sleepHours": [
+                        10,
+                        10
+                    ],
+                    "musicPreference": [],
+                    "hobbies": [
+                        "Dancing"
+                    ],
+                    "dorm": "Crockett"
+                }
+            ]
+        }
     },
-    "Crockett1-107": {
-        "name": "Crockett",
-        "sex": "m",
-        "size": 2,
-        "shared_bathroom": false,
-        "year": "freshman",
-        "occupants": [
-            {
-                "name": "Kent",
-                "sex": "m",
-                "major": "Chemical Engineering",
-                "dormPref": "",
-                "year": "freshman",
-                "geo": "TX",
-                "sleepHours": [
-                    11,
-                    5
-                ],
-                "musicPreference": [
-                    "K-Pop",
-                    "Indie",
-                    "Classical"
-                ],
-                "hobbies": [
-                    "Fishing"
-                ],
-                "dorm": "Crockett"
-            },
-            {
-                "name": "Ehsaan",
-                "sex": "m",
-                "major": "Social Sciences, General",
-                "dormPref": "",
-                "year": "freshman",
-                "geo": "AK",
-                "sleepHours": [
-                    8,
-                    8
-                ],
-                "musicPreference": [
-                    "Pop"
-                ],
-                "hobbies": [
-                    "Cycling",
-                    "Artistty",
-                    "Instrument"
-                ],
-                "dorm": "Crockett"
-            }
-        ]
+    {
+        "Crockett1-107": {
+            "name": "Crockett",
+            "sex": "m",
+            "size": 2,
+            "shared_bathroom": false,
+            "year": "freshman",
+            "occupants": [
+                {
+                    "name": "Bobby",
+                    "sex": "m",
+                    "major": "Physical Sciences, Other",
+                    "dormPref": "",
+                    "year": "freshman",
+                    "geo": "VT",
+                    "sleepHours": [
+                        10,
+                        9
+                    ],
+                    "musicPreference": [],
+                    "hobbies": [],
+                    "dorm": "Crockett"
+                },
+                {
+                    "name": "Leslie",
+                    "sex": "m",
+                    "major": "Physics, Other",
+                    "dormPref": "",
+                    "year": "freshman",
+                    "geo": "TN",
+                    "sleepHours": [
+                        12,
+                        9
+                    ],
+                    "musicPreference": [
+                        "Indie",
+                        "Metal/Grunge",
+                        "Jazz",
+                        "Indie",
+                        "Country"
+                    ],
+                    "hobbies": [
+                        "Singing",
+                        "Singing",
+                        "Instrument"
+                    ],
+                    "dorm": "Crockett"
+                }
+            ]
+        }
     },
-    "Crockett1-108": {
-        "name": "Crockett",
-        "sex": "m",
-        "size": 2,
-        "shared_bathroom": false,
-        "year": "freshman",
-        "occupants": [
-            {
-                "name": "Gloria",
-                "sex": "m",
-                "major": "Industrial Engineering",
-                "dormPref": "",
-                "year": "freshman",
-                "geo": "VT",
-                "sleepHours": [
-                    11,
-                    8
-                ],
-                "musicPreference": [],
-                "hobbies": [],
-                "dorm": "Crockett"
-            }
-        ]
+    {
+        "Crockett1-108": {
+            "name": "Crockett",
+            "sex": "m",
+            "size": 2,
+            "shared_bathroom": false,
+            "year": "freshman",
+            "occupants": []
+        }
     },
-    "Crockett1-109": {
-        "name": "Crockett",
-        "sex": "m",
-        "size": 2,
-        "shared_bathroom": false,
-        "year": "freshman",
-        "occupants": [
-            {
-                "name": "Quinton",
-                "sex": "m",
-                "major": "Computer and Information Sciences, General",
-                "dormPref": "",
-                "year": "freshman",
-                "geo": "CA",
-                "sleepHours": [
-                    10,
-                    5
-                ],
-                "musicPreference": [],
-                "hobbies": [],
-                "dorm": "Crockett"
-            },
-            {
-                "name": "Adrian",
-                "sex": "m",
-                "major": "Environmental Science",
-                "dormPref": "",
-                "year": "freshman",
-                "geo": "OK",
-                "sleepHours": [
-                    11,
-                    9
-                ],
-                "musicPreference": [],
-                "hobbies": [
-                    "Dancing",
-                    "Cycling",
-                    "Dancing",
-                    "Photography"
-                ],
-                "dorm": "Crockett"
-            }
-        ]
+    {
+        "Crockett1-109": {
+            "name": "Crockett",
+            "sex": "m",
+            "size": 2,
+            "shared_bathroom": false,
+            "year": "freshman",
+            "occupants": [
+                {
+                    "name": "Barry",
+                    "sex": "m",
+                    "major": "Biochemistry/Biophysics and Molecular Biology",
+                    "dormPref": "",
+                    "year": "freshman",
+                    "geo": "OH",
+                    "sleepHours": [
+                        10,
+                        5
+                    ],
+                    "musicPreference": [],
+                    "hobbies": [],
+                    "dorm": "Crockett"
+                }
+            ]
+        }
     },
-    "Crockett1-110": {
-        "name": "Crockett",
-        "sex": "m",
-        "size": 2,
-        "shared_bathroom": false,
-        "year": "freshman",
-        "occupants": [
-            {
-                "name": "Grace",
-                "sex": "m",
-                "major": "Multi-/Interdisciplinary Studies, General",
-                "dormPref": "",
-                "year": "freshman",
-                "geo": "AZ",
-                "sleepHours": [
-                    12,
-                    7
-                ],
-                "musicPreference": [
-                    "K-Pop",
-                    "Country",
-                    "Electronic",
-                    "Country"
-                ],
-                "hobbies": [],
-                "dorm": "Crockett"
-            }
-        ]
+    {
+        "Crockett1-110": {
+            "name": "Crockett",
+            "sex": "m",
+            "size": 2,
+            "shared_bathroom": false,
+            "year": "freshman",
+            "occupants": [
+                {
+                    "name": "Shane",
+                    "sex": "m",
+                    "major": "Multi-/Interdisciplinary Studies, Other",
+                    "dormPref": "",
+                    "year": "freshman",
+                    "geo": "AR",
+                    "sleepHours": [
+                        10,
+                        5
+                    ],
+                    "musicPreference": [
+                        "Rock",
+                        "K-Pop",
+                        "Jazz",
+                        "Pop",
+                        "Indie"
+                    ],
+                    "hobbies": [],
+                    "dorm": "Crockett"
+                },
+                {
+                    "name": "Xavier",
+                    "sex": "m",
+                    "major": "Biochemistry/Biophysics and Molecular Biology",
+                    "dormPref": "",
+                    "year": "freshman",
+                    "geo": "WA",
+                    "sleepHours": [
+                        8,
+                        8
+                    ],
+                    "musicPreference": [],
+                    "hobbies": [
+                        "Sports",
+                        "Artistty",
+                        "Cooking"
+                    ],
+                    "dorm": "Crockett"
+                }
+            ]
+        }
     },
-    "Crockett1-111": {
-        "name": "Crockett",
-        "sex": "m",
-        "size": 2,
-        "shared_bathroom": false,
-        "year": "freshman",
-        "occupants": [
-            {
-                "name": "Rick",
-                "sex": "m",
-                "major": "Biology/Biological Sciences, General",
-                "dormPref": "",
-                "year": "freshman",
-                "geo": "VA",
-                "sleepHours": [
-                    8,
-                    6
-                ],
-                "musicPreference": [
-                    "Classical",
-                    "Indie",
-                    "Metal/Grunge",
-                    "K-Pop",
-                    "Classical",
-                    "Classical"
-                ],
-                "hobbies": [
-                    "Cycling"
-                ],
-                "dorm": "Crockett"
-            }
-        ]
+    {
+        "Crockett1-111": {
+            "name": "Crockett",
+            "sex": "m",
+            "size": 2,
+            "shared_bathroom": false,
+            "year": "freshman",
+            "occupants": [
+                {
+                    "name": "Walter",
+                    "sex": "m",
+                    "major": "Biochemistry, Biophysics and Molecular Biology, Other",
+                    "dormPref": "",
+                    "year": "freshman",
+                    "geo": "WI",
+                    "sleepHours": [
+                        12,
+                        9
+                    ],
+                    "musicPreference": [],
+                    "hobbies": [],
+                    "dorm": "Crockett"
+                }
+            ]
+        }
     },
-    "Crockett1-112": {
-        "name": "Crockett",
-        "sex": "m",
-        "size": 2,
-        "shared_bathroom": false,
-        "year": "freshman",
-        "occupants": [
-            {
-                "name": "Kevin",
-                "sex": "m",
-                "major": "Geology/Earth Science, General",
-                "dormPref": "",
-                "year": "freshman",
-                "geo": "MT",
-                "sleepHours": [
-                    11,
-                    10
-                ],
-                "musicPreference": [],
-                "hobbies": [
-                    "Hiking"
-                ],
-                "dorm": "Crockett"
-            },
-            {
-                "name": "Doug",
-                "sex": "m",
-                "major": "Bioinformatics",
-                "dormPref": "",
-                "year": "freshman",
-                "geo": "GA",
-                "sleepHours": [
-                    10,
-                    7
-                ],
-                "musicPreference": [],
-                "hobbies": [],
-                "dorm": "Crockett"
-            }
-        ]
+    {
+        "Crockett1-112": {
+            "name": "Crockett",
+            "sex": "m",
+            "size": 2,
+            "shared_bathroom": false,
+            "year": "freshman",
+            "occupants": [
+                {
+                    "name": "Chris",
+                    "sex": "m",
+                    "major": "Architecture",
+                    "dormPref": "",
+                    "year": "freshman",
+                    "geo": "CO",
+                    "sleepHours": [
+                        10,
+                        6
+                    ],
+                    "musicPreference": [
+                        "Jazz",
+                        "Country/Folk",
+                        "Classical"
+                    ],
+                    "hobbies": [
+                        "Cycling"
+                    ],
+                    "dorm": "Crockett"
+                },
+                {
+                    "name": "Brooke",
+                    "sex": "m",
+                    "major": "Biology/Biological Sciences, General",
+                    "dormPref": "",
+                    "year": "freshman",
+                    "geo": "NH",
+                    "sleepHours": [
+                        9,
+                        5
+                    ],
+                    "musicPreference": [
+                        "Country"
+                    ],
+                    "hobbies": [],
+                    "dorm": "Crockett"
+                }
+            ]
+        }
     },
-    "Crockett1-113": {
-        "name": "Crockett",
-        "sex": "m",
-        "size": 2,
-        "shared_bathroom": false,
-        "year": "freshman",
-        "occupants": [
-            {
-                "name": "Eric",
-                "sex": "m",
-                "major": "Business Administration and Management, General",
-                "dormPref": "",
-                "year": "freshman",
-                "geo": "SD",
-                "sleepHours": [
-                    11,
-                    5
-                ],
-                "musicPreference": [
-                    "Metal/Grunge"
-                ],
-                "hobbies": [],
-                "dorm": "Crockett"
-            },
-            {
-                "name": "Everett",
-                "sex": "m",
-                "major": "Physics, Other",
-                "dormPref": "",
-                "year": "freshman",
-                "geo": "AL",
-                "sleepHours": [
-                    12,
-                    7
-                ],
-                "musicPreference": [],
-                "hobbies": [
-                    "Dancing",
-                    "Cooking",
-                    "Cooking"
-                ],
-                "dorm": "Crockett"
-            }
-        ]
+    {
+        "Crockett1-113": {
+            "name": "Crockett",
+            "sex": "m",
+            "size": 2,
+            "shared_bathroom": false,
+            "year": "freshman",
+            "occupants": [
+                {
+                    "name": "Cynthia",
+                    "sex": "m",
+                    "major": "Science, Technology and Society",
+                    "dormPref": "",
+                    "year": "freshman",
+                    "geo": "KS",
+                    "sleepHours": [
+                        12,
+                        7
+                    ],
+                    "musicPreference": [],
+                    "hobbies": [],
+                    "dorm": "Crockett"
+                }
+            ]
+        }
     },
-    "Crockett1-114": {
-        "name": "Crockett",
-        "sex": "m",
-        "size": 2,
-        "shared_bathroom": false,
-        "year": "freshman",
-        "occupants": [
-            {
-                "name": "Jordan",
-                "sex": "m",
-                "major": "Science, Technology and Society",
-                "dormPref": "",
-                "year": "freshman",
-                "geo": "HI",
-                "sleepHours": [
-                    9,
-                    8
-                ],
-                "musicPreference": [],
-                "hobbies": [
-                    "Hiking",
-                    "Sports",
-                    "Artistty"
-                ],
-                "dorm": "Crockett"
-            },
-            {
-                "name": "Beau",
-                "sex": "m",
-                "major": "Chemical Engineering",
-                "dormPref": "",
-                "year": "freshman",
-                "geo": "HI",
-                "sleepHours": [
-                    8,
-                    6
-                ],
-                "musicPreference": [],
-                "hobbies": [],
-                "dorm": "Crockett"
-            }
-        ]
+    {
+        "Crockett1-114": {
+            "name": "Crockett",
+            "sex": "m",
+            "size": 2,
+            "shared_bathroom": false,
+            "year": "freshman",
+            "occupants": [
+                {
+                    "name": "Phelan",
+                    "sex": "m",
+                    "major": "Pre-Medicine/Pre-Medical Studies",
+                    "dormPref": "",
+                    "year": "freshman",
+                    "geo": "LA",
+                    "sleepHours": [
+                        8,
+                        7
+                    ],
+                    "musicPreference": [],
+                    "hobbies": [
+                        "Singing",
+                        "Table Top Games",
+                        "Gaming",
+                        "Table Top Games"
+                    ],
+                    "dorm": "Crockett"
+                },
+                {
+                    "name": "Ryan",
+                    "sex": "m",
+                    "major": "Information Technology",
+                    "dormPref": "",
+                    "year": "freshman",
+                    "geo": "ID",
+                    "sleepHours": [
+                        12,
+                        9
+                    ],
+                    "musicPreference": [],
+                    "hobbies": [
+                        "Reading",
+                        "Singing",
+                        "Fishing",
+                        "Fishing"
+                    ],
+                    "dorm": "Crockett"
+                }
+            ]
+        }
     },
-    "Crockett1-115": {
-        "name": "Crockett",
-        "sex": "m",
-        "size": 2,
-        "shared_bathroom": false,
-        "year": "freshman",
-        "occupants": [
-            {
-                "name": "Chris",
-                "sex": "m",
-                "major": "Industrial Engineering",
-                "dormPref": "",
-                "year": "freshman",
-                "geo": "DE",
-                "sleepHours": [
-                    9,
-                    6
-                ],
-                "musicPreference": [
-                    "Metal/Grunge",
-                    "Metal/Grunge",
-                    "Indie",
-                    "Rock",
-                    "K-Pop",
-                    "Jazz",
-                    "Hip-Hop",
-                    "Country",
-                    "Country",
-                    "Country/Folk"
-                ],
-                "hobbies": [
-                    "Instrument",
-                    "Fishing",
-                    "Artistty"
-                ],
-                "dorm": "Crockett"
-            }
-        ]
+    {
+        "Crockett1-115": {
+            "name": "Crockett",
+            "sex": "m",
+            "size": 2,
+            "shared_bathroom": false,
+            "year": "freshman",
+            "occupants": [
+                {
+                    "name": "Oren",
+                    "sex": "m",
+                    "major": "Engineering Physics",
+                    "dormPref": "",
+                    "year": "freshman",
+                    "geo": "KY",
+                    "sleepHours": [
+                        10,
+                        7
+                    ],
+                    "musicPreference": [],
+                    "hobbies": [],
+                    "dorm": "Crockett"
+                },
+                {
+                    "name": "Jarrod",
+                    "sex": "m",
+                    "major": "Biochemistry/Biophysics and Molecular Biology",
+                    "dormPref": "",
+                    "year": "freshman",
+                    "geo": "TN",
+                    "sleepHours": [
+                        8,
+                        10
+                    ],
+                    "musicPreference": [],
+                    "hobbies": [],
+                    "dorm": "Crockett"
+                }
+            ]
+        }
     },
-    "Crockett1-116": {
-        "name": "Crockett",
-        "sex": "m",
-        "size": 2,
-        "shared_bathroom": false,
-        "year": "freshman",
-        "occupants": [
-            {
-                "name": "Marco",
-                "sex": "m",
-                "major": "Computer Technology/Computer Systems Technology",
-                "dormPref": "",
-                "year": "freshman",
-                "geo": "IN",
-                "sleepHours": [
-                    10,
-                    10
-                ],
-                "musicPreference": [],
-                "hobbies": [],
-                "dorm": "Crockett"
-            },
-            {
-                "name": "Kona",
-                "sex": "m",
-                "major": "Economics, General",
-                "dormPref": "",
-                "year": "freshman",
-                "geo": "MD",
-                "sleepHours": [
-                    8,
-                    8
-                ],
-                "musicPreference": [
-                    "K-Pop",
-                    "Hip-Hop",
-                    "Pop",
-                    "Classical",
-                    "Jazz",
-                    "Electronic"
-                ],
-                "hobbies": [
-                    "Hiking"
-                ],
-                "dorm": "Crockett"
-            }
-        ]
+    {
+        "Crockett1-116": {
+            "name": "Crockett",
+            "sex": "m",
+            "size": 2,
+            "shared_bathroom": false,
+            "year": "freshman",
+            "occupants": [
+                {
+                    "name": "Sebastian",
+                    "sex": "m",
+                    "major": "Pre-Medicine/Pre-Medical Studies",
+                    "dormPref": "",
+                    "year": "freshman",
+                    "geo": "DE",
+                    "sleepHours": [
+                        8,
+                        9
+                    ],
+                    "musicPreference": [],
+                    "hobbies": [],
+                    "dorm": "Crockett"
+                },
+                {
+                    "name": "Gus",
+                    "sex": "m",
+                    "major": "Biochemistry/Biophysics and Molecular Biology",
+                    "dormPref": "",
+                    "year": "freshman",
+                    "geo": "KY",
+                    "sleepHours": [
+                        10,
+                        6
+                    ],
+                    "musicPreference": [],
+                    "hobbies": [
+                        "Fishing"
+                    ],
+                    "dorm": "Crockett"
+                }
+            ]
+        }
     },
-    "Crockett1-117": {
-        "name": "Crockett",
-        "sex": "m",
-        "size": 2,
-        "shared_bathroom": false,
-        "year": "freshman",
-        "occupants": [
-            {
-                "name": "Janelle",
-                "sex": "m",
-                "major": "Psychology, General",
-                "dormPref": "",
-                "year": "freshman",
-                "geo": "KY",
-                "sleepHours": [
-                    10,
-                    8
-                ],
-                "musicPreference": [],
-                "hobbies": [
-                    "Gaming"
-                ],
-                "dorm": "Crockett"
-            }
-        ]
+    {
+        "Crockett1-117": {
+            "name": "Crockett",
+            "sex": "m",
+            "size": 2,
+            "shared_bathroom": false,
+            "year": "freshman",
+            "occupants": [
+                {
+                    "name": "Jordan",
+                    "sex": "m",
+                    "major": "Environmental Science",
+                    "dormPref": "",
+                    "year": "freshman",
+                    "geo": "ND",
+                    "sleepHours": [
+                        10,
+                        8
+                    ],
+                    "musicPreference": [
+                        "Hip-Hop",
+                        "Hip-Hop",
+                        "Hip-Hop",
+                        "Rock",
+                        "Indie",
+                        "Hip-Hop",
+                        "Metal/Grunge",
+                        "Rock",
+                        "K-Pop",
+                        "Electronic"
+                    ],
+                    "hobbies": [],
+                    "dorm": "Crockett"
+                },
+                {
+                    "name": "Jonah",
+                    "sex": "m",
+                    "major": "Biological and Biomedical Sciences, Other",
+                    "dormPref": "",
+                    "year": "freshman",
+                    "geo": "WI",
+                    "sleepHours": [
+                        8,
+                        7
+                    ],
+                    "musicPreference": [
+                        "Hip-Hop",
+                        "Hip-Hop"
+                    ],
+                    "hobbies": [],
+                    "dorm": "Crockett"
+                }
+            ]
+        }
     },
-    "Crockett1-118": {
-        "name": "Crockett",
-        "sex": "m",
-        "size": 2,
-        "shared_bathroom": false,
-        "year": "freshman",
-        "occupants": [
-            {
-                "name": "Wayne",
-                "sex": "m",
-                "major": "Civil Engineering, General",
-                "dormPref": "",
-                "year": "freshman",
-                "geo": "VT",
-                "sleepHours": [
-                    8,
-                    9
-                ],
-                "musicPreference": [],
-                "hobbies": [],
-                "dorm": "Crockett"
-            },
-            {
-                "name": "Lorelei",
-                "sex": "m",
-                "major": "Music Theory and Composition",
-                "dormPref": "",
-                "year": "freshman",
-                "geo": "NV",
-                "sleepHours": [
-                    11,
-                    10
-                ],
-                "musicPreference": [],
-                "hobbies": [],
-                "dorm": "Crockett"
-            }
-        ]
+    {
+        "Crockett1-118": {
+            "name": "Crockett",
+            "sex": "m",
+            "size": 2,
+            "shared_bathroom": false,
+            "year": "freshman",
+            "occupants": [
+                {
+                    "name": "Francis",
+                    "sex": "m",
+                    "major": "Electrical, Electronics and Communications Engineering",
+                    "dormPref": "",
+                    "year": "freshman",
+                    "geo": "RI",
+                    "sleepHours": [
+                        8,
+                        7
+                    ],
+                    "musicPreference": [],
+                    "hobbies": [
+                        "Reading",
+                        "Gaming",
+                        "Instrument",
+                        "Cycling"
+                    ],
+                    "dorm": "Crockett"
+                },
+                {
+                    "name": "Annika",
+                    "sex": "m",
+                    "major": "Philosophy",
+                    "dormPref": "",
+                    "year": "freshman",
+                    "geo": "UT",
+                    "sleepHours": [
+                        10,
+                        5
+                    ],
+                    "musicPreference": [
+                        "Jazz"
+                    ],
+                    "hobbies": [
+                        "Photography"
+                    ],
+                    "dorm": "Crockett"
+                }
+            ]
+        }
     },
-    "Crockett1-119": {
-        "name": "Crockett",
-        "sex": "m",
-        "size": 2,
-        "shared_bathroom": false,
-        "year": "freshman",
-        "occupants": [
-            {
-                "name": "Monica",
-                "sex": "m",
-                "major": "Visual and Performing Arts, General",
-                "dormPref": "",
-                "year": "freshman",
-                "geo": "NM",
-                "sleepHours": [
-                    9,
-                    8
-                ],
-                "musicPreference": [],
-                "hobbies": [],
-                "dorm": "Crockett"
-            }
-        ]
+    {
+        "Crockett1-119": {
+            "name": "Crockett",
+            "sex": "m",
+            "size": 2,
+            "shared_bathroom": false,
+            "year": "freshman",
+            "occupants": []
+        }
     }
-}
+]
