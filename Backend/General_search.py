@@ -7,28 +7,29 @@ def connect_to_db(uri):
     return db
 
 def findAvailableRoom(db, groupSize, students):
-    # Fetching all the dorms to loop through.
-    dorms = db.rooms.find()
-    for dorm in dorms:
-        hall = dorm["dorm_name"]
-        room_id = str(dorm["_id"])
-        occupants = dorm.get("Occupants", [])
-        size = dorm["size"]
-
-        if len(occupants) + groupSize <= size:
-            occupants.extend(students)
-            # Update the room occupants in MongoDB.
-            db.rooms.update_one({"_id": dorm["_id"]}, {"$set": {"Occupants": occupants}})
-            return True, hall + " " + room_id
+    # Query to find a room with empty occupants and sufficient size
+    potential_room = db['Dorms_Rohan'].find_one({
+        "Occupants": [],
+        "Size": {"$gte": groupSize}
+    })
+    
+    if potential_room:
+        hall = potential_room["Dorm"]
+        room_id = str(potential_room["_id"])
+        
+        # Update the room occupants in MongoDB.
+        db['Dorms_Rohan'].update_one({"_id": potential_room["_id"]}, {"$set": {"Occupants": students}})
+        return True, hall + " " + str(potential_room["RoomNum"])
+    
     return False, None
 
 def printData(db):
-    dorms = db.rooms.find()
+    dorms = db['Dorms_Rohan'].find()
     for dorm in dorms:
-        print(dorm["dorm_name"], ":")
-        print("  ", dorm["_id"], ":")
-        print("    room size:", dorm["size"])
-        print("    shared bathroom:", dorm["shared_bathroom"])
+        print(dorm["Dorm"], ":")
+        print("  ", dorm["RoomNum"], ":")
+        print("    room size:", dorm["Size"])
+        print("    shared bathroom:", dorm["sharedBathroom"])
         print("    type:", dorm["type"])
         print("    occupants:")
         for occupant in dorm["Occupants"]:
@@ -56,4 +57,8 @@ else:
     print("No suitable room found for the group.")
 
 printData(db)
+
+
+
+
 
