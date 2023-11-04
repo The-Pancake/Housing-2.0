@@ -1,0 +1,12 @@
+.left-image-wrapper {
+    flex: 0 0 60%; /* this makes it take up 60% of the container's width */
+    max-width: 60%; /* this makes it take up 60% of the container's width */
+}
+
+.right-images-wrapper {
+    flex: 1; /* this will allow it to take the remaining space */
+}
+
+.right-images-wrapper img {
+    height: 50%; /* each image will take up half of the container's height */
+}
