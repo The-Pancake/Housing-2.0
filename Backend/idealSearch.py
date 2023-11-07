@@ -7,39 +7,30 @@ def connect_to_db(uri):
 
 def idealSearch(db, groupSize, preferred, students):
     for pref in preferred:
-        # Query to find rooms with enough space
-        rooms = db.rooms.find({"dorm_name": pref, "size": {"$gte": groupSize + len(students)}})
+        # Query to find rooms with enough space and empty Occupants array
+        room = db['Dorms_Rohan'].find_one({
+            "Dorm": pref, 
+            "Size": {"$gte": groupSize}, 
+            "Occupants": []
+        })
 
-        for room in rooms:
-            occupants = room.get("Occupants", [])
+        if room:
+            # Add students to occupants
+            occupants = students
             
-            if len(occupants) + groupSize <= room["size"]:
-                # Add students to occupants
-                occupants.extend(students)
-                
-                # Update the room occupants in MongoDB
-                db.rooms.update_one({"_id": room["_id"]}, {"$set": {"Occupants": occupants}})
-                
-                return True, pref + " " + str(room["_id"])
-                
-            elif len(occupants) == 0 and groupSize <= room["size"]:
-                # Add as many students as the room can take
-                occupants.extend(students[:room["size"]])
-                
-                # Update the room occupants in MongoDB
-                db.rooms.update_one({"_id": room["_id"]}, {"$set": {"Occupants": occupants}})
-                
-                return True, pref + " " + str(room["_id"])
-                
+            # Update the room occupants in MongoDB
+            db['Dorms_Rohan'].update_one({"_id": room["_id"]}, {"$set": {"Occupants": occupants}})
+            return True, f"{pref} Room {room['RoomNum']}"  # Return the dorm name and room number
     return False, None
 
+
 def printData(db):
-    dorms = db.rooms.find()
+    dorms = db['Dorms_Rohan'].find()
     for dorm in dorms:
-        print(dorm["dorm_name"], ":")
-        print("  ", dorm["_id"], ":")
-        print("    room size:", dorm["size"])
-        print("    shared bathroom:", dorm["shared_bathroom"])
+        print(dorm["Dorm"], ":")
+        print("  ", dorm["RoomNum"], ":")
+        print("    room size:", dorm["Size"])
+        print("    shared bathroom:", dorm["sharedBathroom"])
         print("    type:", dorm["type"])
         print("    occupants:")
         for occupant in dorm["Occupants"]:
@@ -56,11 +47,11 @@ except Exception as e:
     print(e)
     exit()
 
-preferred1 = ["Davison"]
-students = ["kellie", "Becky"]
+preferences = ["Barton", "Hall", "Blitman", "Davison"]
+students = ["Selena", "Nicky", "Beyonce"]
 groupSize = len(students)
 
-room_found, given_room = idealSearch(db, groupSize, preferred1, students)
+room_found, given_room = idealSearch(db, groupSize, preferences, students)
 
 if room_found:
     print("Room found:", given_room)
@@ -68,5 +59,4 @@ else:
     print("No suitable room found for the group.")
 
 printData(db)
-
 
