@@ -61,9 +61,6 @@ def connect_to_db(uri):
     db = client['Campus'] 
     return db
 
-def Dist_Rating(all_dorm_weights, dorm1, dorm2):
-    return all_dorm_weights[dorm1][dorm2]
-
 def find_nearest_available_buildings_for_group(db, all_dorm_weights, group_pref, group):
     # Randomly split the group
     random.shuffle(group)
