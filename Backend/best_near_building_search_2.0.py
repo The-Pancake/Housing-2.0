@@ -1,3 +1,4 @@
+import random
 from pymongo import MongoClient
 from IdealSearch import searchIdeal
 
@@ -64,8 +65,9 @@ def Dist_Rating(all_dorm_weights, dorm1, dorm2):
     return all_dorm_weights[dorm1][dorm2]
 
 def find_nearest_available_buildings_for_group(db, all_dorm_weights, group_pref, group):
-    # Split the group
-    split_index = len(group) // 2 if len(group) > 1 else 1
+    # Randomly split the group
+    random.shuffle(group)
+    split_index = 2 if len(group) == 3 else len(group) // 2
     group1 = group[:split_index]
     group2 = group[split_index:]
 
@@ -82,12 +84,8 @@ def find_nearest_available_buildings_for_group(db, all_dorm_weights, group_pref,
 
     # If the first half is placed, find the nearest place for the second half
     if room1 and placed_dorm1:
-        # Sort nearest dorms based on the distance from the placed dorm
         nearest_dorms = sorted(all_dorm_weights[placed_dorm1], key=lambda k: all_dorm_weights[placed_dorm1][k])
         for dorm in nearest_dorms:
-            # Skip the dorm where the first group is already placed
-            if dorm == placed_dorm1:
-                continue
             found_room_for_group2, room_info2 = searchIdeal(db, len(group2), [dorm], group2)
             if found_room_for_group2:
                 room2 = room_info2
