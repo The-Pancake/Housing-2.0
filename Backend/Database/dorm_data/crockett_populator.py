@@ -15,6 +15,7 @@
 # - Can not accurately generate Crockett hall
 # - Can only generate one floor of Crockett
 # - Assumes all rooms are of size 2 
+# - Assumes all rooms in Crockett are NOT RA rooms 
 
 import random
 import json
@@ -49,7 +50,10 @@ def return_random_list(func, list: list, maxIter: int) -> list:
         iterations = random.randint(1, maxIter)
 
         for i in range(iterations):
-            resultList.append( func(list) )
+            funcResult = func(list)
+            if (funcResult not in resultList): 
+                resultList.append( funcResult )
+
     return resultList
     
 
@@ -118,6 +122,7 @@ def generate_room(floor: int, roomNum: int, size: int, sex: str, shared_bathroom
     resultDict[roomName]["shared_bathroom"] = shared_bathroom
     resultDict[roomName]["year"] = "freshman"
     resultDict[roomName]["occupants"] = []
+    resultDict[roomName]["ra room"] = False
     return resultDict
 
 # Given a dorm and students, populate the dorm with students, return True on success

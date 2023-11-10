@@ -6,7 +6,7 @@
 
 # Author: Daniel 
 #
-# Description:
+# Description: Program will update a given data base
 
 import mongodb_test as mb
 import json
@@ -23,3 +23,5 @@ if __name__ == "__main__":
     
     # Populate with updated json file
     collection.insert_many(newDorm)
+
+    print("Database Successfully updated!")
