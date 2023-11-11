@@ -42,7 +42,11 @@ def General_Near_Search(group_list, campus_dorm_rooms):
       if (len(room1) > 0) and (len(room2) > 0):
         room1_id = room1[0].get("_id")
         room2_id = room2[1].get("_id")
-        campus_dorm_rooms.update_one({"_id":room1_id}, { "$set" : {"Occupants": group1}})
+        
+        room1_occupants = room1[0].get("Occupants")
+        new_group1 = room1_occupants + group1
+
+        campus_dorm_rooms.update_one({"_id":room1_id}, { "$set" : {"Occupants": new_group1}})
         campus_dorm_rooms.update_one({"_id":room2_id}, { "$set" : {"Occupants": group2}})
         return True 
   return False

@@ -23,9 +23,7 @@ def Ideal_Near_Search(group_list, dorms, campus_dorm_rooms):
       }
       rooms = list(campus_dorm_rooms.find(query))
       
-      if len(rooms) < 2:
-        continue
-      else:
+      if len(rooms) >= 2:
         room1_id = rooms[0].get("_id")
         room2_id = rooms[1].get("_id")
         campus_dorm_rooms.update_one({"_id":room1_id}, { "$set" : {"Occupants": group1}})
@@ -47,12 +45,14 @@ def Ideal_Near_Search(group_list, dorms, campus_dorm_rooms):
       room1 = list(campus_dorm_rooms.find(query1))
       room2 = list(campus_dorm_rooms.find(query2))
       
-      if not (len(room1) == len(room2) > 0):
-        continue
-      else:
+      if len(room1) == len(room2) > 0:
         room1_id = room1[0].get("_id")
         room2_id = room2[1].get("_id")
-        campus_dorm_rooms.update_one({"_id":room1_id}, { "$set" : {"Occupants": group1}})
+
+        room1_occupants = room1[0].get("Occupants")
+        new_group1 = room1_occupants + group1
+
+        campus_dorm_rooms.update_one({"_id":room1_id}, { "$set" : {"Occupants": new_group1}})
         campus_dorm_rooms.update_one({"_id":room2_id}, { "$set" : {"Occupants": group2}})
         return True 
   return False
