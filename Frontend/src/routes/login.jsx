@@ -9,6 +9,7 @@ import "./signup.css"
 export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [rcsid, setRcsid] = useState("");
 
   function handleEmailChange(e) {
     setEmail(e.target.value);
@@ -18,11 +19,31 @@ export default function Login() {
     setPassword(e.target.value);
   }
 
-  function submit() {
+  function handleRCSIDChange(e) {
+    setRcsid(e.target.value);
+  }
+
+  function submit(e) {
     console.log(email)
     console.log(password)
-    let data = { email, password}
+    let data = { email, rcsid, password}
     console.log(data)
+    e.preventDefault();
+    fetch('http://localhost:3001/signin', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data),
+      credentials: "include"
+    })
+    .then(res=>res.json())
+    .then(res=>{
+      console.log(res)
+      // if (res.status === "success") {
+      //   window.location.href = "/home";
+      // }
+    })
     /*
     This is an example fetch call
     We don't have an API yet, but it would be something like this
@@ -46,20 +67,24 @@ export default function Login() {
                     <h1 style={{textAlign:"left"}}>Login</h1>
                     <h3 style={{textAlign:"left"}}>Tagline</h3>
                     <Form className="formInfo">
-                        <Form.Group className="mb-3" controlId="formBasicEmail">
+                        <Form.Group className="mb-3">
                             <Form.Label htmlFor="email">RPI Email Address</Form.Label>
                             <Form.Control type="email" placeholder="Enter RPI email" name="email" value={email} onChange={handleEmailChange}/>
                         </Form.Group>
+                        <Form.Group className="mb-3">
+                            <Form.Label htmlFor="rcsid">RCSID</Form.Label>
+                            <Form.Control type="text" placeholder="Enter RCSID" name="rcsid" value={rcsid} onChange={handleRCSIDChange}/>
+                        </Form.Group>
 
-                        <Form.Group className="mb-3" controlId="formBasicPassword">
+                        <Form.Group className="mb-3">
                             <Form.Label htmlFor="password">Password</Form.Label>
                             <Form.Control type="password" placeholder="Password" name="password" value={password} onChange={handlePasswordChange}/>
                         </Form.Group>
                         <Form.Group className="mb-3" controlId="formBasicCheckbox">
                             <Form.Check type="checkbox" label="I agree to the Terms of Service and Privacy Policy" />
                         </Form.Group>
-                        <Button  type="submit" className="submitButton" onClick={() => submit()}>
-                            Signup
+                        <Button  type="submit" className="submitButton" onClick={submit}>
+                            Sign in
                         </Button>
                         <br/>
                         <Form.Text style={{textAlign:"left"}}>

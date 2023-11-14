@@ -3,6 +3,8 @@ from fastapi import FastAPI, Request, Response
 import uvicorn
 from pymongo import MongoClient
 
+from fastapi.middleware.cors import CORSMiddleware
+
 
 # ------------------ Database ------------------
 # Provide the mongodb atlas url to connect python to mongodb using pymongo
@@ -14,6 +16,17 @@ client = MongoClient(CONNECTION_STRING)
 
 app = FastAPI()
 
+origins = [
+    "http://localhost:5173",
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 @app.get("/")
 async def root():
