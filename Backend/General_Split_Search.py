@@ -1,5 +1,5 @@
-import json
-import copy
+from pymongo.mongo_client import MongoClient
+from pymongo.server_api import ServerApi
 
 '''
 Will try to search for rooms with connected bathrooms in preferred dorms of the group preference
