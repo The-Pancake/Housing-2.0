@@ -19,15 +19,19 @@ app = FastAPI()
 async def root():
     return {"message": "Hello World"}
 
-
-@app.get("/profile")
-async def profile(res: Request):
+@app.get("/queryGroups")
+async def queryGroups(res: Request):
     # is user signed in?
-    if not res.cookies.get("account"):
+    if not res.cookies.get("rcsid"):
         return False
 
-    print(res.cookies.get("account"))
-    return {"message": "tbd"}
+    group = client["Student_Info"]["Groups"].find_one(
+        {"members": res.cookies.get("rcsid")}
+    )
+    return {"members": group["members"]}
+
+
+
 
 
 @app.post("/signin")
@@ -36,6 +40,7 @@ async def signin(req: Request, res: Response):
     req_json = await req.json()
     email = req_json.get("email")
     password = req_json.get("password")
+    rcsid = req_json.get("rcsid") if req_json.get("rcsid") else 'abc123'
     if (not email or not password):
         res.status_code = 400
         return {"message": "Error: missing email or password"}
@@ -44,7 +49,7 @@ async def signin(req: Request, res: Response):
         {"email": email, "password": password})
     if (login_info == None):
         return False
-    res.set_cookie(key="account", value=email)
+    res.set_cookie(key="rcsid", value=rcsid)
     return True
 
 
