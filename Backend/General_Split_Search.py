@@ -25,7 +25,7 @@ def Ideal_Split_Search(group_list,campus_dorm_rooms):
       "Occupants" : {"$size" : 0}
     }
     room2 = list(campus_dorm_rooms.find(query2))
-    if len(room2) == 1:
+    if len(room2) :
       room1_id = room1.get("_id")
       room2_id = room2[0].get("_id")
       campus_dorm_rooms.update_one({"_id":room1_id}, { "$set" : {"Occupants": group1}})
