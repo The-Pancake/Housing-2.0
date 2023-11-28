@@ -28,12 +28,19 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-@app.get("/")
-async def root():
-    return {"message": "Hello World"}
 
 @app.get("/queryGroups")
 async def queryGroups(res: Request):
+    """
+    Queries the groups collection in the Student_Info database to find the group
+    that the user belongs to based on their RCS ID.
+
+    Args:
+        res (Request): The request object containing the user's information.
+
+    Returns:
+        dict: A dictionary containing the members of the group.
+    """
     # is user signed in?
     if not res.cookies.get("rcsid"):
         return False
@@ -45,6 +52,16 @@ async def queryGroups(res: Request):
 
 @app.post("/updateGroup")
 async def updateGroup(req: Request, res: Response):
+    """
+    Update the group members in the database.
+
+    Args:
+        req (Request): The request object.
+        res (Response): The response object.
+
+    Returns:
+        bool: True if the group members are successfully updated, False otherwise.
+    """
     # is user signed in?
     if not req.cookies.get("rcsid"):
         return False
@@ -64,6 +81,16 @@ async def updateGroup(req: Request, res: Response):
 
 @app.post("/signin")
 async def signin(req: Request, res: Response):
+    """
+    Sign in a user with the provided email and password.
+
+    Args:
+        req (Request): The request object containing the JSON payload.
+        res (Response): The response object to send back to the client.
+
+    Returns:
+        bool: True if the user is successfully signed in, False otherwise.
+    """
     # todo: add error checking
     req_json = await req.json()
     email = req_json.get("email")
@@ -83,6 +110,16 @@ async def signin(req: Request, res: Response):
 
 @app.post("/signup")
 async def signup(req: Request, res: Response):
+    """
+    Sign up a new user.
+
+    Args:
+        req (Request): The request object.
+        res (Response): The response object.
+
+    Returns:
+        dict: A dictionary containing the response message.
+    """
     # todo: add error checking here
     # also maybe try to store just the password hashes
     #  instead of the passwords in plaintext
