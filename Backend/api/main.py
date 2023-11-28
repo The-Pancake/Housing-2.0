@@ -43,7 +43,22 @@ async def queryGroups(res: Request):
     )
     return {"members": group["members"]}
 
-
+@app.post("/updateGroup")
+async def updateGroup(req: Request, res: Response):
+    # is user signed in?
+    if not req.cookies.get("rcsid"):
+        return False
+    
+    req_json = await req.json()
+    members = req_json.get("members")
+    if not members:
+        res.status_code = 400
+        return {"message": "Error: missing members"}
+    
+    client["Student_Info"]["Groups"].update_one(
+        {"members": req.cookies.get("rcsid")}, {"$set": {"members": members}}, upsert=True
+    )
+    return True
 
 
 
