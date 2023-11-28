@@ -1,5 +1,5 @@
 import "./addGroup.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Form, InputGroup, Stack, Modal, Container, Button, Col, Row } from "react-bootstrap";
 
 
@@ -11,8 +11,38 @@ export default function AddGroup() {
   const handleShow = () => setShow(true);
   const removeUser = (user) => setGroup(group.filter((u) => u !== user));
   const addUser = (user) => setGroup([...new Set([...group, user])]);
+  const updateGroup = () => {
+    fetch("http://localhost:3001/updateGroup", {
+      method: "POST",
+      credentials: "include",
+      headers: {
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "http://localhost:3001",
+      },
+      body: JSON.stringify(group),
+    })
+      .then((res) => res.json())
+      .then((res) => {
+        console.log(res);
+      });
+  };
+
+  useEffect(() => {
+    // query api for group members
+    fetch("http://localhost:3001/queryGroups", {
+      method: "GET",
+      credentials: "include"
+    }).then(res => res.json())
+      .then(res => {
+        console.log(res)
+        setGroup(res.members)
+    })
+  }, [])
+
+  useEffect(() => {
+    updateGroup()
+  }, [group])
   
-  const userRIN = "abc123";
   return (
     <>
       <div className="main">

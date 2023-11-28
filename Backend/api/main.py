@@ -16,6 +16,16 @@ client = MongoClient(CONNECTION_STRING)
 
 app = FastAPI()
 
+
+@app.middleware("http")
+async def add_cors_headers(request, call_next):
+    response = await call_next(request)
+    response.headers["Access-Control-Allow-Origin"] = "https://www.teste.com.br, http://localhost:3000"
+    response.headers["Access-Control-Allow-Credentials"] = "true"
+    response.headers["Access-Control-Allow-Methods"] = "GET, POST, PUT, DELETE, OPTIONS"
+    response.headers["Access-Control-Allow-Headers"] = "Content-Type, Authorization"
+    return response
+
 origins = [
     "http://localhost:5173",
 ]
@@ -27,7 +37,6 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
 
 @app.get("/queryGroups")
 async def queryGroups(res: Request):
@@ -62,12 +71,14 @@ async def updateGroup(req: Request, res: Response):
     Returns:
         bool: True if the group members are successfully updated, False otherwise.
     """
+
+    print("test")
     # is user signed in?
     if not req.cookies.get("rcsid"):
         return False
     
-    req_json = await req.json()
-    members = req_json.get("members")
+    members = await req.json()
+    print(members)
     if not members:
         res.status_code = 400
         return {"message": "Error: missing members"}
