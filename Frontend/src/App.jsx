@@ -1,35 +1,42 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import Root from "./routes/root";
+import Dorms from "./routes/dorms";
+import Account from "./routes/account";
+import Contact from "./routes/contact";
+import Login from "./routes/login"
+import Application from "./routes/application";
+import Layout from "./routes/layout";
+import Signup from "./routes/signup";
+import Quiz from "./routes/quiz";
+import QuizQuestions from "./routes/quizQuestions";
+import AddGroup from "./routes/addGroup";
+import FAQ from "./routes/faq";
 
-function App() {
-  const [count, setCount] = useState(0)
+import { BrowserRouter } from "react-router-dom";
 
+import { Route, Routes } from "react-router";
+
+import "./app.css"
+
+export default function App() {
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <div className="App">
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Root />} />
+            <Route path="/signup" element={<Signup />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/dorms" element={<Dorms />} />
+            <Route path="/quiz" element={<Quiz />} />
+            <Route path="/account" element={<Account />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/application" element={<Application />} />
+            <Route path="/quizQuestions" element={<QuizQuestions />} />
+            <Route path="/faq" element={<FAQ />} />
+            <Route path="/groups" element={<AddGroup />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </div>
+  );
 }
-
-export default App
