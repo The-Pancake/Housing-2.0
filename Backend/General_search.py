@@ -1,47 +1,64 @@
-import json
+from pymongo import MongoClient
 
-def findAvailableRoom(data, groupSize, students):
-    for hall, rooms in data.items():
-        for room_id, room_data in rooms.items():
-            occupants = room_data["Occupants"]
-            size = room_data["size"]
-            if len(occupants) + groupSize <= size:
-                for student in students:
-                    occupants.append(student)
-                room_data["Occupants"] = occupants
-                return True, hall + " " + room_id
+def connect_to_db(uri):
+    client = MongoClient(uri)
+    # Replace with your actual database name.
+    db = client['Campus'] 
+    return db
+
+def findAvailableRoom(db, groupSize, students):
+    # Query to find a room with empty occupants and sufficient size
+    potential_room = db['Dorms_Rohan'].find_one({
+        "Occupants": [],
+        "Size": {"$gte": groupSize}
+    })
+    
+    if potential_room:
+        hall = potential_room["Dorm"]
+        room_id = str(potential_room["_id"])
+        
+        # Update the room occupants in MongoDB.
+        db['Dorms_Rohan'].update_one({"_id": potential_room["_id"]}, {"$set": {"Occupants": students}})
+        return True, hall + " " + str(potential_room["RoomNum"])
+    
     return False, None
 
-def updateJSON(filename, data):
-    with open(filename, 'w') as f:
-        json.dump(data, f, indent=4)
+def printData(db):
+    dorms = db['Dorms_Rohan'].find()
+    for dorm in dorms:
+        print(dorm["Dorm"], ":")
+        print("  ", dorm["RoomNum"], ":")
+        print("    room size:", dorm["Size"])
+        print("    shared bathroom:", dorm["sharedBathroom"])
+        print("    type:", dorm["type"])
+        print("    occupants:")
+        for occupant in dorm["Occupants"]:
+            print("\t", occupant)
 
-def printData(data):
-    for hall, rooms in data.items():
-        print(hall, ":")
-        for room_id, room_data in rooms.items():
-            print("  ", room_id, ":")
-            print("    room size:", room_data["size"])
-            print("    shared bathroom:", room_data["shared_bathroom"])
-            print("    type:", room_data["type"])
-            print("    occupants:")
-            for occupant in room_data["Occupants"]:
-                print("\t", occupant)
+# Connection URI
+uri = "mongodb+srv://housing20rcos:nQWnpyw4PsFk78eJ@housing2.elxx6hn.mongodb.net/?retryWrites=true&w=majority"
 
-# Load the JSON data
-filename = "Backend/Campus_data_structures/campus3.json"
-with open(filename) as f:
-    data = json.load(f)
+# Connect to MongoDB
+try:
+    db = connect_to_db(uri)
+    print("Pinged your deployment. You successfully connected to MongoDB!")
+except Exception as e:
+    print(e)
+    exit()
 
 students = ["John", "Bill"]
 groupSize = len(students)
 
-room_found, given_room = findAvailableRoom(data, groupSize, students)
+room_found, given_room = findAvailableRoom(db, groupSize, students)
 
 if room_found:
-    updateJSON(filename, data)
     print("Room found:", given_room)
 else:
     print("No suitable room found for the group.")
-    
-printData(data)
+
+printData(db)
+
+
+
+
+

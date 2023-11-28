@@ -1,7 +1,8 @@
-import json
-from IdealSearch import idealSearch
+import random
+from pymongo import MongoClient
+from IdealSearch import searchIdeal
 
-dorms = ['Barton',	'Bray',	'BarH',	'Cary',	'Crockett',	'Davison',	'E_Complex',	'Hall',	'Nason',	'North',	'Quad',	'Sharp',	'Warren',	'Rahps_B',	'Blitman',	'Bryckwyck',	'Colonie',	'Rahps_A',	'Stacwyck',	'City_Station_West',	'City_Station_South',	'Polytechnic']
+dorms = ['Barton',	'Bray',	'BarH',	'Cary',	'Crockett',	'Davison',	'E-Complex',	'Hall',	'Nason',	'North',	'Quad',	'Sharp',	'Warren',	'Rahps B',	'Blitman',	'Bryckwyck',	'Colonie',	'Rahps A',	'Stacwyck',	'City Station West',	'City Station South',	'Polytechnic']
 
 Barton_Weights = {	          'Barton' : 0,	'Bray' : 1,	'BarH' : 3,	'Cary' : 1,	'Crockett' : 1,	'Davison' : 1,	'E-Complex' : 2,	'Hall' : 1,	'Nason' : 1,	'North' : 2,	'Quad' : 2,	'Sharp' : 2,	'Warren' : 1,	'Beman and Brinsmade (Rahps B)' : 5,	'Blitman' : 5,	'Bryckwyck' : 6,	'Colonie' : 5,	'Colvin and Albright (Rahps A)' : 3,	'Stacwyck' : 5,	'City Station West' : 6,	'City Station South' : 6,	'Polytechnic' : 5}
 Bray_Weights = {	          'Barton' : 1,	'Bray' : 0,	'BarH' : 2,	'Cary' : 1,	'Crockett' : 1,	'Davison' : 1,	'E-Complex' : 3,	'Hall' : 1,	'Nason' : 1,	'North' : 3,	'Quad' : 2,	'Sharp' : 1,	'Warren' : 1,	'Beman and Brinsmade (Rahps B)' : 5,	'Blitman' : 5,	'Bryckwyck' : 6,	'Colonie' : 5,	'Colvin and Albright (Rahps A)' : 3,	'Stacwyck' : 5,	'City Station West' : 6,	'City Station South' : 6,	'Polytechnic' : 5}
@@ -52,31 +53,67 @@ all_dorm_weights = {
     'Polytechnic': Polytechnic_Weights,
 }
 
-def Dist_Rating(dorm1, dorm2):
-    return all_dorm_weights[dorm1][dorm2]
+# Connection URI
+uri = "mongodb+srv://housing20rcos:nQWnpyw4PsFk78eJ@housing2.elxx6hn.mongodb.net/?retryWrites=true&w=majority"
 
-def find_nearest_available_buildings(data, group1_pref, group2_pref, group1, group2):
-    nearest_building_pair = None
-    min_distance = float('inf')
-    
-    for building1 in group1_pref:
-        for building2 in group2_pref:
-            if idealSearch(data, len(group1), [building1], group1) and idealSearch(data, len(group2), [building2], group2):
-                distance = Dist_Rating(building1, building2)
-                if distance < min_distance:
-                    min_distance = distance
-                    nearest_building_pair = (building1, building2)
+def connect_to_db(uri):
+    client = MongoClient(uri)
+    db = client['Campus'] 
+    return db
 
-    return nearest_building_pair
+def find_nearest_available_buildings_for_group(db, all_dorm_weights, group_pref, group):
+    # Randomly split the group
+    random.shuffle(group)
+    split_index = 2 if len(group) == 3 else len(group) // 2
+    group1 = group[:split_index]
+    group2 = group[split_index:]
 
-filename = "Backend/Campus_data_structures/campus4.json"
-with open(filename) as f:
-    data = json.load(f)
+    room1 = room2 = None
+    placed_dorm1 = None
 
-group1 = ['kellie', 'Becky']
-group2 = ['John', 'Doe']
-group1_pref = ["Davison", "Barton", "Bray"]
-group2_pref = ["Sharp", "BarH", "Cary"]
+    # Try to place the first half of the group in their preferred dorms
+    for pref in group_pref:
+        found_room_for_group1, room_info1 = searchIdeal(db, len(group1), [pref], group1)
+        if found_room_for_group1:
+            room1 = room_info1
+            placed_dorm1 = pref
+            break
 
-result = find_nearest_available_buildings(data, group1_pref, group2_pref, group1, group2)
-print(f"Nearest Buildings with available rooms for the groups are: {result}")
+    # If the first half is placed, find the nearest place for the second half
+    if room1 and placed_dorm1:
+        nearest_dorms = sorted(all_dorm_weights[placed_dorm1], key=lambda k: all_dorm_weights[placed_dorm1][k])
+        for dorm in nearest_dorms:
+            found_room_for_group2, room_info2 = searchIdeal(db, len(group2), [dorm], group2)
+            if found_room_for_group2:
+                room2 = room_info2
+                break
+
+    return (room1, room2)
+
+
+# Connect to MongoDB
+db = connect_to_db(uri)
+
+group = ['Alice', 'Bob', 'Charlie']  
+group_pref = ["Blitman", "Davison"]  
+
+# Try to place the group
+placed_rooms = find_nearest_available_buildings_for_group(db, all_dorm_weights, group_pref, group)
+
+def printData(db):
+    dorms = db['Dorms_Rohan'].find()
+    for dorm in dorms:
+        print(dorm["Dorm"], ":")
+        print("  ", dorm["RoomNum"], ":")
+        print("    room size:", dorm["Size"])
+        print("    shared bathroom:", dorm["sharedBathroom"])
+        print("    type:", dorm["type"])
+        print("    occupants:")
+        for occupant in dorm["Occupants"]:
+            print("\t", occupant)
+
+# Output the result
+if placed_rooms:
+    print(f"Group was split and placed in: {placed_rooms[0]} and {placed_rooms[1]}")
+else:
+    print("Unable to place the group in preferred and nearby dorms.")

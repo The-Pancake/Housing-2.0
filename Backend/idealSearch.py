@@ -1,58 +1,39 @@
-import json
+from pymongo import MongoClient
 
-def idealSearch(data, groupSize, preferred, students):
+def connect_to_db(uri):
+    client = MongoClient(uri)
+    db = client['Campus'] 
+    return db
+
+def searchIdeal(db, groupSize, preferred, students):
     for pref in preferred:
-        hall = data.get(pref, {}).get("Rooms", {}) 
-        for room_id, room_data in hall.items():
-            occupants = room_data["Occupants"]
-            size = room_data["size"]
-            if len(occupants) + groupSize <= size:
-                for student in students:
-                    occupants.append(student)
-                room_data["Occupants"] = occupants
-                return True, pref + " " + room_id  
-            elif len(occupants) == 0 and groupSize <= size:
-                for student in students[:size]:
-                    occupants.append(student)
-                room_data["Occupants"] = occupants
-                return True, pref + " " + room_id  
+        # Query to find rooms with enough space and empty Occupants array
+        room = db['Dorms_Rohan'].find_one({
+            "Dorm": pref, 
+            "Size": {"$gte": groupSize}, 
+            "Occupants": []
+        })
+
+        if room:
+            # Add students to occupants
+            occupants = students
+            
+            # Update the room occupants in MongoDB
+            db['Dorms_Rohan'].update_one({"_id": room["_id"]}, {"$set": {"Occupants": occupants}})
+            return True, f"{pref} Room {room['RoomNum']}"  # Return the dorm name and room number
     return False, None
 
+# Connection URI
+uri = "mongodb+srv://housing20rcos:nQWnpyw4PsFk78eJ@housing2.elxx6hn.mongodb.net/?retryWrites=true&w=majority"
 
-def updateJSON(filename, data):
-    with open(filename, 'w') as f:
-        json.dump(data, f, indent=4)
+# Connect to MongoDB
+try:
+    db = connect_to_db(uri)
+    print("Pinged your deployment. You successfully connected to MongoDB!")
+except Exception as e:
+    print(e)
+    exit()
 
-def printData(data):
-    for hall, rooms in data.items():
-        print(hall, ":")
-        for room_id, room_data in rooms.items():
-            print("  ", room_id, ":")
-            print("    room size:", room_data["size"])
-            print("    shared bathroom:", room_data["shared_bathroom"])
-            print("    type:", room_data["type"])
-            print("    occupants:")
-            for occupant in room_data["Occupants"]:
-                print("\t", occupant)
 
-# Load the JSON data
-filename = "Backend/Campus_data_structures/campus3.json"
-with open(filename) as f:
-    data = json.load(f)
-
-preferred1 = ["Davison"]
-preferred2 = ["Sharp"]
-students = ["kellie", "Becky"]
-groupSize = len(students)
-
-room_found, given_room = idealSearch(data, groupSize, preferred1, students)
-
-if room_found:
-    updateJSON(filename, data)
-    print("Room found:", given_room)
-else:
-    print("No suitable room found for the group.")
-    
-printData(data)
 
 

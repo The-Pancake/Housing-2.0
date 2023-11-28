@@ -1,45 +1,61 @@
-import json
+from pymongo import MongoClient
 import copy
 
 '''
 Will try to search for rooms with connected bathrooms in preferred dorms of the group preference
 '''
-def General_Split_Search(group_list,campus):
-  group_size = len(group_list)
-  buildings = campus.keys()
-  print(buildings)
+def connect_to_db(uri):
+    client = MongoClient(uri)
+    db = client['Campus'] 
+    return db
 
-  middle_index = group_size // 2
+def General_Split_Search(group_list, db):
+    group_size = len(group_list)
+    middle_index = group_size // 2
+    group1 = group_list[:middle_index]
+    group2 = group_list[middle_index:]
 
-  group1 = group_list[:middle_index]
-  group2 = group_list[middle_index:]
+    dorms = db.rooms.find()
+    for dorm in dorms:
+        dorm_name = dorm["dorm_name"]
+        room_id = str(dorm["_id"])
+        occupants = dorm.get("Occupants", [])
 
-  for dorm in campus:#loops through all the dorms in the groups preferred list
-    for room in campus[dorm]:#loops through the rooms in the building
-      #if the room size does not fit the group or it is occupied
-      if campus[dorm][room]["size"] != len(group1) or len(campus[dorm][room]["Occupants"]) > 0: 
-        continue
-      else:
-        if campus[dorm][room]["shared_bathroom"] != False:
-          connected_room = str(campus[dorm][room]["shared_bathroom"])
-          if campus[dorm][connected_room]["size"] == len(group2) and len(campus[dorm][connected_room]["Occupants"]) == 0:
-            campus[dorm][room]["Occupants"] = copy.deepcopy(group1)
-            campus[dorm][connected_room]["Occupants"] = copy.deepcopy(group2)
-            # a = open('C:/Users/dongm2/Documents/RPI/Personal_projects/Rcos/objects_changed.json', 'w')
-            # json.dump(campus,a, indent = 2)
-            # a.close()
-            return True
-  return False
+        if dorm["size"] != len(group1) or len(occupants) > 0:
+            continue
+        else:
+            if dorm["shared_bathroom"] != False:
+                connected_room = db.rooms.find_one({"_id": dorm["shared_bathroom"]})
+                if not connected_room:
+                    continue
 
+                if connected_room["size"] == len(group2) and len(connected_room["Occupants"]) == 0:
+                    db.rooms.update_one({"_id": dorm["_id"]}, {"$set": {"Occupants": copy.deepcopy(group1)}})
+                    db.rooms.update_one({"_id": connected_room["_id"]}, {"$set": {"Occupants": copy.deepcopy(group2)}})
+                    return True
+    return False
+
+# Connection URI
+uri = "mongodb+srv://housing20rcos:nQWnpyw4PsFk78eJ@housing2.elxx6hn.mongodb.net/?retryWrites=true&w=majority"
+
+# Connect to MongoDB
+try:
+    db = connect_to_db(uri)
+    print("Pinged your deployment. You successfully connected to MongoDB!")
+except Exception as e:
+    print(e)
+    exit()
+    
 if __name__ == '__main__':
-  campus = open("./Campus_data_structures/campus3.json")
-  campus = json.load(campus)
-  group = ["Dom", "Bob", "Paul", "Ben"]
   dorm_pref = ["Hall"]
-  if General_Split_Search(group,campus):
-    print(campus)
+  group = ["Dom", "Bob", "Paul", "Ben"]
+  if General_Split_Search(group, db):
+      # Fetch the updated rooms and print them.
+      rooms = db.rooms.find()
+      for room in rooms:
+          print(room)
   else:
-    print("did not find room for group :(")
+        print("did not find room for group :(")
   # Things to test for:
   #   - if all rooms are empty
   #   - if all rooms are Full
