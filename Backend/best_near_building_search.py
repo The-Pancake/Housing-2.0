@@ -116,3 +116,31 @@ for i in range(count_of_quads):
         print(vicins[3])
 
         group = []
+
+
+def find_nearest_available_buildings(data, group1_pref, group2_pref, group1, group2):
+    nearest_building_pair = None
+    min_distance = float('inf')
+    
+    for building1 in group1_pref:
+        for building2 in group2_pref:
+            if idealSearch(data, len(group1), [building1], group1) and idealSearch(data, len(group2), [building2], group2):
+                distance = Dist_Rating(building1, building2)
+                if distance < min_distance:
+                    min_distance = distance
+                    nearest_building_pair = (building1, building2)
+
+    return nearest_building_pair
+
+filename = "Backend/Campus_data_structures/campus4.json"
+with open(filename) as f:
+    data = json.load(f)
+
+group1 = ['kellie', 'Becky']
+group2 = ['John', 'Doe']
+group1_pref = ["Davison", "Barton", "Bray"]
+group2_pref = ["Sharp", "BarH", "Cary"]
+
+result = find_nearest_available_buildings(data, group1_pref, group2_pref, group1, group2)
+print(f"Nearest Buildings with available rooms for the groups are: {result}")
+

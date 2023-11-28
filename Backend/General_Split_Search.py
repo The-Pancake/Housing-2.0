@@ -1,9 +1,12 @@
+
 from pymongo.mongo_client import MongoClient
 from pymongo.server_api import ServerApi
+
 
 '''
 Will try to search for rooms with connected bathrooms in preferred dorms of the group preference
 '''
+
 def Ideal_Split_Search(group_list,campus_dorm_rooms):
   group_size = len(group_list)
   middle_index = group_size // 2

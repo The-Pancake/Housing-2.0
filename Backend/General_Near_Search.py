@@ -1,5 +1,7 @@
+
 from pymongo.mongo_client import MongoClient
 from pymongo.server_api import ServerApi
+
 
 #General Near Search algorithm:
 # Argurments:
@@ -8,6 +10,7 @@ from pymongo.server_api import ServerApi
 #In the case that General search and Ideal search fail to find a room for a group
 #this algorithm splits the groups up and tries to find 2 rooms within the same building to assign
 #the students to
+
 def General_Near_Search(group_list, campus_dorm_rooms):
   group_size = len(group_list)
   middle_index = group_size // 2
