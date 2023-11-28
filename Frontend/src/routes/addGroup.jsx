@@ -11,21 +11,6 @@ export default function AddGroup() {
   const handleShow = () => setShow(true);
   const removeUser = (user) => setGroup(group.filter((u) => u !== user));
   const addUser = (user) => setGroup([...new Set([...group, user])]);
-  const updateGroup = () => {
-    fetch("http://localhost:3001/updateGroup", {
-      method: "POST",
-      credentials: "include",
-      headers: {
-        "Content-Type": "application/json",
-        "Access-Control-Allow-Origin": "http://localhost:3001",
-      },
-      body: JSON.stringify(group),
-    })
-      .then((res) => res.json())
-      .then((res) => {
-        console.log(res);
-      });
-  };
 
   useEffect(() => {
     // query api for group members
@@ -40,8 +25,20 @@ export default function AddGroup() {
   }, [])
 
   useEffect(() => {
-    updateGroup()
-  }, [group])
+    fetch("http://localhost:3001/updateGroup", {
+      method: "POST",
+      credentials: "include",
+      headers: {
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "http://localhost:3001",
+      },
+      body: JSON.stringify(group),
+    })
+      .then((res) => res.json())
+      .then((res) => {
+        console.log(res);
+      });
+  }, [group]);
   
   return (
     <>
