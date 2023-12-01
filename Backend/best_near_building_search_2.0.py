@@ -1,9 +1,11 @@
 import random
 from pymongo import MongoClient
-from IdealSearch import searchIdeal
+from idealSearch import searchIdeal
 
+# List of dorm names
 dorms = ['Barton',	'Bray',	'BarH',	'Cary',	'Crockett',	'Davison',	'E-Complex',	'Hall',	'Nason',	'North',	'Quad',	'Sharp',	'Warren',	'Rahps B',	'Blitman',	'Bryckwyck',	'Colonie',	'Rahps A',	'Stacwyck',	'City Station West',	'City Station South',	'Polytechnic']
 
+# Weights for each dorm, representing the relative distance or preference from each dorm
 Barton_Weights = {	          'Barton' : 0,	'Bray' : 1,	'BarH' : 3,	'Cary' : 1,	'Crockett' : 1,	'Davison' : 1,	'E-Complex' : 2,	'Hall' : 1,	'Nason' : 1,	'North' : 2,	'Quad' : 2,	'Sharp' : 2,	'Warren' : 1,	'Beman and Brinsmade (Rahps B)' : 5,	'Blitman' : 5,	'Bryckwyck' : 6,	'Colonie' : 5,	'Colvin and Albright (Rahps A)' : 3,	'Stacwyck' : 5,	'City Station West' : 6,	'City Station South' : 6,	'Polytechnic' : 5}
 Bray_Weights = {	          'Barton' : 1,	'Bray' : 0,	'BarH' : 2,	'Cary' : 1,	'Crockett' : 1,	'Davison' : 1,	'E-Complex' : 3,	'Hall' : 1,	'Nason' : 1,	'North' : 3,	'Quad' : 2,	'Sharp' : 1,	'Warren' : 1,	'Beman and Brinsmade (Rahps B)' : 5,	'Blitman' : 5,	'Bryckwyck' : 6,	'Colonie' : 5,	'Colvin and Albright (Rahps A)' : 3,	'Stacwyck' : 5,	'City Station West' : 6,	'City Station South' : 6,	'Polytechnic' : 5}
 BarH_Weights = {	          'Barton' : 3,	'Bray' : 2,	'BarH' : 0,	'Cary' : 3,	'Crockett' : 3,	'Davison' : 3,	'E-Complex' : 3,	'Hall' : 3,	'Nason' : 3,	'North' : 3,	'Quad' : 3,	'Sharp' : 3,	'Warren' : 3,	'Beman and Brinsmade (Rahps B)' : 3,	'Blitman' : 6,	'Bryckwyck' : 4,	'Colonie' : 3,	'Colvin and Albright (Rahps A)' : 1,	'Stacwyck' : 3,	'City Station West' : 8,	'City Station South' : 8,	'Polytechnic' : 6}
@@ -53,15 +55,40 @@ all_dorm_weights = {
     'Polytechnic': Polytechnic_Weights,
 }
 
-# Connection URI
+# Connection URI for MongoDB
 uri = "mongodb+srv://housing20rcos:nQWnpyw4PsFk78eJ@housing2.elxx6hn.mongodb.net/?retryWrites=true&w=majority"
 
 def connect_to_db(uri):
+    """
+    Establishes a connection to the MongoDB database.
+
+    Args:
+    - uri (str): Connection URI string for MongoDB.
+
+    Returns:
+    - db: A database object representing the 'Campus' database.
+    """
     client = MongoClient(uri)
     db = client['Campus'] 
     return db
 
 def find_nearest_available_buildings_for_group(db, all_dorm_weights, group_pref, group):
+    """
+    Attempts to find the nearest available dorm buildings for a group based on their preferences.
+
+    Args:
+    - db: The database object to perform queries on.
+    - all_dorm_weights (dict): A dictionary containing weight mappings for each dorm.
+    - group_pref (list): List of preferred dorm buildings for the group.
+    - group (list): List of group member names.
+
+    Returns:
+    - tuple: (room1, room2) where each is the room information for a part of the group or None.
+
+    This function first randomly splits the group into two (or handles a group of three).
+    It attempts to find accommodation for the first half in their preferred dorms.
+    If successful, it then tries to find the nearest available dorm for the second half.
+    """
     # Randomly split the group
     random.shuffle(group)
     split_index = 2 if len(group) == 3 else len(group) // 2
@@ -71,7 +98,7 @@ def find_nearest_available_buildings_for_group(db, all_dorm_weights, group_pref,
     room1 = room2 = None
     placed_dorm1 = None
 
-    # Try to place the first half of the group in their preferred dorms
+    # Place the first half of the group in their preferred dorms
     for pref in group_pref:
         found_room_for_group1, room_info1 = searchIdeal(db, len(group1), [pref], group1)
         if found_room_for_group1:
@@ -79,7 +106,7 @@ def find_nearest_available_buildings_for_group(db, all_dorm_weights, group_pref,
             placed_dorm1 = pref
             break
 
-    # If the first half is placed, find the nearest place for the second half
+    # Find the nearest place for the second half if the first half is placed
     if room1 and placed_dorm1:
         nearest_dorms = sorted(all_dorm_weights[placed_dorm1], key=lambda k: all_dorm_weights[placed_dorm1][k])
         for dorm in nearest_dorms:
@@ -90,17 +117,26 @@ def find_nearest_available_buildings_for_group(db, all_dorm_weights, group_pref,
 
     return (room1, room2)
 
-
 # Connect to MongoDB
 db = connect_to_db(uri)
 
 group = ['Alice', 'Bob', 'Charlie']  
 group_pref = ["Blitman", "Davison"]  
 
-# Try to place the group
+# Attempt to place the group
 placed_rooms = find_nearest_available_buildings_for_group(db, all_dorm_weights, group_pref, group)
 
 def printData(db):
+    """
+    Prints information for all dorms in the 'Dorms_Rohan' collection from the database.
+
+    Args:
+    - db: The database object to perform queries on.
+
+    This function iterates through each dorm in the 'Dorms_Rohan' collection and prints
+    detailed information about each, including room number, size, shared bathroom status,
+    type, and occupants.
+    """
     dorms = db['Dorms_Rohan'].find()
     for dorm in dorms:
         print(dorm["Dorm"], ":")
@@ -117,3 +153,4 @@ if placed_rooms:
     print(f"Group was split and placed in: {placed_rooms[0]} and {placed_rooms[1]}")
 else:
     print("Unable to place the group in preferred and nearby dorms.")
+
