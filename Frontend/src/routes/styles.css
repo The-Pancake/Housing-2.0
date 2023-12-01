@@ -1,0 +1,251 @@
+/* class for profile menu page*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+/* styes for profile view*/
+body, div, h1, h2, p, button {
+    font-family: 'Poppins', sans-serif;
+}
+
+.user-name {
+    text-align: left;
+    padding-left: 1.4em;
+    font-size: 2.7em;
+    font-weight: bold;
+    margin-bottom: 1em;
+}
+
+/* rectangles on profile page*/
+.info-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4em;
+    height: 60vh;
+}
+
+/*  data in the rectangles*/
+.info-box {
+    width: 30%;
+    background-color: #DBDCEB; 
+    padding: 1em;
+    box-sizing: border-box;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+}
+
+/*header in the rectangle*/
+.box-header {
+    font-weight: bold;
+    font-size: 1.8em;
+    align-self: center;
+}
+
+.personal-info {
+    font-size: 1.32em;
+    text-align: left;
+}
+
+.RIN-info {
+    height: 20vh;
+}
+
+/* buttons in thee rectangle*/
+.edit-info-button, .continue-application-button {
+    align-self: flex-end;
+    font-size: 1em;
+    border-radius: 10px;
+}
+
+/* loading bar data*/
+.loading-bar-container {
+    height: 40px;
+    width: 100%;
+    background-color: #E0E0E0;
+    position: relative;
+    margin-top: 10px;
+    border-radius: 4px;
+}
+
+.loading-bar { 
+    height: 100%;
+    background-color: rgb(93, 219, 93);
+}
+
+.loading-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+    font-size: 1.0em;
+    font-weight: bold;
+}
+
+.step-info {
+    font-size: 1.3em;
+    margin-top: 5px;
+    height: 10vh;
+}
+
+.path-info {
+    margin-top: 1em;
+}
+
+/* edit profile page Styling*/
+
+.edit-profile-background {
+  display: flex;
+    background-color: #d3d3d3; /* light grey */
+    min-height: 100vh;
+}
+
+
+.profile-container {
+    padding: 20px;
+    background-color: #f3f3f3;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+    width: 800px;
+    margin: 0 auto;
+    height: 85vh;
+    align-self: center;
+    align-content: center;
+    flex-direction: column;
+    display: flex;
+  }
+  
+  /*edit profile title*/
+  .profile-title {
+    font-size: 24px;
+    text-align: center;
+    color: #333;
+  }
+  
+  /*profile section*/
+  
+
+  .profile-section.full {
+    max-width: 100%;
+  }
+  
+  /*profile labels inside edit profile*/
+  .profile-label {
+    font-weight: bold;
+    margin-right: 10px;
+    align-content: left;
+  }
+
+  .profile-section {
+    margin: 10px;
+    flex: 1;
+    min-width: 0;
+  }
+  
+  .profile-section.half {
+    max-width: calc(50% - 20px); /* assuming 10px margin on each side */
+  }
+
+  .profile-section.third {
+    max-width: calc(33.333% - 20px); /* assuming 10px margin on each side */
+  }
+
+  @media (max-width: 768px) {
+    .profile-section.half,
+    .profile-section.third,
+    .profile-section.full {
+      max-width: none;
+      flex-basis: 100%;
+    }
+  }
+
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  
+  /*edit other contact info button*/
+  .profile-edit-button, .profile-save-changes-button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    margin: 5px 0px; /* changed from 5px 5px */
+    /* display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer; */
+  }
+  
+  /*edit details profile button*/
+  .profile-edit-button {
+    background-color: #007BFF;
+    color: white;
+  }
+
+  .profile-edit-button:hover {
+    background-color: #0056b3;
+  }
+  
+  /*submit button to save profile changes*/
+  .profile-save-changes-button {
+    background-color: #4CAF50; 
+    color: white;
+  }
+  .profile-save-changes-button:hover {
+    background-color: #45a049; 
+  }
+  
+  
+  /*each row in the edit profile section*/
+  .row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+  }
+
+
+  
+/*Missing information text*/
+  .missing-info {
+    color: red;
+}
+
+/* asterik fields in edit profile*/
+.mandatory-field {
+  color: red;
+  font-size: 1.2em;
+  vertical-align: top;
+  margin-left: 2px;
+}
+
+
+.missing-info-popup {
+  position: fixed;
+  top: 80px;
+  right: 0;
+  background-color: #f44336; /* red background */
+  color: white;
+  padding: 10px 20px;
+  border-radius: 0 0 5px 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000; /* make sure it's on top */
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.popup-link {
+  text-decoration: underline;
+  cursor: pointer;
+}
