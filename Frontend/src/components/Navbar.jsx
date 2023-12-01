@@ -3,7 +3,10 @@ import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-// import NavDropdown from 'react-bootstrap/NavDropdown';
+import NavDropdown from 'react-bootstrap/NavDropdown';
+
+import { Link } from 'react-router-dom';
+import { LinkContainer } from 'react-router-bootstrap';
 
 const NavbarLink = () => {
     return (
@@ -17,12 +20,9 @@ const NavbarLink = () => {
                         style={{ maxHeight: '100px' }}
                         navbarScroll
                     >
-                        <Nav.Link href="/quiz">Quiz</Nav.Link>
-                        <Nav.Link href="/faq">FAQ</Nav.Link>
-                        <Nav.Link href="/profile">Profile</Nav.Link>
-                        <Nav.Link href="/application">Application</Nav.Link>
-                        <Nav.Link href="/dorms">Dorms</Nav.Link>
-                        {/* <NavDropdown title="Link" id="navbarScrollingDropdown">
+                        <Nav.Link href="#action1">Home</Nav.Link>
+                        <Nav.Link href="#action2"><Link to="/">Link</Link></Nav.Link>
+                        <NavDropdown title="Link" id="navbarScrollingDropdown">
                             <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
                             <NavDropdown.Item href="#action4">
                                 Another action
@@ -31,12 +31,14 @@ const NavbarLink = () => {
                             <NavDropdown.Item href="#action5">
                                 Something else here
                             </NavDropdown.Item>
-                        </NavDropdown> */}
-
+                        </NavDropdown>
+                        <Nav.Link href="#" disabled>
+                            Link
+                        </Nav.Link>
                     </Nav>
                     <Form className="d-flex">
-                        <Button variant="outline-success">Login</Button>
-                        <Button variant="outline-success">Signup</Button>
+                        <Button variant="outline-success"><Link to="/login">Login</Link></Button>
+                        <Button variant="outline-success"><Link to="/signup">Signup</Link></Button>
                     </Form>
                 </Navbar.Collapse>
             </Container>
