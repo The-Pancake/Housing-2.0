@@ -1,15 +1,11 @@
-# Backend Information
-This document contains the following:
-- Algorithms used for assigning students their rooms
-- Information strucuture of campus dorms and students
-- Database structure on MongoDB
-- Interaction through FastAPI
+# Algorithm Information
+This document contains information regarding algorithms used for assigning students their rooms
 
 ## Algorithms
 The following algorithms are used in determining a student or a group of students' rooms that they will be assigned.<br>
 - Singles Search
 - Ideal/General Search
-- [Ideal/General Split Search](#Ideal/General-Split-Search)
+- Ideal/General Split Search
 - Ideal/General Near Search
 - Near Building Search
 
