@@ -1,12 +1,44 @@
+.row {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
 .left-image-wrapper {
-    flex: 0 0 60%; /* this makes it take up 60% of the container's width */
-    max-width: 60%; /* this makes it take up 60% of the container's width */
+    flex: 0 0 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.left-image-wrapper img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
 }
 
 .right-images-wrapper {
-    flex: 1; /* this will allow it to take the remaining space */
+    flex: 0 0 40%;
+    display: flex;
+    flex-direction: column;
+}
+
+.right-images-wrapper .col-12 {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px; /* Adjust as needed for spacing */
 }
 
 .right-images-wrapper img {
-    height: 50%; /* each image will take up half of the container's height */
+    width: 100%;
+    object-fit: cover;
+}
+
+.right-images-wrapper .col-12:last-child {
+    margin-bottom: 0;
+}
+
+.outlined {
+    border: 1px solid black; /* Thin black outline */
 }
