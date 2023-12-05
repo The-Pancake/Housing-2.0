@@ -1,6 +1,4 @@
 import 'bootstrap/dist/css/bootstrap.css';
-// import NavbarLink from "../components/Navbar.jsx";
-// import NavbarLink from '../components/Navbar.jsx';
 import "./Quiz.css";
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -10,14 +8,14 @@ import Container from 'react-bootstrap/Container';
 function Quiz() {
     return (
         <>
-            <Container fluid className="h-100">
+            <Container fluid className="h-100" style={{ marginTop: "5%" }}>
                 <Row className="h-100">
                     <Col md={6} className="d-flex justify-content-center align-items-center">
-                        <div className="leftDiv">
+                        <div >
                             <div className="Motto">
                                 <h2 className='roommateText'>
-                                    Find <br/>
-                                    Your Perfect RPI <br/>
+                                    Find <br />
+                                    Your Perfect RPI <br />
                                     Roommate
                                 </h2>
                             </div>
@@ -27,17 +25,21 @@ function Quiz() {
                         </div>
                     </Col>
                     <Col md={6} className="d-flex justify-content-center align-items-center">
-                        <div className="rightDiv">
+                        <div >
                             <img 
                                 className="quizImage" 
                                 src="https://www.pngmart.com/files/19/Quiz-Logo-PNG-Transparent-Image.png" 
                                 alt="Quiz Logo"
-                                // style={{height:"30vw"}}
+                                style={{ height: "30vw", maxWidth: "100%" }}
                             />
                         </div>
                     </Col>
                 </Row>
-                <Button href="/quizQuestions">Go to Quiz</Button>
+                <Row className="justify-content-center mt-3">
+                    <Col md={12} className="d-flex justify-content-center">
+                        <Button href="/quizQuestions" className="btn-lg" style={{background:"3AB8FF"}}>Take Roommate Quiz</Button>
+                    </Col>
+                </Row>
             </Container>
         </>
     );
