@@ -2,7 +2,7 @@ import React from 'react';
 import './styles.css';
 
 
-
+/* test data for checking edit info section */
 export const profileData = {
   firstName: 'Jeremy',
   lastName: 'Lin',
@@ -13,7 +13,7 @@ export const profileData = {
   city: 'Savannah',
   state: 'GA',
   country: 'United States',
-  zipcode: '45649',
+  zipcode: '45649', /* you can delete data and leave an empty string to test for when a required field is left blank */
   phone: '+1(518)-999-9999',
   RIN: '666666666',
   email: 'doejo2@rpi.edu',
@@ -22,7 +22,7 @@ export const profileData = {
 };
 
 
-const mandatoryFields = ['firstName', 'lastName', 'RIN', 'email'];
+const mandatoryFields = ['firstName', 'lastName', 'RIN', 'email']; /* these are the mandatory fields in the edit info section */
 
 export function hasMissingInformation(data) {
   const keysToCheck = [
@@ -57,7 +57,7 @@ export default function EditProfile() {
         <h1 className="profile-title">Edit Profile</h1>
 
         {/* First and Last Name */}
-        <div className="row">
+        <div className="row">  {/* class row holds the design for the layout of each row on the edit info page */}
           <div className="profile-section half">
             <span className="profile-label"><span className="mandatory-field">*</span>First Name:</span> 
             {profileData.firstName}
