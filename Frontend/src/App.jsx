@@ -4,8 +4,9 @@ import Account from "./routes/account";
 import Contact from "./routes/contact";
 import Login from "./routes/login"
 import Application from "./routes/application";
-import Layout from "./routes/layout";
+// import Layout from "./routes/layout";
 import Signup from "./routes/signup";
+import DormView from "./routes/dormView";
 import Quiz from "./routes/quiz";
 import QuizQuestions from "./routes/quizQuestions";
 import FAQ from "./routes/faq";
@@ -30,6 +31,7 @@ export default function App() {
             <Route path="/account" element={<Account />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/application" element={<Application />} />
+            <Route path="/DormView/:dormId" element={<DormView/>}/>
             <Route path="/quizQuestions" element={<QuizQuestions />} />
             <Route path="/faq" element={<FAQ />} />
           {/* </Route> */}
