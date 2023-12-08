@@ -31,6 +31,9 @@ export default function App() {
             <Route path="/account" element={<Account />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/application" element={<Application />} />
+            <Route path="/application" element={<AppRouter />}>
+                <Route path="edit-profile" element={<EditProfile />} />
+            </Route>
             <Route path="/DormView/:dormId" element={<DormView/>}/>
             <Route path="/quizQuestions" element={<QuizQuestions />} />
             <Route path="/faq" element={<FAQ />} />
