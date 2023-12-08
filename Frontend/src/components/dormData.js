@@ -3,6 +3,15 @@ import cary_pic from './src/cary_hall.jpg'
 import barton_pic from './src/barton_hall.jpg'
 import warren_pic from './src/warren_hall.jpg'
 import hall_pic from './src/hall_hall.jpg'
+import barh_pic from './src/barh.jpg'
+import rhapsA_pic1 from './src/rhapsA.jpg'
+import rhapsA_pic2 from './src/rhapsA2.jpg'
+import rhapsA_pic3 from './src/rhapsA3.jpg'
+import north_hall_pic from './src/northlot.jpg'
+import rhapsB_pic1 from './src/rhapsB1.jpg'
+import rhapsB_pic2 from './src/rhapsB2.jpg'
+
+
 
 export default [
     {
@@ -25,9 +34,9 @@ export default [
     }, {
         //BARTON HALL
         imageOne: "https://lh3.googleusercontent.com/p/AF1QipM5wA0AqytzzokOERcI9WIz86-alFGdzO-SXnzy=s680-w680-h510", //changed
-        imageTwo: "https://lh3.googleusercontent.com/p/AF1QipPStpriupdNAYr6g9-X6yD7CxKmSGlQyPFqW9Xj=s680-w680-h510", //changed
-        imageThree: "https://cdn.shopify.com/s/files/1/1429/6260/products/AHTD-TOUR-MERCH-PRODUCT-SHOTS---POSTER-TEE-FRONT_800x.png?v=1663686021",
-        imageFour: "https://cdn.shopify.com/s/files/1/1429/6260/products/AHTD-TOUR-MERCH-PRODUCT-SHOTS---POSTER-TEE-FRONT_800x.png?v=1663686021",
+        imageTwo: "https://lh3.googleusercontent.com/p/AF1QipPStpriupdNAYr6g9-X6yD7CxKmSGlQyPFqW9Xj=s680-w680-h510", //changed,, same as image1
+        imageThree: barton_pic, //changed
+        imageFour: barton_pic, //changed same as image 3
         dormName: "Barton Hall",
         dormPrice: "50",
         category: "shirt",
@@ -78,8 +87,8 @@ export default [
         //BRAY HALL
         imageOne: bray_pic, //changed
         imageTwo: "https://rpirooms.files.wordpress.com/2014/03/bray.jpg", //changed
-        imageThree: "https://cdn.shopify.com/s/files/1/1429/6260/products/AHTD-TOUR-MERCH-PRODUCT-SHOTS---POSTER-TEE-FRONT_800x.png?v=1663686021",
-        imageFour: "https://cdn.shopify.com/s/files/1/1429/6260/products/AHTD-TOUR-MERCH-PRODUCT-SHOTS---POSTER-TEE-FRONT_800x.png?v=1663686021",
+        imageThree: bray_pic, //changed, same as image 1
+        imageFour: "https://rpirooms.files.wordpress.com/2014/03/bray.jpg", //changed, same as image 2
         dormName: "Bray Hall",
         dormPrice: "50",
         category: "shirt",
@@ -94,16 +103,16 @@ export default [
     },
     {
         //WARREN HALL
-        imageOne: warren_pic,
-        imageTwo: "https://cdn.shopify.com/s/files/1/1429/6260/products/AHTD-TOUR-MERCH-PRODUCT-SHOTS---POSTER-TEE-FRONT_800x.png?v=1663686021",
-        imageThree: "https://cdn.shopify.com/s/files/1/1429/6260/products/AHTD-TOUR-MERCH-PRODUCT-SHOTS---POSTER-TEE-FRONT_800x.png?v=1663686021",
-        imageFour: "https://cdn.shopify.com/s/files/1/1429/6260/products/AHTD-TOUR-MERCH-PRODUCT-SHOTS---POSTER-TEE-FRONT_800x.png?v=1663686021",
+        imageOne: warren_pic, //changed
+        imageTwo: "https://rpirooms.files.wordpress.com/2014/03/tumblr_mlrpu2s6hh1qbrkqoo6_1280.jpg", //changed
+        imageThree: "https://i.ytimg.com/vi/k4NSctnUzsM/hqdefault.jpg",
+        imageFour: warren_pic, //changed,, same as 1
         dormName: "Warren Hall",
         dormPrice: "40",
         category: "shirt",
         status: "Available",
-        dormAddress: "None",
-        id: "Warren Hall, 1999 Burdett Ave, Troy, New York, 12180",
+        dormAddress: "Warren Hall, 1999 Burdett Ave, Troy, New York, 12180",
+        id: "warren_hall",
         rating: "5",
         numRooms: 1,
         numBeds: 2,
@@ -130,10 +139,10 @@ export default [
     },
     {
         //DAVISON
-        imageOne: "https://www.asc-cybernetics.org/2010/wp-content/uploads/2010/07/blitman.jpg",
-        imageTwo: "https://cdn.shopify.com/s/files/1/1429/6260/products/AHTD-TOUR-MERCH-PRODUCT-SHOTS---POSTER-TEE-FRONT_800x.png?v=1663686021",
-        imageThree: "https://cdn.shopify.com/s/files/1/1429/6260/products/AHTD-TOUR-MERCH-PRODUCT-SHOTS---POSTER-TEE-FRONT_800x.png?v=1663686021",
-        imageFour: "https://cdn.shopify.com/s/files/1/1429/6260/products/AHTD-TOUR-MERCH-PRODUCT-SHOTS---POSTER-TEE-FRONT_800x.png?v=1663686021",
+        imageOne: "https://rpirooms.files.wordpress.com/2014/03/tumblr_m7ouj1leca1qbrkqoo4_1280.jpg",
+        imageTwo: "https://rpirooms.com/room-photos/davidson-and-nugget-hall/#jp-carousel-521",
+        imageThree: "https://rpirooms.files.wordpress.com/2014/03/tumblr_m7ouj1leca1qbrkqoo4_1280.jpg",
+        imageFour: "https://rpirooms.com/room-photos/davidson-and-nugget-hall/#jp-carousel-521",
         dormName: "Davison Hall",
         dormPrice: "38",
         category: "shirt",
@@ -149,8 +158,8 @@ export default [
         //NASON
         imageOne: "https://vasudha.wp.rpi.edu/files/2013/06/2013-07-09-14.47.28.jpg", //changed
         imageTwo: "https://rpirooms.files.wordpress.com/2014/03/tumblr_kzaw239byy1qbrkqoo4_1280.jpg", //changed
-        imageThree: "https://cdn.shopify.com/s/files/1/1429/6260/products/AHTD-TOUR-MERCH-PRODUCT-SHOTS---POSTER-TEE-FRONT_800x.png?v=1663686021",
-        imageFour: "https://cdn.shopify.com/s/files/1/1429/6260/products/AHTD-TOUR-MERCH-PRODUCT-SHOTS---POSTER-TEE-FRONT_800x.png?v=1663686021",
+        imageThree: "https://vasudha.wp.rpi.edu/files/2013/06/2013-07-09-14.47.28.jpg", //changed,, same as 1
+        imageFour: "https://rpirooms.files.wordpress.com/2014/03/tumblr_kzaw239byy1qbrkqoo4_1280.jpg", //change,, same as 2
         dormName: "Nason Hall",
         dormPrice: "40",
         category: "shirt",
@@ -165,10 +174,10 @@ export default [
     },
     {
         //BARH
-        imageOne: "https://www.asc-cybernetics.org/2010/wp-content/uploads/2010/07/blitman.jpg",
-        imageTwo: "https://cdn.shopify.com/s/files/1/1429/6260/products/AHTD-TOUR-MERCH-PRODUCT-SHOTS---POSTER-TEE-FRONT_800x.png?v=1663686021",
-        imageThree: "https://cdn.shopify.com/s/files/1/1429/6260/products/AHTD-TOUR-MERCH-PRODUCT-SHOTS---POSTER-TEE-FRONT_800x.png?v=1663686021",
-        imageFour: "https://cdn.shopify.com/s/files/1/1429/6260/products/AHTD-TOUR-MERCH-PRODUCT-SHOTS---POSTER-TEE-FRONT_800x.png?v=1663686021",
+        imageOne: "https://lh3.googleusercontent.com/p/AF1QipN_3uu9bqYk20g4MO1ItdNppEvgnGn7q7SpUnWM=s680-w680-h510", //chanaged
+        imageTwo: barh_pic, //changed
+        imageThree: "https://www.rpiviews.com/images/set816/card01116_fr.jpg", //changed 
+        imageFour: barh_pic, //changed same as 2
         dormName: "BARH",
         dormPrice: "38",
         category: "shirt",
@@ -183,10 +192,10 @@ export default [
     }, {
 
         //Crockett
-        imageOne: "https://www.asc-cybernetics.org/2010/wp-content/uploads/2010/07/blitman.jpg",
-        imageTwo: "https://cdn.shopify.com/s/files/1/1429/6260/products/AHTD-TOUR-MERCH-PRODUCT-SHOTS---POSTER-TEE-FRONT_800x.png?v=1663686021",
-        imageThree: "https://cdn.shopify.com/s/files/1/1429/6260/products/AHTD-TOUR-MERCH-PRODUCT-SHOTS---POSTER-TEE-FRONT_800x.png?v=1663686021",
-        imageFour: "https://cdn.shopify.com/s/files/1/1429/6260/products/AHTD-TOUR-MERCH-PRODUCT-SHOTS---POSTER-TEE-FRONT_800x.png?v=1663686021",
+        imageOne: "https://rpirooms.files.wordpress.com/2014/03/hall-3.jpg", //changed
+        imageTwo: "https://rpirooms.files.wordpress.com/2014/03/tumblr_kzaw239byy1qbrkqoo3_1280.jpg", //changed
+        imageThree: "https://rpirooms.files.wordpress.com/2014/03/hall-3.jpg", //changed,, same as image1
+        imageFour: "https://rpirooms.files.wordpress.com/2014/03/tumblr_kzaw239byy1qbrkqoo3_1280.jpg", //changed,, same as image 2
         dormName: "Crockett Hall",
         dormPrice: "38",
         category: "shirt",
@@ -202,9 +211,9 @@ export default [
     {
         //NUGENT
         imageOne: "https://lh3.googleusercontent.com/p/AF1QipMYz5eyTRQ0Da8tBPGkbNVlyTyeR-0e-uoL58bn=s680-w680-h510", //changed
-        imageTwo: "https://cdn.shopify.com/s/files/1/1429/6260/products/AHTD-TOUR-MERCH-PRODUCT-SHOTS---POSTER-TEE-FRONT_800x.png?v=1663686021",
-        imageThree: "https://cdn.shopify.com/s/files/1/1429/6260/products/AHTD-TOUR-MERCH-PRODUCT-SHOTS---POSTER-TEE-FRONT_800x.png?v=1663686021",
-        imageFour: "https://cdn.shopify.com/s/files/1/1429/6260/products/AHTD-TOUR-MERCH-PRODUCT-SHOTS---POSTER-TEE-FRONT_800x.png?v=1663686021",
+        imageTwo: "https://media.bizj.us/view/img/12427219/rpinugent-hall-01122301*900xx6016-3384-0-205.jpg", //changed
+        imageThree: "https://lh3.googleusercontent.com/p/AF1QipMYz5eyTRQ0Da8tBPGkbNVlyTyeR-0e-uoL58bn=s680-w680-h510", //changed,, same as 1
+        imageFour: "https://media.bizj.us/view/img/12427219/rpinugent-hall-01122301*900xx6016-3384-0-205.jpg", //changed,, same as 2
         dormName: "Nugent Hall",
         dormPrice: "60",
         category: "shirt",
@@ -218,10 +227,10 @@ export default [
         ratingAmt: 120
     }, {
         //RHAPS A
-        imageOne: "https://www.asc-cybernetics.org/2010/wp-content/uploads/2010/07/blitman.jpg",
-        imageTwo: "https://cdn.shopify.com/s/files/1/1429/6260/products/AHTD-TOUR-MERCH-PRODUCT-SHOTS---POSTER-TEE-FRONT_800x.png?v=1663686021",
-        imageThree: "https://cdn.shopify.com/s/files/1/1429/6260/products/AHTD-TOUR-MERCH-PRODUCT-SHOTS---POSTER-TEE-FRONT_800x.png?v=1663686021",
-        imageFour: "https://cdn.shopify.com/s/files/1/1429/6260/products/AHTD-TOUR-MERCH-PRODUCT-SHOTS---POSTER-TEE-FRONT_800x.png?v=1663686021",
+        imageOne: rhapsA_pic1, //changed
+        imageTwo: "https://rpirooms.com/room-photos/rahp-pictures/#jp-carousel-554",//changed
+        imageThree: rhapsA_pic3, //changed
+        imageFour: rhapsA_pic3, //changed
         dormName: "AHTD Foam Hat",
         dormPrice: "35",
         category: "hat",
@@ -235,10 +244,10 @@ export default [
         ratingAmt: 120
     }, {
         //RHAPS B
-        imageOne: "https://www.asc-cybernetics.org/2010/wp-content/uploads/2010/07/blitman.jpg",
-        imageTwo: "https://cdn.shopify.com/s/files/1/1429/6260/products/AHTD-TOUR-MERCH-PRODUCT-SHOTS---POSTER-TEE-FRONT_800x.png?v=1663686021",
-        imageThree: "https://cdn.shopify.com/s/files/1/1429/6260/products/AHTD-TOUR-MERCH-PRODUCT-SHOTS---POSTER-TEE-FRONT_800x.png?v=1663686021",
-        imageFour: "https://cdn.shopify.com/s/files/1/1429/6260/products/AHTD-TOUR-MERCH-PRODUCT-SHOTS---POSTER-TEE-FRONT_800x.png?v=1663686021",
+        imageOne: rhapsB_pic1, //chganged
+        imageTwo: rhapsB_pic2, //changed
+        imageThree: rhapsB_pic1, //changed
+        imageFour: rhapsB_pic2, //changed
         dormName: "AHTD Foam Hat",
         dormPrice: "35",
         category: "hat",
@@ -269,32 +278,34 @@ export default [
         ratingAmt: 120
     }, {
         //NORTH HALL
-        imageOne: "https://www.asc-cybernetics.org/2010/wp-content/uploads/2010/07/blitman.jpg",
-        imageTwo: "https://cdn.shopify.com/s/files/1/1429/6260/products/AHTD-TOUR-MERCH-PRODUCT-SHOTS---POSTER-TEE-FRONT_800x.png?v=1663686021",
-        imageThree: "https://cdn.shopify.com/s/files/1/1429/6260/products/AHTD-TOUR-MERCH-PRODUCT-SHOTS---POSTER-TEE-FRONT_800x.png?v=1663686021",
-        imageFour: "https://cdn.shopify.com/s/files/1/1429/6260/products/AHTD-TOUR-MERCH-PRODUCT-SHOTS---POSTER-TEE-FRONT_800x.png?v=1663686021",
-        dormName: "XO Keychain",
+        imageOne: north_hall_pic, //changed
+        imageTwo: "https://rpirooms.files.wordpress.com/2016/11/14958902_652152204965871_1311128849_o.jpg", //changed
+        imageThree: "https://www.mlbind.com/wp-content/uploads/2018/10/rpi-north-and-e-02.jpg", //changed
+        imageFour: north_hall_pic, //changed
+        dormName: "North Hall",
         dormPrice: "30",
         category: "keychain",
         status: "Available",
-        dormAddress: "Limited Edition",
-        id: "keychain2",
+        dormAddress: "North Hall, Sage Ave, Troy, New York, 12180",
+        id: "north_hall",
         rating: "5",
         numRooms: 1,
         numBeds: 2,
         sqft: 140,
         ratingAmt: 120
     }, {
-        imageOne: "https://www.asc-cybernetics.org/2010/wp-content/uploads/2010/07/blitman.jpg",
-        imageTwo: "https://cdn.shopify.com/s/files/1/1429/6260/products/AHTD-TOUR-MERCH-PRODUCT-SHOTS---POSTER-TEE-FRONT_800x.png?v=1663686021",
-        imageThree: "https://cdn.shopify.com/s/files/1/1429/6260/products/AHTD-TOUR-MERCH-PRODUCT-SHOTS---POSTER-TEE-FRONT_800x.png?v=1663686021",
-        imageFour: "https://cdn.shopify.com/s/files/1/1429/6260/products/AHTD-TOUR-MERCH-PRODUCT-SHOTS---POSTER-TEE-FRONT_800x.png?v=1663686021",
-        dormName: "0:00:01",
+
+        //StackWyck
+        imageOne: "https://live.staticflickr.com/3054/2683830736_ab147ef635_b.jpg", //changed
+        imageTwo: "https://rpirooms.files.wordpress.com/2014/03/tumblr_mjfhdgxtdw1qbrkqoo1_1280.jpg", //changed
+        imageThree: "https://i.ytimg.com/vi/X3Bfos0JsDI/maxresdefault.jpg", //changed
+        imageFour: "https://i.ytimg.com/vi/X3Bfos0JsDI/maxresdefault.jpg", //changed,, same as image 3
+        dormName: "StackWyck Apartments",
         dormPrice: "145",
         category: "painting",
         status: "SOLD OUT",
-        dormAddress: "Limited Edition",
-        id: "painting1",
+        dormAddress: "40 Kellog Drive, Troy, New York, 12180",
+        id: "stackwyck",
         rating: "5",
         numRooms: 1,
         numBeds: 2,
