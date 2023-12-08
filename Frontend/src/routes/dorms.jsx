@@ -3,12 +3,14 @@
 import 'bootstrap/dist/css/bootstrap.css';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./dorms";
+import Layout from './layout';
 import Dropdown from 'react-bootstrap/Dropdown';
 import EachDorm from "../components/eachDorms";
 
 export default function Dorms() {
   return (
     <>
+        <Layout/>
         <div style={{ display: 'flex', marginLeft:'5%',marginTop:'5%' }}>
             <Dropdown style={{marginRight:'10px'}}>
                 <Dropdown.Toggle variant="success" id="dropdown-basic-1">

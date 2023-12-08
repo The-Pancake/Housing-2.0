@@ -3,6 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import dormData from "../components/dormData.js";
 import ImageGallery from 'react-image-gallery';
 import "./dormView.css";
+import Layout from "./layout.jsx";
 
 function DormView() {
     const { dormId } = useParams();
@@ -10,7 +11,6 @@ function DormView() {
     if (!thisDorm) {
         return <div>Dorm not found</div>;
     }
-    console.log(thisDorm.dormPrice);
 
     const images = [
         {
@@ -32,6 +32,9 @@ function DormView() {
     ];
 
     return (
+        <>
+        <Layout/>
+        
         <div className="flat-detail">
             <div className="container mt-5 mb-5">
                 <div className="row">
@@ -181,6 +184,7 @@ function DormView() {
                 </div>
             </div>
         </div>
+        </>
     )
 }
 

@@ -1,14 +1,50 @@
 [
     {
-        "question": "What's your favorite color?",
-        "answers": ["Red", "Blue", "Green", "Yellow"]
+        "question": "How do you feel about noise levels in the room?",
+        "answers": ["I prefer quiet", "Occasional noise is fine", "I enjoy a lively atmosphere", "I'm indifferent to noise"]
     },
     {
-        "question": "What's your favorite animal?",
-        "answers": ["Dog", "Cat", "Bird", "Fish"]
+        "question": "What time do you usually go to bed?",
+        "answers": ["Before 10 PM", "Between 10 PM and Midnight", "After Midnight", "My sleep schedule varies"]
     },
     {
-        "question": "What's your favorite animal?",
-        "answers": ["Dog", "Cat", "Bird", "Fish"]
+        "question": "How often do you like to have guests over?",
+        "answers": ["Rarely", "Sometimes", "Often", "Very frequently"]
+    },
+    {
+        "question": "How tidy do you keep your living space?",
+        "answers": ["Very tidy", "Moderately tidy", "Occasionally messy", "Often messy"]
+    },
+    {
+        "question": "What's your approach to sharing items?",
+        "answers": ["I prefer not to share", "Willing to share some items", "Happy to share most items", "Everything is communal"]
+    },
+    {
+        "question": "What's your preferred room temperature?",
+        "answers": ["Cool", "Moderately cool", "Warm", "Varies a lot"]
+    },
+    {
+        "question": "How do you feel about study habits?",
+        "answers": ["Quiet study only", "Casual study with some talk", "Group study sessions", "I study elsewhere"]
+    },
+    {
+        "question": "What are your thoughts on having pets?",
+        "answers": ["Love pets", "Okay with pets", "Prefer no pets", "Allergic to pets"]
+    },
+    {
+        "question": "What's your usual weekend routine?",
+        "answers": ["Relaxing at home", "Socializing with friends", "Outdoor activities", "Partying"]
+    },
+    {
+        "question": "How often do you cook?",
+        "answers": ["Regularly", "Sometimes", "Rarely", "Never"]
+    },
+    {
+        "question": "Your attitude towards smoking?",
+        "answers": ["I smoke", "I'm okay with it", "Prefer smoke-free", "Strongly against it"]
+    },
+    {
+        "question": "How do you handle conflicts?",
+        "answers": ["Direct communication", "Seek compromise", "Avoid confrontation", "Seek external help"]
     }
 ]

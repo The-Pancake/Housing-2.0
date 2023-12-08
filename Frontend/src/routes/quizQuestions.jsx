@@ -4,6 +4,7 @@ import { Container, Row, Col, Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import questionsData from './questions.json';
 import "./quiz";
+import Layout from './layout';
 
 function QuizQuestions() {
     const [questionIndex, setQuestionIndex] = useState(0);
@@ -23,6 +24,7 @@ function QuizQuestions() {
 
     return (
         <>  
+            <Layout/>
             <Container className="h-100" id="container" style={{marginTop:"10%"}}>
                 <Row className="h-50 justify-content-between align-items-center">
                     <ProgressBar now={getProgress()} style={{marginBottom:"5%"}}/>

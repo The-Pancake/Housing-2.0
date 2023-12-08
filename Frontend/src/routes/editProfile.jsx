@@ -4,9 +4,12 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Button from 'react-bootstrap/Button';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import ButtonToolbar from 'react-bootstrap/ButtonToolbar';
+import Layout from './layout';
 
 export default function EditProfile() {
   return (
+    <>
+    <Layout/>
     <div style={{ width: "80vw", margin: "auto" }}>
       <h2 style={{textAlign:"center"}}>Edit Profile</h2>
       <Form style={{ marginTop: "9%" }}>
@@ -190,5 +193,6 @@ export default function EditProfile() {
         </ButtonGroup>
       </ButtonToolbar>
     </div>
+    </>
   );
 }

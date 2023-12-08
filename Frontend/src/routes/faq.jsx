@@ -1,11 +1,11 @@
 import Accordion from 'react-bootstrap/Accordion';
-// import 'bootstrap/dist/css/bootstrap.css';
-// import "bootstrap/dist/css/bootstrap.min.css";
+import Layout from './layout';
 
 export default function FAQ() {
     return (
-        <>
-            <h1 style={{ textAlign: "center" }}>Frequency Asked Questions</h1>
+        <>  
+            <Layout/>
+            <h1 style={{ textAlign: "center",marginTop:"40px" }}>Frequency Asked Questions</h1>
                 <div style={{width:"80%",margin:"auto",marginTop:"4%"}}>
                 <Accordion defaultActiveKey="0">
                     <Accordion.Item eventKey="0">

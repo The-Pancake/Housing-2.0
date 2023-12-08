@@ -1,9 +1,11 @@
 import { Row, Col, Form } from 'react-bootstrap';
 import "bootstrap/dist/css/bootstrap.min.css";
+import Layout from './layout';
 
 export default function ViewProfile() {
   return (
     <>
+    <Layout/>
     <Form style={{marginTop:"9%"}}>
       <Row>
         <Col md={6}>
