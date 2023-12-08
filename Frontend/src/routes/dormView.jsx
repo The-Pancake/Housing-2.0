@@ -51,7 +51,7 @@ function DormView() {
                             <div className="col-lg-8">
                                 <div className="fd-item">
                                     <h4>Description</h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                                    <p>This is dorm {thisDorm.dormName}. It is currently located at {thisDorm.dormAddress} for ${thisDorm.dormPrice} per month. It includes {thisDorm.numRooms} room/s and {thisDorm.numBeds} beds.</p>
                                 </div>
                                 <div className="fd-item fd-property-detail">
                                     <h4>Property Details</h4>
@@ -131,26 +131,26 @@ function DormView() {
                                 </div> */}
                                 {/* <div className="fd-item">
                                     <h4>Maps</h4>
-                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15105200.564429!2d37.91245092855647!3d38.99130948591772!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14b0155c964f2671%3A0x40d9dbd42a625f2a!2zVMO8cmtpeWU!5e0!3m2!1str!2str!4v1630158674074!5m2!1str!2str" width="100%" height="450" loading="lazy"></iframe>
+                                    <iframe src="https://www.google.com/maps/place/Barton+Hall/@42.729118,-73.6766864,17z/data=!3m1!4b1!4m6!3m5!1s0x89de0f9e2d6ecedf:0xcef59faad0bf7f6e!8m2!3d42.7291141!4d-73.6741061!16s%2Fg%2F11bwqqgbj0?entry=ttu" width="100%" height="450" loading="lazy"></iframe>
                                 </div> */}
                             </div>
                             <div className="col-lg-4">
                                 <div className="fd-sidebar-item">
-                                    <h4>Recently Added</h4>
+                                    <h4>Points of Interest</h4>
                                     <div className="recently-item">
                                         <img src="/img/product1.jpeg" alt="detail" width="50px" />
-                                        <span>Lorem Ipsum Dolor</span>
+                                        <span>Nearest Dining Hall</span>
                                     </div>
                                     <div className="recently-item">
                                         <img src="/img/product1.jpeg" alt="detail" width="50px" />
-                                        <span>Lorem Ipsum Dolor</span>
+                                        <span>Nearest Dorm</span>
                                     </div>
-                                    <div className="recently-item">
+                                    {/* <div className="recently-item">
                                         <img src="/img/product1.jpeg" alt="detail" width="50px" />
                                         <span>Lorem Ipsum Dolor</span>
-                                    </div>
+                                    </div> */}
                                 </div>
-                                <div className="fd-sidebar-item">
+                                {/* <div className="fd-sidebar-item">
                                     <h4>Category</h4>
                                     <ul className="category-ul">
                                         <li>Category 1</li>
@@ -159,7 +159,7 @@ function DormView() {
                                         <li>Category 4</li>
                                         <li>Category 5</li>
                                     </ul>
-                                </div>
+                                </div> */}
                                 {/* <div className="fd-sidebar-item">
                                     <h4>Recently Added</h4>
                                     <div className="recently-item">
