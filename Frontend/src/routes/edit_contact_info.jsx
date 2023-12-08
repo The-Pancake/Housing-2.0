@@ -2,7 +2,7 @@ import React from 'react';
 import './styles.css';
 
 
-/* test data for checking edit info section */
+
 export const profileData = {
   firstName: 'Jeremy',
   lastName: 'Lin',
@@ -13,7 +13,7 @@ export const profileData = {
   city: 'Savannah',
   state: 'GA',
   country: 'United States',
-  zipcode: '45649', /* you can delete data and leave an empty string to test for when a required field is left blank */
+  zipcode: '45649',
   phone: '+1(518)-999-9999',
   RIN: '666666666',
   email: 'doejo2@rpi.edu',
@@ -22,7 +22,7 @@ export const profileData = {
 };
 
 
-const mandatoryFields = ['firstName', 'lastName', 'RIN', 'email']; /* these are the mandatory fields in the edit info section */
+const mandatoryFields = ['firstName', 'lastName', 'RIN', 'email'];
 
 export function hasMissingInformation(data) {
   const keysToCheck = [
@@ -55,88 +55,75 @@ export default function EditProfile() {
     <div className="edit-profile-background">
       <div className="profile-container">
         <h1 className="profile-title">Edit Profile</h1>
-
-        {/* First and Last Name */}
-        <div className="row">  {/* class row holds the design for the layout of each row on the edit info page */}
-          <div className="profile-section half">
-            <span className="profile-label"><span className="mandatory-field">*</span>First Name:</span> 
-            {profileData.firstName}
-          </div>
-          <div className="profile-section half">
-            <span className="profile-label"><span className="mandatory-field">*</span>Last Name:</span> 
-            {profileData.lastName}
-          </div>
-        </div>
-
-        {/* RIN, Class, Email */}
         <div className="row">
-          <div className="profile-section third">
-            <span className="profile-label"><span className="mandatory-field">*</span>RIN:</span> 
-            {profileData.RIN}
+          <div className="profile-section">
+              <span className="profile-label"><span className="mandatory-field">*</span>First Name:</span> 
+              {profileData.firstName}
           </div>
-          <div className="profile-section third">
-            <span className="profile-label"><span className="mandatory-field">*</span>Class:</span>
-            {profileData.class}
-          </div>
-          <div className="profile-section third">
-            <span className="profile-label"><span className="mandatory-field">*</span>Email:</span> 
-            {profileData.email}
+          <div className="profile-section">
+              <span className="profile-label"><span className="mandatory-field">*</span>Last Name:</span> 
+              {profileData.lastName}
           </div>
         </div>
 
-        {/* Date of Birth */}
         <div className="row">
-          <div className="profile-section full">
-            <span className="profile-label">Date of Birth:</span> 
-            {profileData.dob}
+          <div className="profile-section">
+              <span className="profile-label"><span className="mandatory-field">*</span>RIN:</span> 
+              {profileData.RIN}
+          </div>
+          <div className="profile-section">
+              <span className="profile-label"><span className="mandatory-field">*</span>Email:</span> 
+              {profileData.email}
+          </div>
+          <div className="profile-section">
+              <span className="profile-label"><span className="mandatory-field">*</span>Class:</span>
+              {profileData.class}
           </div>
         </div>
 
-        {/* Address Details */}
+
         <div className="row">
-          <div className="profile-section third">
-            <span className="profile-label">Street Address:</span> 
-            {profileData.streetAddress}
-          </div>
-          <div className="profile-section third">
-            <span className="profile-label">City:</span> 
-            {profileData.city}
-          </div>
-          <div className="profile-section third">
-            <span className="profile-label">State:</span> 
-            {profileData.state}
+          <div className="profile-section">
+            <span className="profile-label">Date of Birth:</span> {profileData.dob}
           </div>
         </div>
 
-        {/* Country, Zipcode, Phone */}
         <div className="row">
-          <div className="profile-section third">
-            <span className="profile-label">Country:</span> 
-            {profileData.country}
+          <div className="profile-section">
+            <span className="profile-label">Street Address:</span> {profileData.streetAddress}
           </div>
-          <div className="profile-section third">
-            <span className="profile-label">Zipcode:</span> 
-            {profileData.zipcode}
+          <div className="profile-section">
+            <span className="profile-label">City:</span> {profileData.city}
           </div>
-          <div className="profile-section third">
-            <span className="profile-label">Phone:</span> 
-            {profileData.phone}
+          <div className="profile-section">
+            <span className="profile-label">State:</span> {profileData.state}
           </div>
         </div>
 
-        {/* Gender and Pronouns */}
         <div className="row">
-          <div className="profile-section half">
-            <span className="profile-label">Gender:</span> 
-            {profileData.gender}
+          <div className="profile-section">
+            <span className="profile-label">Country:</span> {profileData.country}
           </div>
-          <div className="profile-section half">
-            <span className="profile-label">Pronouns:</span> 
-            {profileData.pronouns}
+          <div className="profile-section">
+            <span className="profile-label">Zipcode:</span> {profileData.zipcode}
           </div>
         </div>
 
-        {/* Buttons */}
+        <div className="row">
+          <div className="profile-section">
+            <span className="profile-label">Phone:</span> {profileData.phone}
+          </div>
+        </div>
+
+        <div className="row">
+          <div className="profile-section">
+            <span className="profile-label">Gender:</span> {profileData.gender}
+          </div>
+          <div className="profile-section">
+            <span className="profile-label">Pronouns:</span> {profileData.pronouns}
+          </div>
+        </div>
+
         <div className="button-group">
           <button className="profile-edit-button">Edit Details</button>
           <button className="profile-save-changes-button">Save Changes</button>
@@ -145,4 +132,5 @@ export default function EditProfile() {
     </div>
   );
 }
+
 

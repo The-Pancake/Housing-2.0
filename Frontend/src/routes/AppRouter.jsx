@@ -3,7 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 import Application from './application';
 import EditProfile from './edit_contact_info';
 
-function AppRouter() { // routing the main profile page to the edit profile section
+function AppRouter() {
     return (
         <Routes>
             <Route path="/" element={<Application />} />

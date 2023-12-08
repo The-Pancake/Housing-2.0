@@ -98,9 +98,8 @@ body, div, h1, h2, p, button {
 /* edit profile page Styling*/
 
 .edit-profile-background {
-  display: flex;
     background-color: #d3d3d3; /* light grey */
-    min-height: 100vh;
+    min-height: 85vh;
 }
 
 
@@ -110,12 +109,8 @@ body, div, h1, h2, p, button {
     border-radius: 10px;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
     width: 800px;
-    margin: 0 auto;
+    margin: 50px 0px 50px 0px;
     height: 85vh;
-    align-self: center;
-    align-content: center;
-    flex-direction: column;
-    display: flex;
   }
   
   /*edit profile title*/
@@ -126,10 +121,8 @@ body, div, h1, h2, p, button {
   }
   
   /*profile section*/
-  
-
-  .profile-section.full {
-    max-width: 100%;
+  .profile-section {
+    margin: 10px;
   }
   
   /*profile labels inside edit profile*/
@@ -139,35 +132,12 @@ body, div, h1, h2, p, button {
     align-content: left;
   }
 
-  .profile-section {
-    margin: 10px;
-    flex: 1;
-    min-width: 0;
-  }
   
-  .profile-section.half {
-    max-width: calc(50% - 20px); /* assuming 10px margin on each side */
-  }
-
-  .profile-section.third {
-    max-width: calc(33.333% - 20px); /* assuming 10px margin on each side */
-  }
-
-  @media (max-width: 768px) {
-    .profile-section.half,
-    .profile-section.third,
-    .profile-section.full {
-      max-width: none;
-      flex-basis: 100%;
-    }
-  }
-
 .button-group {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-  
   
   /*edit other contact info button*/
   .profile-edit-button, .profile-save-changes-button {
